@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<ArrayOfRace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Race>
+    <Name>Human</Name>
+	<Health>25</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Brute</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Paladin</string>
+		<string>Warlord</string>
+		<string>Boweeton Cleric</string>
+		<string>Wizard</string>
+		<string>Court Mage</string>
+		<string>Warlock</string>
+		<string>Enchanter</string>
+		<string>Monk</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Wood Elf</Name>
+	<Health>26</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Paladin</string>
+		<string>Boweeton Cleric</string>
+		<string>Court Mage</string>
+		<string>Enchanter</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Bright Elf</Name>
+	<Health>20</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Paladin</string>
+		<string>Boweeton Cleric</string>
+		<string>Wizard</string>
+		<string>Court Mage</string>
+		<string>Enchanter</string>
+		<string>Monk</string>
+		<string>Thief</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Mountain Elf</Name>
+	<Health>28</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Brute</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Warlord</string>
+		<string>Boweeton Cleric</string>
+		<string>Wizard</string>
+		<string>Warlock</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Night Elf</Name>
+	<Health>22</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Warlord</string>
+		<string>Wizard</string>
+		<string>Warlock</string>
+		<string>Enchanter</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Roughrider</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Reistric Dragon</Name>
+	<Health>27</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Hunter</string>
+		<string>Paladin</string>
+		<string>Boweeton Cleric</string>
+		<string>Wizard</string>
+		<string>Court Mage</string>
+		<string>Warlock</string>
+		<string>Enchanter</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Bard</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Troll</Name>
+	<Health>30</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Brute</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Paladin</string>
+		<string>Warlord</string>
+		<string>Wizard</string>
+		<string>Warlock</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Roughrider</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Southern Dwarf</Name>
+	<Health>26</Health>
+    <PossibleClassList>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Warlord</string>
+		<string>Boweeton Cleric</string>
+		<string>Warlock</string>
+		<string>Enchanter</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Northern Dwarf</Name>
+	<Health>26</Health>
+    <PossibleClassList>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Warlord</string>
+		<string>Boweeton Cleric</string>
+		<string>Warlock</string>
+		<string>Enchanter</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Armaloon</Name>
+	<Health>25</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Boweeton Cleric</string>
+		<string>Wizard</string>
+		<string>Court Mage</string>
+		<string>Warlock</string>
+		<string>Enchanter</string>
+		<string>Monk</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Bard</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Nymph</Name>
+	<Health>21</Health>
+    <PossibleClassList>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Wizard</string>
+		<string>Court Mage</string>
+		<string>Enchanter</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Screllecrellen</Name>
+	<Health>29</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Brute</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Enchanter</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Roughrider</string>
+		<string>Scout</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Krendonite Dragon</Name>
+	<Health>26</Health>
+    <PossibleClassList>
+		<string>Knight</string>
+		<string>Brute</string>
+		<string>Hunter</string>
+		<string>Ranger</string>
+		<string>Paladin</string>
+		<string>Warlord</string>
+		<string>Warlock</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Goblin</Name>
+	<Health>18</Health>
+    <PossibleClassList>
+		<string>Hunter</string>
+		<string>Warlord</string>
+		<string>Wizard</string>
+		<string>Warlock</string>
+		<string>Thief</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Assassin</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+  <Race>
+    <Name>Zarthuun</Name>
+	<Health>32</Health>
+    <PossibleClassList>
+		<string>Brute</string>
+		<string>Ranger</string>
+		<string>Paladin</string>
+		<string>Boweeton Cleric</string>
+		<string>Wizard</string>
+		<string>Court Mage</string>
+		<string>Enchanter</string>
+		<string>Monk</string>
+		<string>Pirate</string>
+		<string>Brigand</string>
+		<string>Mercenary</string>
+		<string>Roughrider</string>
+		<string>Bard</string>
+		<string>Nomad</string>
+		<string>Scout</string>
+		<string>Pilgrim</string>
+		<string>Gun Slinger</string>
+		<string>Bounty Hunter</string>
+    </PossibleClassList>
+  </Race>
+
+</ArrayOfRace>

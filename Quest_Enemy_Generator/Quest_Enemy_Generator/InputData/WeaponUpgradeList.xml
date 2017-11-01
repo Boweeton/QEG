@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfWeaponUpgrade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeaponUpgrade>
+    <UpgradeVal>1</UpgradeVal>
+  </WeaponUpgrade>
+  <WeaponUpgrade>
+    <UpgradeVal>2</UpgradeVal>
+  </WeaponUpgrade>
+  <WeaponUpgrade>
+    <UpgradeVal>3</UpgradeVal>
+  </WeaponUpgrade>
+  <WeaponUpgrade>
+    <UpgradeVal>4</UpgradeVal>
+  </WeaponUpgrade>
+  <WeaponUpgrade>
+    <UpgradeVal>5</UpgradeVal>
+  </WeaponUpgrade>
+</ArrayOfWeaponUpgrade>

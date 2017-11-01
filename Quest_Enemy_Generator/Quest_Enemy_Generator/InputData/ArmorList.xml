@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfArmor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Armor>
+    <Name>Steel Helm</Name>
+    <IsLight>false</IsLight>
+    <AType>Head</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Wizard's Slippers</Name>
+    <IsLight>true</IsLight>
+    <AType>Feet</AType>
+    <DType>Glyph</DType>
+  </Armor>
+</ArrayOfArmor>

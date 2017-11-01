@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<ArrayOfGlyph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Glyph>
+		<Name>Bone Crack</Name>
+		<School>IMP</School>
+		<LvlReq>3</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deals 8 Damage to target within 4 spaces. If IMP is 15 or more, Imobilize. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Flash Bang</Name>
+		<School>IMP</School>
+		<LvlReq>4</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deals 6 Damage to all targets within 2 spaces. Stagger 1 (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Laceration</Name>
+		<School>IMP</School>
+		<LvlReq>4</LvlReq>
+		<Speed>5</Speed>
+		<Description>Deal 8 damage. (Undodgeable.) Stagger 2. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Camouflage </Name>
+		<School>IMP</School>
+		<LvlReq>5</LvlReq>
+		<Speed>2</Speed>
+		<Description>Assume the appearance of a tree for two turns and gain +15 sneak if not moving or taking actions (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Impact Snap</Name>
+		<School>IMP</School>
+		<LvlReq>5</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 4 damage that ignores all armor.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Instinct of Fire</Name>
+		<School>IMP</School>
+		<LvlReq>5</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 8 Auto Fire damage to yourself and every adjacent target.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ignition</Name>
+		<School>IMP</School>
+		<LvlReq>5</LvlReq>
+		<Speed>4</Speed>
+		<Description>Set target on fire. Deals IMP lvl fire damage for d4 turns after this one.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Celestial Glare</Name>
+		<School>IMP</School>
+		<LvlReq>6</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal 5 Pure Light damage to target (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Impact Spike</Name>
+		<School>IMP</School>
+		<LvlReq>6</LvlReq>
+		<Speed>5</Speed>
+		<Description>Deal 15 damage that fully ignores any armor, but not shields.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Undying Fury</Name>
+		<School>IMP</School>
+		<LvlReq>7</LvlReq>
+		<Speed>2</Speed>
+		<Description>For 3 turns starting now, you may go to -15 health without dying.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Searing Bolt</Name>
+		<School>IMP</School>
+		<LvlReq>7</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal 8 Fire/Lightning damage to target. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Flame Pillars</Name>
+		<School>IMP</School>
+		<LvlReq>7</LvlReq>
+		<Speed>6</Speed>
+		<Description>Create a 1x5 Barrier for 5 turns starting now. It deals 16 Fire damage</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Entwined Fate</Name>
+		<School>IMP</School>
+		<LvlReq>8</LvlReq>
+		<Speed>0</Speed>
+		<Description>The next Physical Damage you are dealt is also dealt in Glyph form to target opponent. (You are both damaged.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Sheathed in Flame</Name>
+		<School>IMP</School>
+		<LvlReq>8</LvlReq>
+		<Speed>1</Speed>
+		<Description>Deal Fire damage with all weapons until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Sheathed in Storm</Name>
+		<School>IMP</School>
+		<LvlReq>8</LvlReq>
+		<Speed>1</Speed>
+		<Description>Deal Shock damage with all weapons until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Tempest of Terror</Name>
+		<School>IMP</School>
+		<LvlReq>8</LvlReq>
+		<Speed>4</Speed>
+		<Description>For the next 4 turns after this one, the ememy team loses 5 Strength.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Lightning Spark</Name>
+		<School>IMP</School>
+		<LvlReq>9</LvlReq>
+		<Speed>2</Speed>
+		<Description>Deal 4 Shock damage to target. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Charged Shot</Name>
+		<School>IMP</School>
+		<LvlReq>9</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal Imp. lvl damage to target. RCH 4</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Destructive Charge</Name>
+		<School>IMP</School>
+		<LvlReq>9</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deals 12 + d8 of Shock damage. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Flame Splash</Name>
+		<School>IMP</School>
+		<LvlReq>9</LvlReq>
+		<Speed>4</Speed>
+		<Description>Target space and all adjacent spaces are dealt 10 + d20 fire damage. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Snake's Dash</Name>
+		<School>IMP</School>
+		<LvlReq>10</LvlReq>
+		<Speed>0</Speed>
+		<Description>Roll 2 spaces away after a successfull parry.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Reap the Whirlwind</Name>
+		<School>IMP</School>
+		<LvlReq>10</LvlReq>
+		<Speed>1</Speed>
+		<Description>For 4 turns starting now, all ranged attacks are redirected to target you.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Lightning Strike</Name>
+		<School>IMP</School>
+		<LvlReq>10</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deals 12 Shock damage to target within 10 spaces. KB 1 (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Charging Arc</Name>
+		<School>IMP</School>
+		<LvlReq>10</LvlReq>
+		<Speed>4</Speed>
+		<Description>Roll a d4. Deal that much Pure Shock damage to that many targets. Add that much speed on your next turn. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Chromatic Blast</Name>
+		<School>IMP</School>
+		<LvlReq>10</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal 1 Pure damage of every type to up to 2 targets.	(S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Fire Charge</Name>
+		<School>IMP</School>
+		<LvlReq>10</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal 2 Pure Fire damage to every target within 2 spaces. Add 1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Bolster</Name>
+		<School>IMP</School>
+		<LvlReq>11</LvlReq>
+		<Speed>2</Speed>
+		<Description>The next potion target takes this turn has double effect.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Snake’s Insight</Name>
+		<School>IMP</School>
+		<LvlReq>12</LvlReq>
+		<Speed>0</Speed>
+		<Description>Roll a d20, if you roll 8 or more, punch the weapon out of the enemy's hand. Add 1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Blazing Pillar</Name>
+		<School>IMP</School>
+		<LvlReq>12</LvlReq>
+		<Speed>5</Speed>
+		<Description>Create a 2x5 Barrier for 7 turns starting now. It deals 10 Fire damage. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Fire Storm</Name>
+		<School>IMP</School>
+		<LvlReq>13</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 2 Pure Fire damage to 2 targets. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Keen Reflexes</Name>
+		<School>IMP</School>
+		<LvlReq>14</LvlReq>
+		<Speed>0</Speed>
+		<Description>Roll a d20. If 12 or more: grab weapon out of adjacent enemy's hand.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Charge Snap</Name>
+		<School>IMP</School>
+		<LvlReq>14</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 3 Pure Shock damage to target. Add 1 speed on your next turn. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Charged Bolt</Name>
+		<School>IMP</School>
+		<LvlReq>14</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal Imp. lvl damage to target. Add 1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Lightning Storm</Name>
+		<School>IMP</School>
+		<LvlReq>16</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal 10 Shock damage to target. Add 1 speed to your next turn. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Boon of the Ancients</Name>
+		<School>IMP</School>
+		<LvlReq>16</LvlReq>
+		<Speed>5</Speed>
+		<Description>All enemies are knocked back by 2 from you. Heal all allies by 8.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Super Energy Blast</Name>
+		<School>IMP</School>
+		<LvlReq>16</LvlReq>
+		<Speed>6</Speed>
+		<Description>Deal 4 Pure light and 4 Pure fire damage. RCH 1 (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Uncaged Monster</Name>
+		<School>IMP</School>
+		<LvlReq>18</LvlReq>
+		<Speed>3</Speed>
+		<Description>For 4 turns starting now, you may ignore up to 13 damage each turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Will Breaker</Name>
+		<School>IMP</School>
+		<LvlReq>18</LvlReq>
+		<Speed>4</Speed>
+		<Description>Break target battle charm, you take 15 Fire Damage.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Charged Blast</Name>
+		<School>IMP</School>
+		<LvlReq>18</LvlReq>
+		<Speed>5</Speed>
+		<Description>Deal Imp. lvl damage to target. Gain 7 health. Add 1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Reality Storm</Name>
+		<School>INS</School>
+		<LvlReq>5</LvlReq>
+		<Speed>9</Speed>
+		<Description>Target has 5 less speed next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Reverse Digestion</Name>
+		<School>INS</School>
+		<LvlReq>7</LvlReq>
+		<Speed>2</Speed>
+		<Description>Target throws up.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Sheathed in Void</Name>
+		<School>INS</School>
+		<LvlReq>8</LvlReq>
+		<Speed>1</Speed>
+		<Description>Deal Void damage with all weapons until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Binding Strike</Name>
+		<School>INS</School>
+		<LvlReq>8</LvlReq>
+		<Speed>6</Speed>
+		<Description>Target gets -5 Str. for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Retribution</Name>
+		<School>INS</School>
+		<LvlReq>9</LvlReq>
+		<Speed>0</Speed>
+		<Description>The next Glyph damage you take this turn is also dealt to it's caster.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ensnaring Evil</Name>
+		<School>INS</School>
+		<LvlReq>9</LvlReq>
+		<Speed>4</Speed>
+		<Description>Weak target cannot move until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Vampiric Absorption</Name>
+		<School>INS</School>
+		<LvlReq>9</LvlReq>
+		<Speed>5</Speed>
+		<Description>Absorb 8 health from an adjacent target.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Mutually Assured Destruction</Name>
+		<School>INS</School>
+		<LvlReq>10</LvlReq>
+		<Speed>1</Speed>
+		<Description>Deal 20 Glyph Damage to yourself and one target (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Self Infection</Name>
+		<School>INS</School>
+		<LvlReq>11</LvlReq>
+		<Speed>1</Speed>
+		<Description>Gain 1 Void counter. Add 2 speed to your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Collective Trade</Name>
+		<School>INS</School>
+		<LvlReq>12</LvlReq>
+		<Speed>2</Speed>
+		<Description>Drain 1 speed from each teammate, they gain 4 life.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Dark Flame Bolt</Name>
+		<School>INS</School>
+		<LvlReq>12</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 8 Flame/Void Damage. RCH 2. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Leeching Pulse</Name>
+		<School>INS</School>
+		<LvlReq>12</LvlReq>
+		<Speed>3</Speed>
+		<Description>Absorb 5 health from target. Add 1 speed on your next turn. (Cast once per turn.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Mind Probe</Name>
+		<School>INS</School>
+		<LvlReq>12</LvlReq>
+		<Speed>3</Speed>
+		<Description>Know which enemies are weak.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Animate Dead</Name>
+		<School>INS</School>
+		<LvlReq>12</LvlReq>
+		<Speed>5</Speed>
+		<Description>You puppet target normal dead for 3 turns starting now. They have 7 speed.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Break Neck</Name>
+		<School>INS</School>
+		<LvlReq>13</LvlReq>
+		<Speed>4</Speed>
+		<Description>Weak target gains "neck damage" counter. If they have 3 counters, they die.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Obscure</Name>
+		<School>INS</School>
+		<LvlReq>13</LvlReq>
+		<Speed>6</Speed>
+		<Description>Make a Weak target blind until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Encage</Name>
+		<School>INS</School>
+		<LvlReq>14</LvlReq>
+		<Speed>4</Speed>
+		<Description>For 3 turns starting now: if target moves, they take 8 Auto-Damage. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Void Storm</Name>
+		<School>INS</School>
+		<LvlReq>14</LvlReq>
+		<Speed>4</Speed>
+		<Description>Everyone in combat gets 1 Void Counter.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Despicable Deal</Name>
+		<School>INS</School>
+		<LvlReq>14</LvlReq>
+		<Speed>10</Speed>
+		<Description>(Note: must be team's first action.) You and 3 teammates skip this turn. Deal 40 glyph damage to target.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Rest in Pieces</Name>
+		<School>INS</School>
+		<LvlReq>14</LvlReq>
+		<Speed>10</Speed>
+		<Description>For 5 turns starting now: you are inactive; up to 5 targets cannot roll Acc, Dex, or Str. (they can only use static lvl)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Buying Time</Name>
+		<School>INS</School>
+		<LvlReq>15</LvlReq>
+		<Speed>0</Speed>
+		<Description>Lose 3 health. Add 2 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Edge of Death</Name>
+		<School>INS</School>
+		<LvlReq>15</LvlReq>
+		<Speed>0</Speed>
+		<Description>Lose all but 1 health. Add 30 speed to this turn. (Cast once per turn.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Distortion of the Mind</Name>
+		<School>INS</School>
+		<LvlReq>15</LvlReq>
+		<Speed>3</Speed>
+		<Description>Target loses 4 seconds on their next turn. Gain 4 seconds during your next turn. (Cast once per turn)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Shift</Name>
+		<School>INS</School>
+		<LvlReq>15</LvlReq>
+		<Speed>3</Speed>
+		<Description>Lose 5 health. Teleport behind target person.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ankle Crack</Name>
+		<School>INS</School>
+		<LvlReq>15</LvlReq>
+		<Speed>7</Speed>
+		<Description>Break weak target's ankles (IMB).</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Nerve Assault</Name>
+		<School>INS</School>
+		<LvlReq>16</LvlReq>
+		<Speed>1</Speed>
+		<Description>Target is imobilized until end of turn. Your health capacity is reduced by 20 until end of combat.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Black Flame Jet</Name>
+		<School>INS</School>
+		<LvlReq>16</LvlReq>
+		<Speed>6</Speed>
+		<Description>Deal Ins. lvl + Imp. Fire damage. RCH 3.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Binding Devestation</Name>
+		<School>INS</School>
+		<LvlReq>16</LvlReq>
+		<Speed>7</Speed>
+		<Description>Target gets -10 Str. for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Karmic Evil</Name>
+		<School>INS</School>
+		<LvlReq>16</LvlReq>
+		<Speed>7</Speed>
+		<Description>"Battle charm." Until end of combat, magic health gain is now health loss. </Description>
+	</Glyph>
+	<Glyph>
+		<Name>Will Shaper</Name>
+		<School>INS</School>
+		<LvlReq>17</LvlReq>
+		<Speed>2</Speed>
+		<Description>Break target battle charm. Each temmate loses 3 speed.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Infection</Name>
+		<School>INS</School>
+		<LvlReq>17</LvlReq>
+		<Speed>3</Speed>
+		<Description>Target gains 1 void counter. (Cast once per turn.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Mental Intrusion</Name>
+		<School>INS</School>
+		<LvlReq>17</LvlReq>
+		<Speed>3</Speed>
+		<Description>Target loses 2 speed on their next turn. Add 2 speed on your next turn. (Cast't twice per turn.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Suppression</Name>
+		<School>INS</School>
+		<LvlReq>17</LvlReq>
+		<Speed>4</Speed>
+		<Description>No one (including you) can cast glyphs for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Frightining Stare</Name>
+		<School>INS</School>
+		<LvlReq>17</LvlReq>
+		<Speed>7</Speed>
+		<Description>Roll a d20. If 8 or more: your glyphs can't be dodged for 5 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Future Insight</Name>
+		<School>INS</School>
+		<LvlReq>18</LvlReq>
+		<Speed>5</Speed>
+		<Description>"Battle Charm." Until end of combat, you may pay 5 life to re-roll any of your die rolls (including re-rolls).</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Puppetier of Life</Name>
+		<School>INS</School>
+		<LvlReq>18</LvlReq>
+		<Speed>6</Speed>
+		<Description>You puppet target dead for 7 turns starting now. They have 8 speed.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Unintended Consequences</Name>
+		<School>INS</School>
+		<LvlReq>20</LvlReq>
+		<Speed>0</Speed>
+		<Description>Target ranged attack or glyph is instead directed at another possible target of your choice</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Heart Extraction</Name>
+		<School>INS</School>
+		<LvlReq>20</LvlReq>
+		<Speed>1</Speed>
+		<Description>Roll a d20. If 15 or more. you rip out target's heart. (cast once per turn.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Mental Forclosure</Name>
+		<School>INS</School>
+		<LvlReq>20</LvlReq>
+		<Speed>4</Speed>
+		<Description>You and weak target are inactive for 2 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Blight</Name>
+		<School>INS</School>
+		<LvlReq>20</LvlReq>
+		<Speed>5</Speed>
+		<Description>Absorb 4 health	from every target within 2 spaces. (Cast twice per turn.)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Void Spear</Name>
+		<School>INS</School>
+		<LvlReq>20</LvlReq>
+		<Speed>6</Speed>
+		<Description>Deal 10 Fire damage to target. They get 2 void cointers. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Enslave the Lesser</Name>
+		<School>INS</School>
+		<LvlReq>20</LvlReq>
+		<Speed>12</Speed>
+		<Description>For 3 turns starting now: you are inactive; you control weak target. (you cannot make them kill themselves)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Paladin's Bolster</Name>
+		<School>INT</School>
+		<LvlReq>4</LvlReq>
+		<Speed>1</Speed>
+		<Description>Add 3 BLDS, BLDG until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ranger's Bolster</Name>
+		<School>INT</School>
+		<LvlReq>4</LvlReq>
+		<Speed>1</Speed>
+		<Description>Add 3 GUNS, PLAR, until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Thief's Bolster</Name>
+		<School>INT</School>
+		<LvlReq>4</LvlReq>
+		<Speed>1</Speed>
+		<Description>Add 3 BOWS, THRN until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Anticipation</Name>
+		<School>INT</School>
+		<LvlReq>5</LvlReq>
+		<Speed>0</Speed>
+		<Description>Pit your INT to the magic skill of the caster. If you win it gets deflected; if you lose assume you did nothing.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Fool's Errand</Name>
+		<School>INT</School>
+		<LvlReq>5</LvlReq>
+		<Speed>1</Speed>
+		<Description>Target teammate Adds 1 speed on this turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Totally Not Magelight</Name>
+		<School>INT</School>
+		<LvlReq>6</LvlReq>
+		<Speed>1</Speed>
+		<Description>Create ball of light that follows target for 5 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Self Preservation</Name>
+		<School>INT</School>
+		<LvlReq>7</LvlReq>
+		<Speed>2</Speed>
+		<Description>Gain 5 helath.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Renew</Name>
+		<School>INT</School>
+		<LvlReq>7</LvlReq>
+		<Speed>4</Speed>
+		<Description>Add 6 health to every member of the party.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Vitality Buff</Name>
+		<School>INT</School>
+		<LvlReq>7</LvlReq>
+		<Speed>4</Speed>
+		<Description>Add 4 health for self and vicinity.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Sheathed in Frost</Name>
+		<School>INT</School>
+		<LvlReq>8</LvlReq>
+		<Speed>1</Speed>
+		<Description>Deal Freeze damage with all weapons until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Sheathed in Light</Name>
+		<School>INT</School>
+		<LvlReq>8</LvlReq>
+		<Speed>1</Speed>
+		<Description>Deal Light damage with all weapons until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ocular Mirroring</Name>
+		<School>INT</School>
+		<LvlReq>8</LvlReq>
+		<Speed>2</Speed>
+		<Description>For 10 turns starting now, you see out of target's eyes</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ice Wall</Name>
+		<School>INT</School>
+		<LvlReq>8</LvlReq>
+		<Speed>3</Speed>
+		<Description>Create a 1x5 Wall with 25 health.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Creature of the Night</Name>
+		<School>INT</School>
+		<LvlReq>9</LvlReq>
+		<Speed>1</Speed>
+		<Description>Be able to see in pure darkness until end of turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Mental Spike</Name>
+		<School>INT</School>
+		<LvlReq>9</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 3 + X (X is the amount of times you've cast this glyph this combat). Add 1 speed on your next turn. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Repel the Void</Name>
+		<School>INT</School>
+		<LvlReq>9</LvlReq>
+		<Speed>6</Speed>
+		<Description>Heal 1 Void counter for self and vicinity.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Dissipate</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>0</Speed>
+		<Description>Deflect any type of glyph. Lose 5 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Warding Shield</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>0</Speed>
+		<Description>Reduce up to 12 glyph damage of the next attack.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ice Storm</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>3</Speed>
+		<Description>Deal 7 Frost damage to d4 targets. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Fog Bank</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>4</Speed>
+		<Description>Create 3 1x2 Barriers for 4 turns starting now. They take 3 speed to pass through.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Cloak of Deception</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>5</Speed>
+		<Description>Make your self apear as target person for X turns starting now. X = INT lvl.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Cacophony</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>6</Speed>
+		<Description>Fill the room (or area) with unbelievably loud noise for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Lock Finder</Name>
+		<School>INT</School>
+		<LvlReq>10</LvlReq>
+		<Speed>10</Speed>
+		<Description>Unlock simple lock.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Blink</Name>
+		<School>INT</School>
+		<LvlReq>11</LvlReq>
+		<Speed>0</Speed>
+		<Description>The next attack passes trhough you without harm. Lose 5 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Atune Senses</Name>
+		<School>INT</School>
+		<LvlReq>11</LvlReq>
+		<Speed>3</Speed>
+		<Description>Add 5 Perception to your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Silent Step</Name>
+		<School>INT</School>
+		<LvlReq>11</LvlReq>
+		<Speed>3</Speed>
+		<Description>Add 5 Sneak to your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Rebuke the Void</Name>
+		<School>INT</School>
+		<LvlReq>11</LvlReq>
+		<Speed>5</Speed>
+		<Description>Heal 2 Void counters for self and vicinity.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Redirection</Name>
+		<School>INT</School>
+		<LvlReq>12</LvlReq>
+		<Speed>0</Speed>
+		<Description>Target glyph is redirected to target teammate.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Tradeoff</Name>
+		<School>INT</School>
+		<LvlReq>12</LvlReq>
+		<Speed>1</Speed>
+		<Description>Add 1 speed to your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Fog wall of Dispair</Name>
+		<School>INT</School>
+		<LvlReq>12</LvlReq>
+		<Speed>3</Speed>
+		<Description>Create a 1x5 barrier for 3 turns starting now. Only allies can pass through; ranged that goes through does half damage.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Blinding Barrier</Name>
+		<School>INT</School>
+		<LvlReq>12</LvlReq>
+		<Speed>4</Speed>
+		<Description>Create 1x5 Barrier for 5 turns starting now. It deals 3 Pure Light damage, and STG 2. Add 1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Teleportation</Name>
+		<School>INT</School>
+		<LvlReq>12</LvlReq>
+		<Speed>4</Speed>
+		<Description>Transport yourself to target space within 10 spaces away. This is the only glyph you can cast for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Accelerate</Name>
+		<School>INT</School>
+		<LvlReq>13</LvlReq>
+		<Speed>3</Speed>
+		<Description>Add 2 speed on your next turn. (Cast once per turn)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Blood Regrowth</Name>
+		<School>INT</School>
+		<LvlReq>13</LvlReq>
+		<Speed>6</Speed>
+		<Description>Cure target of poisons and infections.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Trickster of Fate</Name>
+		<School>INT</School>
+		<LvlReq>14</LvlReq>
+		<Speed>0</Speed>
+		<Description>Teleport one space in any direction. You can't cast glyphs on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Flight</Name>
+		<School>INT</School>
+		<LvlReq>14</LvlReq>
+		<Speed>3</Speed>
+		<Description>Fly up around 30 feet, then come back down.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Acrobat</Name>
+		<School>INT</School>
+		<LvlReq>14</LvlReq>
+		<Speed>4</Speed>
+		<Description>Add 5 DEX for 2 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Telekinetic Storm</Name>
+		<School>INT</School>
+		<LvlReq>14</LvlReq>
+		<Speed>5</Speed>
+		<Description>Throw debris at target. Deal INT lvl damage.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Glowing Outburst</Name>
+		<School>INT</School>
+		<LvlReq>14</LvlReq>
+		<Speed>7</Speed>
+		<Description>Every enemy gets: STG 2, GB 1, KB 1. Add 1 speed to your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Will Bender</Name>
+		<School>INT</School>
+		<LvlReq>14</LvlReq>
+		<Speed>9</Speed>
+		<Description>Break target battle charm, lose 3 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Copy Paper</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>1</Speed>
+		<Description>Copy contents of target paper onto another.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Mimicry</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>1</Speed>
+		<Description>Assume the total appearance of someone for 6 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Cold Fusiuon</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>3</Speed>
+		<Description>Subtract 4 speed from target's next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Glimpse the Unknown</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>3</Speed>
+		<Description>Know a random glyph target person has equipped.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Sonic Charge</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>4</Speed>
+		<Description>Deal 9 damage to target. STG 1. Add 1 speed to your next turn. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Vapor Weapon</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>4</Speed>
+		<Description>Create the apearance of any weapon in your hand.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Marksman's Eye</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>6</Speed>
+		<Description>Add 4 ACC for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Repayment</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>7</Speed>
+		<Description>"Battle charm." Until end of combat, if you take damage: add 1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Cloak</Name>
+		<School>INT</School>
+		<LvlReq>15</LvlReq>
+		<Speed>10</Speed>
+		<Description>Become Invisible (add 12 Snek) for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Refleciton Prism</Name>
+		<School>INT</School>
+		<LvlReq>16</LvlReq>
+		<Speed>0</Speed>
+		<Description>Reflect target glyph back on it's caster. You cant use magic for 7 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Light Storm</Name>
+		<School>INT</School>
+		<LvlReq>16</LvlReq>
+		<Speed>2</Speed>
+		<Description>Deal 1 Pure Light damage to everyone.	Add 1 speed to your next turn. (S)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Momentum</Name>
+		<School>INT</School>
+		<LvlReq>16</LvlReq>
+		<Speed>4</Speed>
+		<Description>For 3 turns starting now, when you cast a glyph: +1 speed on your next turn.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Shimmering Spells</Name>
+		<School>INT</School>
+		<LvlReq>17</LvlReq>
+		<Speed>7</Speed>
+		<Description>Roll a d20. If 6 or more: your glyphs can't be countered for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Expel the Void</Name>
+		<School>INT</School>
+		<LvlReq>18</LvlReq>
+		<Speed>4</Speed>
+		<Description>Heal 3 Void counters for self and vicinity.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ice Barricade</Name>
+		<School>INT</School>
+		<LvlReq>18</LvlReq>
+		<Speed>7</Speed>
+		<Description>Create a 1x5 Wall with 100 health.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Ward of the Ancients</Name>
+		<School>INT</School>
+		<LvlReq>18</LvlReq>
+		<Speed>8</Speed>
+		<Description>"Battle charm." Until end of combat, each turn you may ignore up to 10 glyph damage.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Rewind</Name>
+		<School>INT</School>
+		<LvlReq>20</LvlReq>
+		<Speed>7</Speed>
+		<Description>Reset the speed of every teammate. (Cast twice per combat)</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Vault Picker</Name>
+		<School>INT</School>
+		<LvlReq>20</LvlReq>
+		<Speed>10</Speed>
+		<Description>Unlock complex lock.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Exile the Void</Name>
+		<School>INT</School>
+		<LvlReq>27</LvlReq>
+		<Speed>5</Speed>
+		<Description>Heal 3 Void counters for self and vicinity. Affected cannot take Void counters for 3 turns starting now.</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Breath of the Cosmos</Name>
+		<School>INT</School>
+		<LvlReq>30</LvlReq>
+		<Speed>0</Speed>
+		<Description>Add 15 speed to this turn (play once per combat).</Description>
+	</Glyph>
+	<Glyph>
+		<Name>Cosmic Translation</Name>
+		<School>INT</School>
+		<LvlReq>32</LvlReq>
+		<Speed>6</Speed>
+		<Description>Lose 5 health.	Until end of turn, target memorized glyph becomes of type INT.</Description>
+	</Glyph>
+</ArrayOfGlyph>

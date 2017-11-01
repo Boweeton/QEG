@@ -1,0 +1,981 @@
+<?xml version="1.0"?>
+<ArrayOfWeaponBlueprint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Fencing Foil</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Dagger</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Slashing Daggers</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Gladius</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Rapier</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Estoc</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Cutlass</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Scimitar</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Katana</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Odachi</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Falchion</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Quaren Khopesh</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Arming Sword</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Longsword (1H or 2H)</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Claymore</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Flamberge</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Highlander's Sword</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Zweihander</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>O'hlloman Titan Blade</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Splitting Hammer</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Mace</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Flail</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Double Flail</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Warhammer</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Wrath Hammer</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Tonfa</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Great Flail</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Punching Gauntlets</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Piercing Sledge</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bearded Axe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Troll Axe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Double Axe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Jutte</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Morning Star</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Quarterstaff</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Crowbill</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Warpick</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Glaive</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Halbard</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Spear</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Winged Spear</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Battle Axe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Nun-Chuck</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bardiche</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Warden's Scythe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Light Scythe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Great Scythe</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Rifle Spear</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Chigiriki</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Pole Flail</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Trident</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>Joe</Name>
+		<DestWeapon>Bident</DestWeapon>
+		<Move>
+			<Name>Say some kind of bullshit</Name>
+			<Description>repeat yourself</Description>
+			<Speed>10</Speed>
+			<Damage>0</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Pitchfork</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Simple Bow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Recurve Bow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Light Crossbow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Sniper’s Crossbow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Great Crossbow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Compound Bow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Archer’s Greatbow</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Muzzleloading Pistol</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Muzzleloading Rifle</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bolt Action Pistol</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bolt Action Rifle</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Short Blunderbuss</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Long Blunderbuss</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>6-Shot Revolver</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>4-Shot Revolver</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Muzzleloading Pistol (beyonetted)</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Muzzleloading Rifle (beyonetted)</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bolt Action Pistol (beyonetted)</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bolt Action Rifle (beyonetted)</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Pistol Blade </DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Throwing star</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Throwing knife</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>War Sling</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Tomahawk</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Javelin</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Clubbing Boomerang</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Atlatl</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Blowdart Gun</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Bullwhip</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Chainwhip</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Longwhip</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Buckler Shield</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Round Shield</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Kite Shield</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Tower Shield</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+
+	<WeaponBlueprint>
+		<Name>blluprintName</Name>
+		<DestWeapon>Teardrop Shield</DestWeapon>
+		<Move>
+			<Name>moveName</Name>
+			<Description>descrip</Description>
+			<Speed>num</Speed>
+			<Damage>num</Damage>
+			</Move>
+	</WeaponBlueprint>
+</ArrayOfWeaponBlueprint>

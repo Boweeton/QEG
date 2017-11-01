@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ArrayOfArmorEnchant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArmorEnchant>
+    <Name>Glowing</Name>
+    <Description>Adds +3 Persona</Description>
+  </ArmorEnchant>
+</ArrayOfArmorEnchant>
