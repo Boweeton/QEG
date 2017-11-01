@@ -355,10 +355,11 @@ namespace Quest_Enemy_Generator
             }
 
             // Assemble armor list
-            //while (Enemy.Armors.Count < armorCount)
-            //{
-                
-            //}
+            Enemy.Armors = new List<Armor>();
+            while (Enemy.Armors.Count < armorCount)
+            {
+                Console.WriteLine("lol");
+            }
 
 
 
