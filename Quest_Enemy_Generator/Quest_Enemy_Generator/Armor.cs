@@ -26,13 +26,20 @@ namespace Quest_Enemy_Generator
             
         }
 
+        public Armor(Armor armor)
+        {
+            Name = armor.Name;
+            IsLight = armor.IsLight;
+            AType = armor.AType;
+            DType = armor.DType;
+        }
+
         /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
         public Armor(string name, bool isLight, ArmorType armorType, int defVal, DefType dType)
         {
             Name = name;
             IsLight = isLight;
             AType = armorType;
-            DefVal = defVal;
             DType = dType;
         }
 
@@ -43,7 +50,6 @@ namespace Quest_Enemy_Generator
         public string Name { get; set; }
         public bool IsLight { get; set; }
         public ArmorType AType { get; set; }
-        public int DefVal { get; set; }
         public DefType DType { get; set; }
 
         #endregion

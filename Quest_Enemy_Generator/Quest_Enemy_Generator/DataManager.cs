@@ -357,9 +357,12 @@ namespace Quest_Enemy_Generator
             // Assemble armor list
             Enemy.Armors = new List<Armor>();
             List<Armor> possibleArmors = new List<Armor>();
-            while (Enemy.Armors.Count < armorCount)
+            foreach (Armor currentArmor in armors)
             {
-                
+                if (currentArmor.IsLight == Enemy.GameClass.WearsLight)
+                {
+                    possibleArmors.Add(currentArmor);
+                }
             }
 
 
