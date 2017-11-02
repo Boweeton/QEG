@@ -32,6 +32,8 @@ namespace Quest_Enemy_Generator
         public List<Armor> Armors { get; set; }
         public List<Glyph> Glyphs { get; set; }
 
+        public int TotalPDef { get; set; }
+        public int TotalGDef { get; set; }
         public int XpYield { get; set; }
         public int AveragePlayerLevel { get; set; }
         public int Level { get; set; }

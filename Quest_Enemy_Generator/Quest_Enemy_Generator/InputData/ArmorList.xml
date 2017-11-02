@@ -1,9 +1,63 @@
 <?xml version="1.0"?>
 <ArrayOfArmor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Armor>
+    <Name>Glitering Steel Helm</Name>
+    <IsLight>false</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Glitering Steel Chestplate</Name>
+    <IsLight>false</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Glitering Steel Gauntlets</Name>
+    <IsLight>false</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Glitering Steel Grievs</Name>
+    <IsLight>false</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Glitering Steel Boots</Name>
+    <IsLight>false</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
     <Name>Steel Helm</Name>
     <IsLight>false</IsLight>
     <AType>Head</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Steel Chestplate</Name>
+    <IsLight>false</IsLight>
+    <AType>Chest</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Steel Gauntlets</Name>
+    <IsLight>false</IsLight>
+    <AType>Hands</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Steel Grieves</Name>
+    <IsLight>false</IsLight>
+    <AType>Legs</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Steel Boots</Name>
+    <IsLight>false</IsLight>
+    <AType>Feet</AType>
     <DType>Physical</DType>
   </Armor>
   <Armor>
@@ -11,5 +65,77 @@
     <IsLight>true</IsLight>
     <AType>Feet</AType>
     <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Wizard's Hat</Name>
+    <IsLight>true</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Wizard's Dainty Gloves</Name>
+    <IsLight>true</IsLight>
+    <AType>Hands</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Leather Hat</Name>
+    <IsLight>true</IsLight>
+    <AType>Head</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Leather Tunic</Name>
+    <IsLight>true</IsLight>
+    <AType>Chest</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Leather Gloves</Name>
+    <IsLight>true</IsLight>
+    <AType>Hands</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Leather Pants</Name>
+    <IsLight>true</IsLight>
+    <AType>Legs</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Leather Boots</Name>
+    <IsLight>true</IsLight>
+    <AType>Feet</AType>
+    <DType>Glyph</DType>
+  </Armor>
+  <Armor>
+    <Name>Hardened Leather Hat</Name>
+    <IsLight>true</IsLight>
+    <AType>Head</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Hardened Leather Tunic</Name>
+    <IsLight>true</IsLight>
+    <AType>Chest</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Hardened Leather Gloves</Name>
+    <IsLight>true</IsLight>
+    <AType>Hands</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Hardened Leather Pants</Name>
+    <IsLight>true</IsLight>
+    <AType>Legs</AType>
+    <DType>Physical</DType>
+  </Armor>
+  <Armor>
+    <Name>Hardened Leather Boots</Name>
+    <IsLight>true</IsLight>
+    <AType>Feet</AType>
+    <DType>Physical</DType>
   </Armor>
 </ArrayOfArmor>

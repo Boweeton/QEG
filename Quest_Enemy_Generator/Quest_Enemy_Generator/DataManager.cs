@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace Quest_Enemy_Generator
@@ -87,8 +88,12 @@ namespace Quest_Enemy_Generator
 
         #region Public Methods
 
-        public void RandomizeEnemy()
+        public void RandomizeEnemy(int averageLevel)
         {
+            Enemy = new Enemy();
+
+            Enemy.AveragePlayerLevel = averageLevel;
+
             double dRoll;
             SetDifficulty();
 
@@ -347,23 +352,70 @@ namespace Quest_Enemy_Generator
                     armorCount = random.Next(0, 4);
                     break;
                 case EnemyDifficulty.Medium:
-                    armorCount = random.Next(1, 5);
+                    armorCount = random.Next(1, 4);
                     break;
                 case EnemyDifficulty.Hard:
-                    armorCount = random.Next(3, 7);
+                    armorCount = random.Next(3, 5);
                     break;
             }
 
-            // Assemble armor list
+            // Assemble possibleArmor list
             Enemy.Armors = new List<Armor>();
             List<Armor> possibleArmors = new List<Armor>();
+
+            // ReSharper disable once LoopCanBeConvertedToQuery
             foreach (Armor currentArmor in armors)
             {
                 if (currentArmor.IsLight == Enemy.GameClass.WearsLight)
                 {
-                    possibleArmors.Add(currentArmor);
+                    possibleArmors.Add(new Armor(currentArmor));
                 }
             }
+
+            // Add armors to current enemy
+            Armor tmpArmor;
+            while (Enemy.Armors.Count <= armorCount)
+            {
+                tmpArmor = possibleArmors[random.Next(possibleArmors.Count)];
+                if (Enemy.Armors.All(armor => armor.AType != tmpArmor.AType))
+                {
+                    Enemy.Armors.Add(tmpArmor);
+                }
+            }
+
+            // Decide armor def values
+            foreach (Armor armor in Enemy.Armors)
+            {
+                switch (Enemy.Difficulty)
+                {
+                    case EnemyDifficulty.Easy:
+                        armor.DefVal = random.Next(1, 3);
+                        break;
+                    case EnemyDifficulty.Medium:
+                        armor.DefVal = random.Next(2, 5);
+                        break;
+                    case EnemyDifficulty.Hard:
+                        armor.DefVal = random.Next(3, 6);
+                        break;
+                }
+            }
+
+            // Total up def values
+            foreach (Armor armor in Enemy.Armors)
+            {
+                switch (armor.DType)
+                {
+                    case DefType.Physical:
+                        Enemy.TotalPDef += armor.DefVal;
+                        break;
+                    case DefType.Glyph:
+                        Enemy.TotalGDef += armor.DefVal;
+                        break;
+                }
+            }
+
+            // Sort the armors
+            Enemy.Armors = Enemy.Armors.OrderBy(armor => armor.AType).ToList();
 
 
 
@@ -375,6 +427,19 @@ namespace Quest_Enemy_Generator
 
         }
 
+        #endregion
+
+        #region Protected Methods
+
+
+
+        #endregion
+
+        #region Private Methods
+
+        /// <summary>
+        /// Sets the enemy diffaculty
+        /// </summary>
         void SetDifficulty()
         {
             // Select difficulty
@@ -392,16 +457,6 @@ namespace Quest_Enemy_Generator
                 Enemy.Difficulty = EnemyDifficulty.Easy;
             }
         }
-
-        #endregion
-
-        #region Protected Methods
-
-
-
-        #endregion
-
-        #region Private Methods
 
         /// <summary>
         /// Reads in an xml file into a generic list taylored to that xml file
@@ -671,6 +726,9 @@ namespace Quest_Enemy_Generator
             weapon.WeaponMoves.Add(weapon.Blueprint.Move);
         }
 
+        /// <summary>
+        /// Loads up glyphs based on possible glyphs
+        /// </summary>
         void AssembleFinalGlyphList()
         {
             const int EasyGlyphCount = 2;

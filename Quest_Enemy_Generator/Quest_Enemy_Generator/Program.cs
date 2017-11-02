@@ -32,13 +32,12 @@ namespace Quest_Enemy_Generator
             const int DescriptionTpSpeedOffset = 50;
             const int SpeedToDamageOffset = 5;
 
-            dm.Enemy.AveragePlayerLevel = 10;
 
             for (int i = 0; i < Repeats; i++)
             {
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
-                dm.RandomizeEnemy();
+                dm.RandomizeEnemy(10);
                 sw.Stop();
                 if (i != 0)
                 {
@@ -91,10 +90,22 @@ namespace Quest_Enemy_Generator
                     Console.WriteLine(TranslateCentered("[Magic stuffs]"));
                     foreach (Glyph enemyGlyph in dm.Enemy.Glyphs)
                     {
-                        Console.WriteLine($"{enemyGlyph.Name, -18}: \"{enemyGlyph.Description}\"");
+                        Console.WriteLine($"{enemyGlyph.Name, -25}: \"{enemyGlyph.Description}\"");
                     }
                 }
+                const int TypeOffset = 10;
+                const int NameOffset = 25;
+                Console.WriteLine(partialPartition);
+                Console.WriteLine(TranslateCentered("[Armors]"));
+                Console.WriteLine($"{"Type",-TypeOffset}{"Name",-NameOffset}DefVal");
+                foreach (Armor arm in dm.Enemy.Armors)
+                {
+                    Console.WriteLine($"{arm.AType.ToString(),-TypeOffset}{arm.Name,-NameOffset}{arm.DefVal}");
+                }
 
+                Console.WriteLine(TranslateCentered($"TOTAL PDef: {dm.Enemy.TotalPDef,-10} TOTAL GDef: {dm.Enemy.TotalGDef}"));
+
+                Console.WriteLine(fullPartition);
                 Console.WriteLine(fullPartition);
             }
             average = average / (Repeats - 1);

@@ -51,6 +51,7 @@ namespace Quest_Enemy_Generator
         public bool IsLight { get; set; }
         public ArmorType AType { get; set; }
         public DefType DType { get; set; }
+        public int DefVal { get; set; }
 
         #endregion
 
