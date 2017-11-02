@@ -45,6 +45,7 @@ namespace Quest_Enemy_Generator
         public int Percep { get; set; }
         public int MagicSkill { get; set; }
         public int WeaponSkill { get; set; }
+        public int Scrips { get; set; }
 
         #endregion
 

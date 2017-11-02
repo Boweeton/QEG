@@ -422,6 +422,37 @@ namespace Quest_Enemy_Generator
 
             // Select Loot
 
+            // Choose Scrips
+            int tmpScrips = 0;
+
+            // Add scrips based off diffaculty
+            switch (Enemy.Difficulty)
+            {
+                case EnemyDifficulty.Easy:
+                    tmpScrips += random.Next(0, 6);
+                    break;
+                case EnemyDifficulty.Medium:
+                    tmpScrips += random.Next(5, 13);
+                    break;
+                case EnemyDifficulty.Hard:
+                    tmpScrips += random.Next(10, 21);
+                    break;
+            }
+
+            // Add scrips based off weapons
+            tmpScrips += random.Next(Enemy.Weapons.Count - 1, Enemy.Weapons.Count + 3);
+
+            // Add scrips based off glyphs
+            if (Enemy.GameClass.CanUseMagic)
+            {
+                tmpScrips += random.Next(Enemy.Glyphs.Count - 1, Enemy.Glyphs.Count + 4);
+            }
+
+            // Add scrips based off armor
+            tmpScrips += random.Next(Enemy.Armors.Count + 3, Enemy.Armors.Count + 7);
+
+            Enemy.Scrips = tmpScrips;
+
         }
 
         #endregion

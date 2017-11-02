@@ -105,6 +105,11 @@ namespace Quest_Enemy_Generator
 
                 Console.WriteLine(TranslateCentered($"TOTAL PDef: {dm.Enemy.TotalPDef,-10} TOTAL GDef: {dm.Enemy.TotalGDef}"));
 
+
+                Console.WriteLine(partialPartition);
+                Console.WriteLine(TranslateCentered("[Loot]"));
+                Console.WriteLine($"Scrips: {dm.Enemy.Scrips}");
+
                 Console.WriteLine(fullPartition);
                 Console.WriteLine(fullPartition);
             }
