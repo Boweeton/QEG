@@ -35,27 +35,16 @@ namespace Quest_Enemy_Generator
         #region Properties
 
         public string Name { get; set; }
-
         public bool WearsLight { get; set; }
-
         public List<string> PossibleWeaponsList { get; set; }
-
         public bool CanUseMagic { get; set; }
-
         public MagicianType MagType { get; set; }
-
         public SkillGrade DexGrade { get; set; }
-
         public SkillGrade AccGrade { get; set; }
-
         public SkillGrade StrGrade { get; set; }
-
         public SkillGrade SnekGrade { get; set; }
-
         public SkillGrade PercepGrade { get; set; }
-
         public SkillGrade MSkillGrade { get; set; }
-
         public SkillGrade WSkillGrade { get; set; }
 
         #endregion

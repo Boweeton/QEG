@@ -356,9 +356,10 @@ namespace Quest_Enemy_Generator
 
             // Assemble armor list
             Enemy.Armors = new List<Armor>();
+            List<Armor> possibleArmors = new List<Armor>();
             while (Enemy.Armors.Count < armorCount)
             {
-                Console.WriteLine("lol");
+                
             }
 
 
