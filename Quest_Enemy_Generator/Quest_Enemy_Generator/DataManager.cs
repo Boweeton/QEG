@@ -21,7 +21,7 @@ namespace Quest_Enemy_Generator
         readonly List<WeaponBlueprint> weaponBlueprints;
         readonly List<WeaponEnchant> weaponEnchants;
         readonly List<WeaponUpgrade> weaponUpgrades;
-        List<Armor> armors;
+        readonly List<Armor> armors;
         List<ArmorBlueprint> armorBlueprints;
         List<ArmorEnchant> armorEnchants;
 
@@ -90,11 +90,8 @@ namespace Quest_Enemy_Generator
 
         public void RandomizeEnemy(int averageLevel)
         {
-            Enemy = new Enemy();
+            Enemy = new Enemy { AveragePlayerLevel = averageLevel };
 
-            Enemy.AveragePlayerLevel = averageLevel;
-
-            double dRoll;
             SetDifficulty();
 
             // Select a Race
@@ -121,7 +118,7 @@ namespace Quest_Enemy_Generator
             const int MediumOffset = 3;
             const int HardOffset = 5;
 
-            dRoll = random.NextDouble();
+            double dRoll = random.NextDouble();
             switch (Enemy.Difficulty)
             {
                 case EnemyDifficulty.Easy:
@@ -792,7 +789,7 @@ namespace Quest_Enemy_Generator
             {
                 loopLength = HardGlyphCount + extraGlyphCount;
             }
-            
+
             // Add the first glyph
             glyphsToActuallyHave.Add(Enemy.Glyphs[random.Next(Enemy.Glyphs.Count)]);
 
