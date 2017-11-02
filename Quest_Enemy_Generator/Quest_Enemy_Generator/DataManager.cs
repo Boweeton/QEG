@@ -343,7 +343,6 @@ namespace Quest_Enemy_Generator
             }
 
             // Select Armor
-
             // Select armor count
             int armorCount = 0;
             switch (Enemy.Difficulty)
@@ -416,8 +415,6 @@ namespace Quest_Enemy_Generator
 
             // Sort the armors
             Enemy.Armors = Enemy.Armors.OrderBy(armor => armor.AType).ToList();
-
-
 
             // Select ArmorBlueprint
 
