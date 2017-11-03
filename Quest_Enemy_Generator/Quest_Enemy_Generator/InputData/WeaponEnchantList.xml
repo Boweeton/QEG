@@ -4,4 +4,24 @@
     <Name>Glimmering</Name>
     <Description>+1 to parry val</Description>
   </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Fire Enchanted</Name>
+    <Description>All moves have fire damage</Description>
+  </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Frost Enchanted</Name>
+    <Description>All moves have frost damage</Description>
+  </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Shock Enchanted</Name>
+    <Description>All moves have shock damage</Description>
+  </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Void Enchanted</Name>
+    <Description>All moves have void damage</Description>
+  </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Light Enchanted</Name>
+    <Description>All moves have light damage</Description>
+  </WeaponEnchant>
 </ArrayOfWeaponEnchant>

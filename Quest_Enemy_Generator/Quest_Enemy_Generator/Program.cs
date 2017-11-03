@@ -25,7 +25,7 @@ namespace Quest_Enemy_Generator
 
             Console.WriteLine(message);
             DataManager dm = new DataManager();
-            const int Repeats = 100;
+            const int Repeats = 50;
             long average = 0;
 
             const int NameToDescriptionOffset = 28;
@@ -57,19 +57,18 @@ namespace Quest_Enemy_Generator
                 Console.WriteLine($"Kill XP: {dm.Enemy.XpYield,-4} Ast XP: {(dm.Enemy.XpYield + 1)/2}");
 
                 Console.WriteLine(partialPartition);
-                const int Partitioning = 4;
+
+                const int Partition = 8;
 
                 Console.WriteLine(TranslateCentered("[Core Stats]"));
-                Console.WriteLine(TranslateCentered($"Health: {dm.Enemy.Health}"));
-                StringBuilder bobTheStringBuilder = new StringBuilder();
-                bobTheStringBuilder.Append($"Dex: {dm.Enemy.Dex,-Partitioning}");
-                bobTheStringBuilder.Append($"Acc: {dm.Enemy.Acc,-Partitioning}");
-                bobTheStringBuilder.Append($"Str: {dm.Enemy.Str,-Partitioning}");
-                bobTheStringBuilder.Append($"Snek: {dm.Enemy.Snek,-Partitioning}");
-                bobTheStringBuilder.Append($"Percep: {dm.Enemy.Percep,-Partitioning}");
-                bobTheStringBuilder.Append($"W-Skill: {dm.Enemy.WeaponSkill,-Partitioning}");
-                bobTheStringBuilder.Append($"M-Skill: {dm.Enemy.MagicSkill,-Partitioning}");
-                Console.WriteLine(TranslateCentered(bobTheStringBuilder.ToString()));
+                Console.WriteLine($"{"Health:",+Partition} {dm.Enemy.Health}");
+                Console.WriteLine($"{"Dex:",+Partition} {dm.Enemy.Dex}");
+                Console.WriteLine($"{"Acc:",+Partition} {dm.Enemy.Acc}");
+                Console.WriteLine($"{"Str:",+Partition} {dm.Enemy.Str}");
+                Console.WriteLine($"{"Percep:",+Partition} {dm.Enemy.Percep}");
+                Console.WriteLine($"{"Snek:",+Partition} {dm.Enemy.Snek}");
+                Console.WriteLine($"{"W-Skill:",+Partition} {dm.Enemy.WeaponSkill}");
+                Console.WriteLine($"{"M-Skill:",+Partition} {dm.Enemy.MagicSkill}");
                 
 
                 Console.WriteLine(TranslateCentered("[Weapons]"));

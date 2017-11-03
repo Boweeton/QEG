@@ -93,6 +93,7 @@ namespace Quest_Enemy_Generator
             Enemy = new Enemy { AveragePlayerLevel = averageLevel };
 
             SetDifficulty();
+            Enemy.Difficulty = EnemyDifficulty.Hard;
 
             // Select a Race
             Enemy.Race = races[random.Next(races.Count)];
