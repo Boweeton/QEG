@@ -157,6 +157,26 @@ namespace Quest_Enemy_Generator
                 }
             }
 
+            // Print the glyphs
+            if (GameClass.CanUseMagic)
+            {
+                // Print front end stuff
+                sb.AppendLine(partialPartition);
+                sb.AppendLine(TranslateCentered("--[Glyphs]--"));
+
+                // Buffer constants
+                const int BufferAfterName = 20;
+                const int BufferAfterSpeed = 7;
+
+                // Print the title
+                sb.AppendLine($"{"Name",-BufferAfterName}{"SPD",-BufferAfterSpeed}Description");
+
+                // Print ALL the glyphs
+                foreach (Glyph glyph in Glyphs)
+                {
+                    sb.AppendLine($"{glyph.Name,-BufferAfterName}{glyph.Speed, -BufferAfterSpeed}{glyph.ToDescripString(ScreenWidth, (BufferAfterSpeed+BufferAfterName))} [{glyph.School}]");
+                }
+            }
 
             sb.AppendLine(fullPartition);
             return sb.ToString();

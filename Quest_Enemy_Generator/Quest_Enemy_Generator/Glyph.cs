@@ -1,4 +1,6 @@
 ﻿
+using System.Text;
+
 namespace Quest_Enemy_Generator
 {
     /// <summary>
@@ -48,6 +50,25 @@ namespace Quest_Enemy_Generator
         public override string ToString()
         {
             return $"{nameof(Name)}: {Name}";
+        }
+
+        public string ToDescripString(int screeWidth, int offset)
+        {
+            // Local declarations
+            int spaceToWorkWith = screeWidth - offset;
+            string tmpDescription = $"{Description} [{School}]";
+            StringBuilder sb = new StringBuilder();
+
+            // Split up the description
+            string[] list = tmpDescription.Split(' ');
+
+            int counter = 0;
+            foreach (string s in list)
+            {
+                
+            }
+
+            return sb.ToString();
         }
 
         #endregion
