@@ -92,6 +92,10 @@ namespace Quest_Enemy_Generator
             sb.AppendLine(fullPartition);
             sb.AppendLine(TranslateCentered("--[Core Info]--"));
 
+            // Print enemy title
+            sb.AppendLine(TranslateCentered($"{Difficulty} : {Race.Name} : {GameClass.Name}"));
+            sb.AppendLine(partialPartition);
+
             for (int i = 0; i < list1.Count; i++)
             {
                 sb.Append(list1[i]);
@@ -99,25 +103,62 @@ namespace Quest_Enemy_Generator
                 sb.AppendLine(list2[i]);
             }
 
+            // Print the weapons
             if (PrintFullWeapons)
             {
                 sb.AppendLine(partialPartition);
                 sb.AppendLine(TranslateCentered("--[Weapons (Full)]--"));
                 foreach (Weapon weapon in Weapons)
                 {
+                    // Calculations
                     string parry = $"(Parry cost: {weapon.ParryVal})";
+                    const int BufferAfterName = 21;
+                    const int BufferAfterDescription = 38;
+                    const int BufferAfterSpeed = 8;
+
                     sb.AppendLine("----------");
-                    sb.Append(weapon.Name);
-                    sb.Append(' ', ScreenWidth - weapon.Name.Length - parry.Length);
+
+                    // Print name
+                    sb.Append(weapon.DisplayName);
+                    sb.Append(' ', ScreenWidth - weapon.DisplayName.Length - parry.Length);
                     sb.AppendLine(parry);
+
+                    // Print moves title
+                    sb.AppendLine($"   {"Name", -BufferAfterName}{"Description", -BufferAfterDescription}{"SPD", -BufferAfterSpeed}DMG");
+
+                    // Print ALL the moves
+                    foreach (WeaponMove move in weapon.WeaponMoves)
+                    {
+                        sb.AppendLine($"   {move.Name, -BufferAfterName}{move.Description, -BufferAfterDescription}{move.Speed, -BufferAfterSpeed}{move.Damage}");
+                    }
                 }
+                sb.AppendLine("----------");
             }
             else
             {
-                
+                // Print front end stuff
+                sb.AppendLine(partialPartition);
+                sb.AppendLine(TranslateCentered("--[Weapons (Compacted)]--"));
+
+                // Print the compacted form of each weapon
+                const int BufferAtEnd = 8;
+                const int BufferAfterSpeed = 6;
+
+                sb.Append($"Name");
+                sb.Append(' ', ScreenWidth - "Name".Length - "SPD".Length - "DMG".Length - (BufferAfterSpeed - "SPD".Length) - BufferAtEnd);
+                sb.AppendLine($"{"SPD",-BufferAfterSpeed}DMG  ");
+
+                foreach (Weapon weapon in Weapons)
+                {
+                    sb.Append($"{weapon.DisplayName}");
+                    sb.Append(' ', ScreenWidth - weapon.DisplayName.Length - "SPD".Length - "DMG".Length - (BufferAfterSpeed - "SPD".Length) - BufferAtEnd);
+                    sb.Append($"{weapon.WeaponMoves[1].Speed, -BufferAfterSpeed}");
+                    sb.AppendLine(weapon.WeaponMoves[1].Damage);
+                }
             }
 
 
+            sb.AppendLine(fullPartition);
             return sb.ToString();
         }
 
@@ -168,7 +209,7 @@ namespace Quest_Enemy_Generator
             // Local declarations
             StringBuilder bobTheStringBuilder = new StringBuilder();
 
-            for (int i = 0; i < (ScreenWidth / 2) - 2; i++)
+            for (int i = 0; i < (ScreenWidth / 2) - 1; i++)
             {
                 bobTheStringBuilder.Append("- ");
             }

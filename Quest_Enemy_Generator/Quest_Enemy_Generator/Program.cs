@@ -35,15 +35,11 @@ namespace Quest_Enemy_Generator
 
             for (int i = 0; i < Repeats; i++)
             {
-                Stopwatch sw = new Stopwatch();
-                sw.Start();
                 dm.RandomizeEnemy(10);
-                sw.Stop();
-                if (i != 0)
-                {
-                    average += sw.ElapsedTicks;
-                }
-                Console.WriteLine($"Calculation time (ms): {sw.ElapsedTicks / 10000f:0.0000}");
+
+                dm.Enemy.PrintFullWeapons = true;
+                dm.Enemy.PrintArmor = true;
+                dm.Enemy.PrintFullGlyphs = true;
 
                 Console.WriteLine(dm.Enemy.ToString());
 

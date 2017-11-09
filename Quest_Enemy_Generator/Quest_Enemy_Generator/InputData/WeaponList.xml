@@ -23,7 +23,7 @@
 
 			<WeaponMove>
 			<Name>Flourish</Name>
-			<Description>Gain 1 Dex and 1 Acc until End of Turn.</Description>
+			<Description>Gain 1 Dex and 1 Acc until E.O.T.</Description>
 			<Speed>2</Speed>
 			<Damage>0</Damage>
 			</WeaponMove>
@@ -736,7 +736,7 @@
 
 			<WeaponMove>
 			<Name>2H Guard</Name>
-			<Description>Add 4 P-Def until end of turn</Description>
+			<Description>Add 4 P-Def until E.O.T</Description>
 			<Speed>R</Speed>
 			<Damage>-</Damage>
 			</WeaponMove>
