@@ -323,7 +323,7 @@
 		<Description>Absorb 8 health from an adjacent target.</Description>
 	</Glyph>
 	<Glyph>
-		<Name>Mutually Assured Destruction</Name>
+		<Name>Mutually Assured End</Name>
 		<School>INS</School>
 		<LvlReq>10</LvlReq>
 		<Speed>1</Speed>

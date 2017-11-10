@@ -17,21 +17,11 @@ namespace Quest_Enemy_Generator
 
             Console.Title = "Quest Enemy Generator";
 
-            string fullPartition = CreateFullPartition();
-            string partialPartition = CreatePartialPartition();
-            Console.WriteLine(fullPartition);
-
-            string message = TranslateCentered("[Primary Information]");
-
-            Console.WriteLine(message);
             DataManager dm = new DataManager();
-            const int Repeats = 50;
+
+            const int Repeats = 100;
+
             long average = 0;
-
-            const int NameToDescriptionOffset = 28;
-            const int DescriptionTpSpeedOffset = 50;
-            const int SpeedToDamageOffset = 5;
-
 
             for (int i = 0; i < Repeats; i++)
             {
@@ -42,73 +32,6 @@ namespace Quest_Enemy_Generator
                 dm.Enemy.PrintFullGlyphs = true;
 
                 Console.WriteLine(dm.Enemy.ToString());
-
-                //const int HeaderPartitioning = 17;
-
-                //Console.WriteLine(TranslateCentered("[Enemy]"));
-                //Console.Write($"Lvl: {dm.Enemy.Level,-HeaderPartitioning}");
-                //Console.Write($"// {dm.Enemy.Difficulty,-HeaderPartitioning}");
-                //Console.Write($"// {dm.Enemy.GameClass.Name,-HeaderPartitioning}");
-                //Console.Write($"// {dm.Enemy.Race.Name,-HeaderPartitioning}");
-                //Console.WriteLine();
-
-                //Console.WriteLine($"Kill XP: {dm.Enemy.XpYield,-4} Ast XP: {(dm.Enemy.XpYield + 1)/2}");
-
-                //Console.WriteLine(partialPartition);
-
-                //const int Partition = 8;
-
-                //Console.WriteLine(TranslateCentered("[Core Stats]"));
-                //Console.WriteLine($"{"Health:",+Partition} {dm.Enemy.Health}");
-                //Console.WriteLine($"{"Dex:",+Partition} {dm.Enemy.Dex}");
-                //Console.WriteLine($"{"Acc:",+Partition} {dm.Enemy.Acc}");
-                //Console.WriteLine($"{"Str:",+Partition} {dm.Enemy.Str}");
-                //Console.WriteLine($"{"Percep:",+Partition} {dm.Enemy.Percep}");
-                //Console.WriteLine($"{"Snek:",+Partition} {dm.Enemy.Snek}");
-                //Console.WriteLine($"{"W-Skill:",+Partition} {dm.Enemy.WeaponSkill}");
-                //Console.WriteLine($"{"M-Skill:",+Partition} {dm.Enemy.MagicSkill}");
-                
-
-                //Console.WriteLine(TranslateCentered("[Weapons]"));
-                //foreach (Weapon currentWeapon in dm.Enemy.Weapons)
-                //{
-                //    Console.WriteLine(partialPartition);
-                //    Console.WriteLine($"{currentWeapon.DisplayName,-35}(Parry Cost: {currentWeapon.ParryVal})");
-                //    Console.WriteLine($"{"Name",-NameToDescriptionOffset}{"Description",-DescriptionTpSpeedOffset}{"SPD",-SpeedToDamageOffset}{"DMG"}");
-                //    foreach (WeaponMove currentMove in currentWeapon.WeaponMoves)
-                //    {
-                //        Console.WriteLine($"{currentMove.Name,-NameToDescriptionOffset}{currentMove.Description,-DescriptionTpSpeedOffset}{currentMove.Speed,-SpeedToDamageOffset}{currentMove.Damage}");
-                //    }
-                //}
-
-                //if (dm.Enemy.GameClass.CanUseMagic)
-                //{
-                //    Console.WriteLine(partialPartition);
-                //    Console.WriteLine(TranslateCentered("[Magic stuffs]"));
-                //    foreach (Glyph enemyGlyph in dm.Enemy.Glyphs)
-                //    {
-                //        Console.WriteLine($"{enemyGlyph.Name, -25}: \"{enemyGlyph.Description}\"");
-                //    }
-                //}
-                //const int TypeOffset = 10;
-                //const int NameOffset = 25;
-                //Console.WriteLine(partialPartition);
-                //Console.WriteLine(TranslateCentered("[Armors]"));
-                //Console.WriteLine($"{"Type",-TypeOffset}{"Name",-NameOffset}DefVal");
-                //foreach (Armor arm in dm.Enemy.Armors)
-                //{
-                //    Console.WriteLine($"{arm.AType.ToString(),-TypeOffset}{arm.Name,-NameOffset}{arm.DefVal}");
-                //}
-
-                //Console.WriteLine(TranslateCentered($"TOTAL PDef: {dm.Enemy.TotalPDef,-10} TOTAL GDef: {dm.Enemy.TotalGDef}"));
-
-
-                //Console.WriteLine(partialPartition);
-                //Console.WriteLine(TranslateCentered("[Loot]"));
-                //Console.WriteLine($"Scrips: {dm.Enemy.Scrips}");
-
-                //Console.WriteLine(fullPartition);
-                //Console.WriteLine(fullPartition);
             }
             average = average / (Repeats - 1);
             Console.WriteLine($"Average calculation time (ms): {average / 10000f:0.0000}");

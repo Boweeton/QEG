@@ -63,9 +63,26 @@ namespace Quest_Enemy_Generator
             string[] list = tmpDescription.Split(' ');
 
             int counter = 0;
-            foreach (string s in list)
+
+            // Print the first word
+            sb.Append(list[0]);
+            counter += list[0].Length;
+
+            for (int i = 1; i < list.Length; i++)
             {
-                
+                if (list[i].Length+1 > (spaceToWorkWith - counter))
+                {
+                    counter = 0;
+                    sb.AppendLine();
+                    sb.Append(' ', offset-1);
+                    sb.Append($" {list[i]}");
+                    counter += (list[i].Length + 1);
+                }
+                else
+                {
+                    sb.Append($" {list[i]}");
+                    counter += (list[i].Length + 1);
+                }
             }
 
             return sb.ToString();

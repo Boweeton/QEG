@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quest_Enemy_Generator", "Quest_Enemy_Generator\Quest_Enemy_Generator.csproj", "{DEFB06AA-E51C-4143-8B19-D54D182446DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QEG_Classes", "QEG_Classes\QEG_Classes.csproj", "{5ADAC708-B728-4B87-9C03-9D18F7E86E95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DEFB06AA-E51C-4143-8B19-D54D182446DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEFB06AA-E51C-4143-8B19-D54D182446DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEFB06AA-E51C-4143-8B19-D54D182446DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ADAC708-B728-4B87-9C03-9D18F7E86E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADAC708-B728-4B87-9C03-9D18F7E86E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADAC708-B728-4B87-9C03-9D18F7E86E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADAC708-B728-4B87-9C03-9D18F7E86E95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

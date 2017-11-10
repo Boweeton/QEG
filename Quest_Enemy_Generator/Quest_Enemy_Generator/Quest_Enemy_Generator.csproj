@@ -42,62 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Armor.cs" />
-    <Compile Include="ArmorBlueprint.cs" />
-    <Compile Include="ArmorEnchant.cs" />
-    <Compile Include="ArmorType.cs" />
-    <Compile Include="DataManager.cs" />
-    <Compile Include="DefType.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="EnemyDifficulty.cs" />
-    <Compile Include="GameClass.cs" />
-    <Compile Include="Glyph.cs" />
-    <Compile Include="MagicianType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Race.cs" />
-    <Compile Include="SkillGrade.cs" />
-    <Compile Include="Weapon.cs" />
-    <Compile Include="WeaponBlueprint.cs" />
-    <Compile Include="WeaponEnchant.cs" />
-    <Compile Include="WeaponMove.cs" />
-    <Compile Include="WeaponType.cs" />
-    <Compile Include="WeaponUpgrade.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="InputData\ArmorBlueprintList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\ArmorEnchantList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\ArmorList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\GameClassList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\GlyphList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\RaceList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\WeaponBlueprintList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\WeaponEnchantList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\WeaponList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="InputData\WeaponUpgradeList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <ProjectReference Include="..\QEG_Classes\QEG_Classes.csproj">
+      <Project>{5ADAC708-B728-4B87-9C03-9D18F7E86E95}</Project>
+      <Name>QEG_Classes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

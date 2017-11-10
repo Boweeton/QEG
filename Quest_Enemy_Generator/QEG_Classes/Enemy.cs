@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Mail;
 using System.Text;
 
@@ -28,30 +29,51 @@ namespace Quest_Enemy_Generator
         #region Properties
 
         public EnemyDifficulty Difficulty { get; set; }
+
         public Race Race { get; set; }
+
         public GameClass GameClass { get; set; }
+
         public List<Weapon> Weapons { get; set; }
+
         public List<Armor> Armors { get; set; }
+
         public List<Glyph> Glyphs { get; set; }
 
         public int TotalPDef { get; set; }
+
         public int TotalGDef { get; set; }
+
         public int TotalSDef { get; set; }
+
         public int XpYield { get; set; }
+
         public int AveragePlayerLevel { get; set; }
+
         public int Level { get; set; }
+
         public int Health { get; set; }
+
         public int Dex { get; set; }
+
         public int Acc { get; set; }
+
         public int Str { get; set; }
+
         public int Snek { get; set; }
+
         public int Percep { get; set; }
+
         public int MagicSkill { get; set; }
+
         public int WeaponSkill { get; set; }
+
         public int Scrips { get; set; }
 
         public bool PrintFullWeapons { get; set; }
+
         public bool PrintFullGlyphs { get; set; }
+
         public bool PrintArmor { get; set; }
 
         #endregion
@@ -124,12 +146,12 @@ namespace Quest_Enemy_Generator
                     sb.AppendLine(parry);
 
                     // Print moves title
-                    sb.AppendLine($"   {"Name", -BufferAfterName}{"Description", -BufferAfterDescription}{"SPD", -BufferAfterSpeed}DMG");
+                    sb.AppendLine($"   {"Name",-BufferAfterName}{"Description",-BufferAfterDescription}{"SPD",-BufferAfterSpeed}DMG");
 
                     // Print ALL the moves
                     foreach (WeaponMove move in weapon.WeaponMoves)
                     {
-                        sb.AppendLine($"   {move.Name, -BufferAfterName}{move.Description, -BufferAfterDescription}{move.Speed, -BufferAfterSpeed}{move.Damage}");
+                        sb.AppendLine($"   {move.Name,-BufferAfterName}{move.Description,-BufferAfterDescription}{move.Speed,-BufferAfterSpeed}{move.Damage}");
                     }
                 }
                 sb.AppendLine("----------");
@@ -152,7 +174,7 @@ namespace Quest_Enemy_Generator
                 {
                     sb.Append($"{weapon.DisplayName}");
                     sb.Append(' ', ScreenWidth - weapon.DisplayName.Length - "SPD".Length - "DMG".Length - (BufferAfterSpeed - "SPD".Length) - BufferAtEnd);
-                    sb.Append($"{weapon.WeaponMoves[1].Speed, -BufferAfterSpeed}");
+                    sb.Append($"{weapon.WeaponMoves[1].Speed,-BufferAfterSpeed}");
                     sb.AppendLine(weapon.WeaponMoves[1].Damage);
                 }
             }
@@ -160,21 +182,71 @@ namespace Quest_Enemy_Generator
             // Print the glyphs
             if (GameClass.CanUseMagic)
             {
+                if (PrintFullGlyphs)
+                {
+                    // Print front end stuff
+                    sb.AppendLine(partialPartition);
+                    sb.AppendLine(TranslateCentered("--[Glyphs (Full)]--"));
+
+                    // Buffer constants
+                    const int BufferAfterName = 20;
+                    const int BufferAfterSpeed = 7;
+
+                    // Print the title
+                    sb.AppendLine($"{"Name",-BufferAfterName}{"SPD",-BufferAfterSpeed}Description");
+
+                    // Print ALL the glyphs
+                    foreach (Glyph glyph in Glyphs)
+                    {
+                        sb.AppendLine($"{glyph.Name,-BufferAfterName}{glyph.Speed,-BufferAfterSpeed}{glyph.ToDescripString(ScreenWidth, BufferAfterSpeed + BufferAfterName)}");
+                        sb.AppendLine();
+                    }
+                }
+                else
+                {
+                    // Print front end stuff
+                    sb.AppendLine(partialPartition);
+                    sb.AppendLine(TranslateCentered("--[Glyphs (Compact)]--"));
+
+                    // Print glyphs
+                    int counter = 0;
+
+                    // Print the first one
+                    sb.Append($"({Glyphs[0].Name})");
+                    counter += Glyphs[0].Name.Length + 2;
+
+                    for (int i = 1; i < Glyphs.Count; i++)
+                    {
+                        if (Glyphs[i].Name.Length + 4 > ScreenWidth - counter)
+                        {
+                            sb.AppendLine();
+                            counter = 0;
+                            sb.Append($"({Glyphs[i].Name})");
+                            counter += Glyphs[i].Name.Length + 2;
+                        }
+                        else
+                        {
+                            sb.Append($"  ({Glyphs[i].Name})");
+                            counter += Glyphs[i].Name.Length + 4;
+                        }
+                    }
+                    sb.AppendLine();
+                }
+            }
+
+            // Print armor
+            if (PrintArmor)
+            {
                 // Print front end stuff
                 sb.AppendLine(partialPartition);
-                sb.AppendLine(TranslateCentered("--[Glyphs]--"));
+                sb.AppendLine(TranslateCentered("--[Armor]--"));
 
-                // Buffer constants
-                const int BufferAfterName = 20;
-                const int BufferAfterSpeed = 7;
-
-                // Print the title
-                sb.AppendLine($"{"Name",-BufferAfterName}{"SPD",-BufferAfterSpeed}Description");
-
-                // Print ALL the glyphs
-                foreach (Glyph glyph in Glyphs)
+                //Print ALL the armor
+                const int TypeOffset = 10;
+                const int NameOffset = 10;
+                foreach (Armor arm in Armors)
                 {
-                    sb.AppendLine($"{glyph.Name,-BufferAfterName}{glyph.Speed, -BufferAfterSpeed}{glyph.ToDescripString(ScreenWidth, (BufferAfterSpeed+BufferAfterName))} [{glyph.School}]");
+                    sb.AppendLine($"{arm.AType.ToString(),-TypeOffset}{arm.Name,-NameOffset}{arm.DefVal}");
                 }
             }
 
