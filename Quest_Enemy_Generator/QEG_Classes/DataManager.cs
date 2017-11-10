@@ -93,7 +93,6 @@ namespace Quest_Enemy_Generator
             Enemy = new Enemy { AveragePlayerLevel = averageLevel };
 
             SetDifficulty();
-            Enemy.Difficulty = EnemyDifficulty.Hard;
 
             // Select a Race
             Enemy.Race = races[random.Next(races.Count)];
@@ -320,7 +319,7 @@ namespace Quest_Enemy_Generator
 
             // Build the list of POSSIBLE glyphs
             List<Glyph> tmpPossibleGlyphs = new List<Glyph>();
-            if (Enemy.GameClass.MagType != MagicianType.NON)
+            if (Enemy.GameClass.CanUseMagic)
             {
                 // ReSharper disable once LoopCanBeConvertedToQuery
                 foreach (Glyph currentGlyph in glyphs)

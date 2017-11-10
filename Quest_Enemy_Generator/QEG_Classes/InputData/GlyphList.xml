@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfGlyph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<Glyph>
-		<Name>Bone Crack</Name>
-		<School>IMP</School>
-		<LvlReq>3</LvlReq>
-		<Speed>3</Speed>
-		<Description>Deals 8 Damage to target within 4 spaces. If IMP is 15 or more, Imobilize. (S)</Description>
-	</Glyph>
+  <Glyph>
+    <Name>Bone Crack</Name>
+    <School>IMP</School>
+    <LvlReq>3</LvlReq>
+    <Speed>3</Speed>
+    <Description>Deals 8 Damage to target within 4 spaces. If IMP is 15 or more, Imobilize. (S)</Description>
+  </Glyph>
 	<Glyph>
 		<Name>Flash Bang</Name>
 		<School>IMP</School>
