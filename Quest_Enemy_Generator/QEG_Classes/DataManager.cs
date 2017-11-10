@@ -22,8 +22,6 @@ namespace Quest_Enemy_Generator
         readonly List<WeaponEnchant> weaponEnchants;
         readonly List<WeaponUpgrade> weaponUpgrades;
         readonly List<Armor> armors;
-        List<ArmorBlueprint> armorBlueprints;
-        List<ArmorEnchant> armorEnchants;
 
         // Create the RNG
         readonly Random random;
@@ -59,8 +57,6 @@ namespace Quest_Enemy_Generator
             weaponUpgrades = ReadInFromXml<List<WeaponUpgrade>>(nameof(WeaponUpgrade));
             glyphs = ReadInFromXml<List<Glyph>>(nameof(Glyph));
             armors = ReadInFromXml<List<Armor>>(nameof(Armor));
-            armorBlueprints = ReadInFromXml<List<ArmorBlueprint>>(nameof(ArmorBlueprint));
-            armorEnchants = ReadInFromXml<List<ArmorEnchant>>(nameof(ArmorEnchant));
 
             // Set each weapon's "DisplayName" to the base name
             foreach (Weapon weapon in weapons)
@@ -71,7 +67,6 @@ namespace Quest_Enemy_Generator
             // Create the enemy
             Enemy = new Enemy();
             random = new Random();
-            PrintList = new List<Enemy>();
         }
 
         #endregion
@@ -79,14 +74,73 @@ namespace Quest_Enemy_Generator
         #region Properties
 
         public Enemy Enemy { get; set; }
-
-        public List<Enemy> PrintList { get; set; }
+        public List<Enemy> EnemyList { get; set; }
 
         #endregion
 
         #region Methods
 
         #region Public Methods
+
+        public void FillEnemyList(int avgLevel, int enemyCount)
+        {
+            // Initialize the enemyList
+            EnemyList = new List<Enemy>();
+
+            for (int i = 0; i < enemyCount; i++)
+            {
+                RandomizeEnemy(avgLevel);
+                EnemyList.Add(Enemy);
+            }
+        }
+
+        public List<string> FormatListForDisplay(bool printAllWeapons, bool printAllGlyphs, bool printAllArmor)
+        {
+            List<string> returnList = new List<string>();
+
+            foreach (Enemy enemy in EnemyList)
+            {
+                enemy.PrintFullWeapons = printAllWeapons;
+                enemy.PrintFullGlyphs = printAllGlyphs;
+                enemy.PrintArmor = printAllArmor;
+                returnList.Add(enemy.ToString());
+            }
+
+            return returnList;
+        }
+
+        public List<string> FormatListForTxtPrinting(bool printAllWeapons, bool printAllGlyphs, bool printAllArmor)
+        {
+            // Local declarations
+            const int PageHeight = 46;
+            List<string> returnList = new List<string>();
+
+            int counter = 0;
+
+            foreach (Enemy enemy in EnemyList)
+            {
+                enemy.PrintFullWeapons = printAllWeapons;
+                enemy.PrintFullGlyphs = printAllGlyphs;
+                enemy.PrintArmor = printAllArmor;
+
+                string enemyString = enemy.ToString();
+                int currentHeight = CountLines(enemyString);
+
+                if (currentHeight > PageHeight - counter)
+                {
+                    for (int i = 0; i < (PageHeight - counter) + 1; i++)
+                    {
+                        returnList.Add(" ");
+                    }
+                    counter = 0;
+                }
+                counter += currentHeight;
+
+                returnList.Add(enemyString);
+            }
+
+            return returnList;
+        }
 
         public void RandomizeEnemy(int averageLevel)
         {
@@ -463,6 +517,16 @@ namespace Quest_Enemy_Generator
         #region Private Methods
 
         /// <summary>
+        /// Returns how many line return characters are in the provided string.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        int CountLines(string str)
+        {
+            return str.Length - str.Replace("\n", "").Length;
+        }
+
+        /// <summary>
         /// Sets the enemy diffaculty
         /// </summary>
         void SetDifficulty()
@@ -773,21 +837,20 @@ namespace Quest_Enemy_Generator
             }
 
             List<Glyph> glyphsToActuallyHave = new List<Glyph>();
-            Glyph tmpGlyph;
 
             // Assemble loop length
             int loopLength = 0;
-            if (Enemy.Difficulty == EnemyDifficulty.Easy)
+            switch (Enemy.Difficulty)
             {
-                loopLength = EasyGlyphCount + extraGlyphCount;
-            }
-            if (Enemy.Difficulty == EnemyDifficulty.Medium)
-            {
-                loopLength = MediumGlyphCount + extraGlyphCount;
-            }
-            if (Enemy.Difficulty == EnemyDifficulty.Hard)
-            {
-                loopLength = HardGlyphCount + extraGlyphCount;
+                case EnemyDifficulty.Easy:
+                    loopLength = EasyGlyphCount + extraGlyphCount;
+                    break;
+                case EnemyDifficulty.Medium:
+                    loopLength = MediumGlyphCount + extraGlyphCount;
+                    break;
+                case EnemyDifficulty.Hard:
+                    loopLength = HardGlyphCount + extraGlyphCount;
+                    break;
             }
 
             // Add the first glyph
@@ -796,7 +859,7 @@ namespace Quest_Enemy_Generator
             // Add the rest of the glyphs
             while (glyphsToActuallyHave.Count < loopLength)
             {
-                tmpGlyph = Enemy.Glyphs[random.Next(Enemy.Glyphs.Count)];
+                Glyph tmpGlyph = Enemy.Glyphs[random.Next(Enemy.Glyphs.Count)];
                 if (!glyphsToActuallyHave.Contains(tmpGlyph))
                 {
                     glyphsToActuallyHave.Add(tmpGlyph);

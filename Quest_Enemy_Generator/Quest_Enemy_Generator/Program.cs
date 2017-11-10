@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
@@ -19,33 +20,17 @@ namespace Quest_Enemy_Generator
 
             DataManager dm = new DataManager();
 
-            const int Repeats = 100;
+            const int Repeats = 8;
+            const int Level = 13;
 
-            int counter = 0;
 
-            for (int i = 0; i < Repeats; i++)
+            // New way of printing
+            dm.FillEnemyList(Level, Repeats);
+            List<string> printList = dm.FormatListForDisplay(true, true, false);
+
+            foreach (string s in printList)
             {
-                const int PageHeight = 46;
-                dm.RandomizeEnemy(30);
-
-                dm.Enemy.PrintFullWeapons = true;
-                dm.Enemy.PrintArmor = true;
-                dm.Enemy.PrintFullGlyphs = true;
-
-                string enemyString = dm.Enemy.ToString();
-                int currentHeight = CountLines(enemyString);
-
-                if (currentHeight > PageHeight - counter)
-                {
-                    for (int j = 0; j < (PageHeight-counter); j++)
-                    {
-                        Console.WriteLine();
-                    }
-                    counter = 0;
-                }
-                counter += currentHeight;
-
-                Console.WriteLine(enemyString);
+                Console.WriteLine(s);
             }
         }
 
