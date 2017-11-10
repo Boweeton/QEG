@@ -22,7 +22,10 @@ namespace Quest_Enemy_Generator
 
             // New way of printing
             dm.FillEnemyList(Level, Repeats);
-            List<string> printList = dm.FormatListForDisplay(false, false, false);
+            dm.PrintWeaponsFull = true;
+            dm.PrintGlyphsFull = true;
+            dm.PrintArmorFull = true;
+            List<string> printList = dm.FormatListForDisplay();
 
             foreach (string s in printList)
             {

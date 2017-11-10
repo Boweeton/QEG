@@ -75,6 +75,9 @@ namespace Quest_Enemy_Generator
 
         public Enemy Enemy { get; set; }
         public List<Enemy> EnemyList { get; set; }
+        public bool PrintWeaponsFull { get; set; }
+        public bool PrintGlyphsFull { get; set; }
+        public bool PrintArmorFull { get; set; }
 
         #endregion
 
@@ -94,22 +97,22 @@ namespace Quest_Enemy_Generator
             }
         }
 
-        public List<string> FormatListForDisplay(bool printAllWeapons, bool printAllGlyphs, bool printAllArmor)
+        public List<string> FormatListForDisplay()
         {
             List<string> returnList = new List<string>();
 
             foreach (Enemy enemy in EnemyList)
             {
-                enemy.PrintFullWeapons = printAllWeapons;
-                enemy.PrintFullGlyphs = printAllGlyphs;
-                enemy.PrintArmor = printAllArmor;
+                enemy.PrintFullWeapons = PrintWeaponsFull;
+                enemy.PrintFullGlyphs = PrintGlyphsFull;
+                enemy.PrintArmor = PrintArmorFull;
                 returnList.Add(enemy.ToString());
             }
 
             return returnList;
         }
 
-        public List<string> FormatListForTxtPrinting(bool printAllWeapons, bool printAllGlyphs, bool printAllArmor)
+        public List<string> FormatListForTxtPrinting()
         {
             // Local declarations
             const int PageHeight = 46;
@@ -119,9 +122,9 @@ namespace Quest_Enemy_Generator
 
             foreach (Enemy enemy in EnemyList)
             {
-                enemy.PrintFullWeapons = printAllWeapons;
-                enemy.PrintFullGlyphs = printAllGlyphs;
-                enemy.PrintArmor = printAllArmor;
+                enemy.PrintFullWeapons = PrintWeaponsFull;
+                enemy.PrintFullGlyphs = PrintGlyphsFull;
+                enemy.PrintArmor = PrintArmorFull;
 
                 string enemyString = enemy.ToString();
                 int currentHeight = CountLines(enemyString);

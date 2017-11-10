@@ -60,6 +60,7 @@
             this.displayFullGlyphs.TabIndex = 1;
             this.displayFullGlyphs.Text = "Display full glyphs";
             this.displayFullGlyphs.UseVisualStyleBackColor = true;
+            this.displayFullGlyphs.CheckedChanged += new System.EventHandler(this.displayFullGlyphs_CheckedChanged);
             // 
             // displayFullArmor
             // 
@@ -70,6 +71,7 @@
             this.displayFullArmor.TabIndex = 2;
             this.displayFullArmor.Text = "Display full armor";
             this.displayFullArmor.UseVisualStyleBackColor = true;
+            this.displayFullArmor.CheckedChanged += new System.EventHandler(this.displayFullArmor_CheckedChanged);
             // 
             // avgPlrLvl
             // 
@@ -97,6 +99,7 @@
             this.randomize.TabIndex = 5;
             this.randomize.Text = "Randomize";
             this.randomize.UseVisualStyleBackColor = true;
+            this.randomize.Click += new System.EventHandler(this.randomize_Click);
             // 
             // enemyCountLabel
             // 
@@ -124,7 +127,6 @@
             this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.output.Size = new System.Drawing.Size(931, 695);
             this.output.TabIndex = 8;
-            this.output.WordWrap = false;
             // 
             // printButton
             // 
