@@ -58,11 +58,6 @@ namespace QEG_Windows_Application
             dm.FillEnemyList(avgLvl, count);
 
             UpdateAndDisplayToOutput();
-
-            // Scroll to top of output box
-            output.SelectionStart = 0;
-            output.SelectionLength = 1;
-            output.ScrollToCaret();
         }
 
         void UpdateAndDisplayToOutput()
@@ -82,6 +77,11 @@ namespace QEG_Windows_Application
             string printingString = string.Join(Environment.NewLine, printList);
 
             output.AppendText(printingString);
+
+            // Scroll to top of output box
+            output.SelectionStart = 0;
+            output.SelectionLength = 1;
+            output.ScrollToCaret();
         }
 
         void DisplayFullWeapons_CheckedChanged(object sender, EventArgs e)
