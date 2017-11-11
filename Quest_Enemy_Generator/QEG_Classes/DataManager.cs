@@ -903,7 +903,7 @@ namespace Quest_Enemy_Generator
                     break;
             }
 
-            List<Glyph> glyphsToActuallyHave = new List<Glyph>();
+            List<Glyph> actualGlyphs = new List<Glyph>();
 
             // Assemble loop length
             int loopLength = 0;
@@ -921,24 +921,24 @@ namespace Quest_Enemy_Generator
             }
 
             // Add the first glyph
-            glyphsToActuallyHave.Add(Enemy.Glyphs[random.Next(Enemy.Glyphs.Count)]);
+            actualGlyphs.Add(Enemy.Glyphs[random.Next(Enemy.Glyphs.Count)]);
 
             // Add the rest of the glyphs
-            while (glyphsToActuallyHave.Count < loopLength)
+            while (actualGlyphs.Count < loopLength)
             {
                 Glyph tmpGlyph = Enemy.Glyphs[random.Next(Enemy.Glyphs.Count)];
-                if (!glyphsToActuallyHave.Contains(tmpGlyph))
+                if (!actualGlyphs.Contains(tmpGlyph))
                 {
-                    glyphsToActuallyHave.Add(tmpGlyph);
+                    actualGlyphs.Add(tmpGlyph);
                 }
-                if (glyphsToActuallyHave.Count == Enemy.Glyphs.Count)
+                if (actualGlyphs.Count == Enemy.Glyphs.Count)
                 {
                     break;
                 }
             }
 
             // Add the final glyph list to the Enemy.Glyph list
-            Enemy.Glyphs = glyphsToActuallyHave;
+            Enemy.Glyphs = actualGlyphs;
         }
 
         #endregion

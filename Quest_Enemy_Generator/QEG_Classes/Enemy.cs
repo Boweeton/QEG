@@ -38,7 +38,7 @@ namespace Quest_Enemy_Generator
 
         public List<Armor> Armors { get; set; }
 
-        public List<Glyph> Glyphs { get; set; }
+        public List<Glyph> Glyphs { get; set; } = new List<Glyph>();
 
         public int TotalPDef { get; set; }
 
