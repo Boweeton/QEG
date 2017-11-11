@@ -53,7 +53,7 @@ namespace QEG_Windows_Application
                 {
                     switch (args.KeyCode)
                     {
-                        case Keys.S when printButton.Enabled:
+                        case Keys.S when saveButton.Enabled:
                             SaveToFile();
                             break;
                         case Keys.R:
@@ -63,12 +63,19 @@ namespace QEG_Windows_Application
                 }
             };
 
-            printButton.Enabled = false;
+            saveButton.Enabled = false;
+            gameClassNorowerBox.CheckOnClick = true;
 
         }
 
         void Form1_Load(object sender, EventArgs e)
         {
+            // Auto set the Narrow Class
+            for (int i = 0; i < gameClassNorowerBox.Items.Count; i++)
+            {
+                gameClassNorowerBox.SetItemCheckState(i, CheckState.Checked);
+            }
+
             // Set the focus on to the avgPlrLvl box
             avgPlrLvlBox.Select();
             avgPlrLvlBox.SelectAll();
@@ -88,7 +95,7 @@ namespace QEG_Windows_Application
 
             UpdateAndDisplayToOutput();
 
-            printButton.Enabled = true;
+            saveButton.Enabled = true;
         }
 
         void UpdateAndDisplayToOutput()

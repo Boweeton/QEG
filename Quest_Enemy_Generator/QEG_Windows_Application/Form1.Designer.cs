@@ -34,28 +34,31 @@
             this.displayFullArmor = new System.Windows.Forms.CheckBox();
             this.avgPlrLvlBox = new System.Windows.Forms.TextBox();
             this.avgPlrLvlLabel = new System.Windows.Forms.Label();
-            this.randomize = new System.Windows.Forms.Button();
+            this.randomizeButton = new System.Windows.Forms.Button();
             this.enemyCountLabel = new System.Windows.Forms.Label();
             this.enemyCountBox = new System.Windows.Forms.TextBox();
             this.output = new System.Windows.Forms.TextBox();
-            this.printButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.formatOptions = new System.Windows.Forms.GroupBox();
             this.inputData = new System.Windows.Forms.GroupBox();
             this.randomModes = new System.Windows.Forms.ListBox();
             this.randomMode = new System.Windows.Forms.GroupBox();
             this.saveFileToTxtDialog = new System.Windows.Forms.SaveFileDialog();
+            this.gameClassNarowingGroupBox = new System.Windows.Forms.GroupBox();
+            this.gameClassNorowerBox = new System.Windows.Forms.CheckedListBox();
             this.formatOptions.SuspendLayout();
             this.inputData.SuspendLayout();
             this.randomMode.SuspendLayout();
+            this.gameClassNarowingGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // displayFullWeapons
             // 
             this.displayFullWeapons.AutoSize = true;
-            this.displayFullWeapons.Location = new System.Drawing.Point(4, 17);
-            this.displayFullWeapons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayFullWeapons.Location = new System.Drawing.Point(5, 21);
+            this.displayFullWeapons.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.displayFullWeapons.Name = "displayFullWeapons";
-            this.displayFullWeapons.Size = new System.Drawing.Size(122, 17);
+            this.displayFullWeapons.Size = new System.Drawing.Size(158, 21);
             this.displayFullWeapons.TabIndex = 0;
             this.displayFullWeapons.Text = "Display full weapons";
             this.displayFullWeapons.UseVisualStyleBackColor = true;
@@ -64,10 +67,10 @@
             // displayFullGlyphs
             // 
             this.displayFullGlyphs.AutoSize = true;
-            this.displayFullGlyphs.Location = new System.Drawing.Point(4, 39);
-            this.displayFullGlyphs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayFullGlyphs.Location = new System.Drawing.Point(5, 48);
+            this.displayFullGlyphs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.displayFullGlyphs.Name = "displayFullGlyphs";
-            this.displayFullGlyphs.Size = new System.Drawing.Size(109, 17);
+            this.displayFullGlyphs.Size = new System.Drawing.Size(143, 21);
             this.displayFullGlyphs.TabIndex = 1;
             this.displayFullGlyphs.Text = "Display full glyphs";
             this.displayFullGlyphs.UseVisualStyleBackColor = true;
@@ -76,10 +79,10 @@
             // displayFullArmor
             // 
             this.displayFullArmor.AutoSize = true;
-            this.displayFullArmor.Location = new System.Drawing.Point(4, 61);
-            this.displayFullArmor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayFullArmor.Location = new System.Drawing.Point(5, 75);
+            this.displayFullArmor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.displayFullArmor.Name = "displayFullArmor";
-            this.displayFullArmor.Size = new System.Drawing.Size(105, 17);
+            this.displayFullArmor.Size = new System.Drawing.Size(139, 21);
             this.displayFullArmor.TabIndex = 2;
             this.displayFullArmor.Text = "Display full armor";
             this.displayFullArmor.UseVisualStyleBackColor = true;
@@ -87,90 +90,88 @@
             // 
             // avgPlrLvlBox
             // 
-            this.avgPlrLvlBox.Location = new System.Drawing.Point(4, 31);
-            this.avgPlrLvlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.avgPlrLvlBox.Location = new System.Drawing.Point(5, 38);
+            this.avgPlrLvlBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.avgPlrLvlBox.Name = "avgPlrLvlBox";
-            this.avgPlrLvlBox.Size = new System.Drawing.Size(75, 20);
+            this.avgPlrLvlBox.Size = new System.Drawing.Size(99, 22);
             this.avgPlrLvlBox.TabIndex = 0;
             // 
             // avgPlrLvlLabel
             // 
             this.avgPlrLvlLabel.AutoSize = true;
             this.avgPlrLvlLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.avgPlrLvlLabel.Location = new System.Drawing.Point(5, 15);
-            this.avgPlrLvlLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.avgPlrLvlLabel.Location = new System.Drawing.Point(7, 18);
             this.avgPlrLvlLabel.Name = "avgPlrLvlLabel";
-            this.avgPlrLvlLabel.Size = new System.Drawing.Size(76, 13);
+            this.avgPlrLvlLabel.Size = new System.Drawing.Size(99, 17);
             this.avgPlrLvlLabel.TabIndex = 4;
             this.avgPlrLvlLabel.Text = "Average Level";
             this.avgPlrLvlLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // randomize
+            // randomizeButton
             // 
-            this.randomize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.randomize.Location = new System.Drawing.Point(248, 12);
-            this.randomize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.randomize.Name = "randomize";
-            this.randomize.Size = new System.Drawing.Size(175, 40);
-            this.randomize.TabIndex = 1;
-            this.randomize.Text = "Randomize";
-            this.randomize.UseVisualStyleBackColor = true;
-            this.randomize.Click += new System.EventHandler(this.randomize_Click);
+            this.randomizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.randomizeButton.Location = new System.Drawing.Point(331, 15);
+            this.randomizeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.randomizeButton.Name = "randomizeButton";
+            this.randomizeButton.Size = new System.Drawing.Size(233, 49);
+            this.randomizeButton.TabIndex = 1;
+            this.randomizeButton.Text = "Randomize";
+            this.randomizeButton.UseVisualStyleBackColor = true;
+            this.randomizeButton.Click += new System.EventHandler(this.randomize_Click);
             // 
             // enemyCountLabel
             // 
             this.enemyCountLabel.AutoSize = true;
             this.enemyCountLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.enemyCountLabel.Location = new System.Drawing.Point(8, 51);
-            this.enemyCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.enemyCountLabel.Location = new System.Drawing.Point(11, 63);
             this.enemyCountLabel.Name = "enemyCountLabel";
-            this.enemyCountLabel.Size = new System.Drawing.Size(70, 13);
+            this.enemyCountLabel.Size = new System.Drawing.Size(92, 17);
             this.enemyCountLabel.TabIndex = 2;
             this.enemyCountLabel.Text = "Enemy Count";
             this.enemyCountLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // enemyCountBox
             // 
-            this.enemyCountBox.Location = new System.Drawing.Point(4, 67);
-            this.enemyCountBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyCountBox.Location = new System.Drawing.Point(5, 82);
+            this.enemyCountBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.enemyCountBox.Name = "enemyCountBox";
-            this.enemyCountBox.Size = new System.Drawing.Size(75, 20);
+            this.enemyCountBox.Size = new System.Drawing.Size(99, 22);
             this.enemyCountBox.TabIndex = 1;
             // 
             // output
             // 
             this.output.Font = new System.Drawing.Font("Lucida Console", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(11, 134);
-            this.output.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.output.Location = new System.Drawing.Point(12, 164);
+            this.output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.output.Multiline = true;
             this.output.Name = "output";
             this.output.ReadOnly = true;
             this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.output.Size = new System.Drawing.Size(700, 540);
-            this.output.TabIndex = 8;
+            this.output.Size = new System.Drawing.Size(932, 664);
+            this.output.TabIndex = 2;
             // 
-            // printButton
+            // saveButton
             // 
-            this.printButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printButton.Location = new System.Drawing.Point(248, 70);
-            this.printButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(175, 40);
-            this.printButton.TabIndex = 9;
-            this.printButton.Text = "Save";
-            this.printButton.UseVisualStyleBackColor = true;
-            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(331, 86);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(233, 49);
+            this.saveButton.TabIndex = 9;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // formatOptions
             // 
             this.formatOptions.Controls.Add(this.displayFullWeapons);
             this.formatOptions.Controls.Add(this.displayFullGlyphs);
             this.formatOptions.Controls.Add(this.displayFullArmor);
-            this.formatOptions.Location = new System.Drawing.Point(100, 10);
-            this.formatOptions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formatOptions.Location = new System.Drawing.Point(133, 12);
+            this.formatOptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.formatOptions.Name = "formatOptions";
-            this.formatOptions.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.formatOptions.Size = new System.Drawing.Size(127, 83);
+            this.formatOptions.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.formatOptions.Size = new System.Drawing.Size(169, 102);
             this.formatOptions.TabIndex = 10;
             this.formatOptions.TabStop = false;
             this.formatOptions.Text = "Formatting Options";
@@ -181,11 +182,11 @@
             this.inputData.Controls.Add(this.avgPlrLvlBox);
             this.inputData.Controls.Add(this.enemyCountBox);
             this.inputData.Controls.Add(this.enemyCountLabel);
-            this.inputData.Location = new System.Drawing.Point(9, 10);
-            this.inputData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inputData.Location = new System.Drawing.Point(12, 12);
+            this.inputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputData.Name = "inputData";
-            this.inputData.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.inputData.Size = new System.Drawing.Size(87, 92);
+            this.inputData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputData.Size = new System.Drawing.Size(116, 113);
             this.inputData.TabIndex = 0;
             this.inputData.TabStop = false;
             this.inputData.Text = "Input Data";
@@ -193,6 +194,7 @@
             // randomModes
             // 
             this.randomModes.FormattingEnabled = true;
+            this.randomModes.ItemHeight = 16;
             this.randomModes.Items.AddRange(new object[] {
             "Normal mode",
             "More easy",
@@ -201,20 +203,20 @@
             "All easy",
             "All medium",
             "All hard"});
-            this.randomModes.Location = new System.Drawing.Point(10, 17);
-            this.randomModes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randomModes.Location = new System.Drawing.Point(13, 21);
+            this.randomModes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.randomModes.Name = "randomModes";
-            this.randomModes.Size = new System.Drawing.Size(72, 95);
+            this.randomModes.Size = new System.Drawing.Size(95, 116);
             this.randomModes.TabIndex = 12;
             // 
             // randomMode
             // 
             this.randomMode.Controls.Add(this.randomModes);
-            this.randomMode.Location = new System.Drawing.Point(442, 10);
-            this.randomMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randomMode.Location = new System.Drawing.Point(589, 12);
+            this.randomMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.randomMode.Name = "randomMode";
-            this.randomMode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.randomMode.Size = new System.Drawing.Size(93, 120);
+            this.randomMode.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.randomMode.Size = new System.Drawing.Size(124, 148);
             this.randomMode.TabIndex = 13;
             this.randomMode.TabStop = false;
             this.randomMode.Text = "Random Mode";
@@ -224,22 +226,50 @@
             this.saveFileToTxtDialog.DefaultExt = "txt";
             this.saveFileToTxtDialog.FileName = "QEG_Save";
             // 
+            // gameClassNarowingGroupBox
+            // 
+            this.gameClassNarowingGroupBox.Controls.Add(this.gameClassNorowerBox);
+            this.gameClassNarowingGroupBox.Location = new System.Drawing.Point(719, 12);
+            this.gameClassNarowingGroupBox.Name = "gameClassNarowingGroupBox";
+            this.gameClassNarowingGroupBox.Size = new System.Drawing.Size(169, 118);
+            this.gameClassNarowingGroupBox.TabIndex = 15;
+            this.gameClassNarowingGroupBox.TabStop = false;
+            this.gameClassNarowingGroupBox.Text = "Narrow Class";
+            // 
+            // gameClassNorowerBox
+            // 
+            this.gameClassNorowerBox.BackColor = System.Drawing.SystemColors.Control;
+            this.gameClassNorowerBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gameClassNorowerBox.ColumnWidth = 10;
+            this.gameClassNorowerBox.FormattingEnabled = true;
+            this.gameClassNorowerBox.Items.AddRange(new object[] {
+            "Heavy Fighters",
+            "Light Fighters",
+            "Sneak Fighters",
+            "Heavy Magic Users",
+            "Light Magic Users"});
+            this.gameClassNorowerBox.Location = new System.Drawing.Point(6, 19);
+            this.gameClassNorowerBox.Name = "gameClassNorowerBox";
+            this.gameClassNorowerBox.Size = new System.Drawing.Size(154, 102);
+            this.gameClassNorowerBox.TabIndex = 16;
+            // 
             // QEGForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(724, 685);
+            this.ClientSize = new System.Drawing.Size(960, 843);
+            this.Controls.Add(this.gameClassNarowingGroupBox);
             this.Controls.Add(this.randomMode);
             this.Controls.Add(this.inputData);
             this.Controls.Add(this.formatOptions);
-            this.Controls.Add(this.printButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.output);
-            this.Controls.Add(this.randomize);
+            this.Controls.Add(this.randomizeButton);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "QEGForm";
             this.Text = "QEG 1.0";
@@ -249,6 +279,7 @@
             this.inputData.ResumeLayout(false);
             this.inputData.PerformLayout();
             this.randomMode.ResumeLayout(false);
+            this.gameClassNarowingGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,16 +292,18 @@
         private System.Windows.Forms.CheckBox displayFullArmor;
         private System.Windows.Forms.TextBox avgPlrLvlBox;
         private System.Windows.Forms.Label avgPlrLvlLabel;
-        private System.Windows.Forms.Button randomize;
+        private System.Windows.Forms.Button randomizeButton;
         private System.Windows.Forms.Label enemyCountLabel;
         private System.Windows.Forms.TextBox enemyCountBox;
         private System.Windows.Forms.TextBox output;
-        private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.GroupBox formatOptions;
         private System.Windows.Forms.GroupBox inputData;
         private System.Windows.Forms.ListBox randomModes;
         private System.Windows.Forms.GroupBox randomMode;
         private System.Windows.Forms.SaveFileDialog saveFileToTxtDialog;
+        private System.Windows.Forms.GroupBox gameClassNarowingGroupBox;
+        private System.Windows.Forms.CheckedListBox gameClassNorowerBox;
     }
 }
 

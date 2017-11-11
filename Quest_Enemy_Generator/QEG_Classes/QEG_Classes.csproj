@@ -49,6 +49,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyDifficulty.cs" />
     <Compile Include="GameClass.cs" />
+    <Compile Include="GameClassType.cs" />
     <Compile Include="Glyph.cs" />
     <Compile Include="MagicianType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
