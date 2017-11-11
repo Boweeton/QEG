@@ -21,31 +21,40 @@ namespace QEG_Windows_Application
         {
             InitializeComponent();
             randomModes.SelectedIndex = 0;
-            avgPlrLvl.Text = 1.ToString();
-            enemyCount.Text = 1.ToString();
+            avgPlrLvlBox.Text = 1.ToString();
+            enemyCountBox.Text = 1.ToString();
 
-            avgPlrLvl.Leave += (sender, args) =>
+            avgPlrLvlBox.Leave += (sender, args) =>
             {
-                if (!int.TryParse(avgPlrLvl.Text, out avgLvl) || avgLvl <= 0 || avgLvl > MaxPlayerLevel)
+                if (!int.TryParse(avgPlrLvlBox.Text, out avgLvl) || avgLvl <= 0 || avgLvl > MaxPlayerLevel)
                 {
-                    avgPlrLvl.Text = 1.ToString();
+                    avgPlrLvlBox.Text = 1.ToString();
                     avgLvl = 1;
                 }
             };
 
-            enemyCount.Leave += (sender, args) =>
+            enemyCountBox.Leave += (sender, args) =>
             {
-                if (!int.TryParse(enemyCount.Text, out count) || count <= 0 || count > MaxEnemyCount)
+                if (!int.TryParse(enemyCountBox.Text, out count) || count <= 0 || count > MaxEnemyCount)
                 {
-                    enemyCount.Text = 1.ToString();
+                    enemyCountBox.Text = 1.ToString();
                     count = 1;
                 }
             };
 
+            avgPlrLvlBox.Click += (sender, args) => avgPlrLvlBox.SelectAll();
+            enemyCountBox.Click += (sender, args) => enemyCountBox.SelectAll();
+
+            printButton.Enabled = false;
+
         }
 
         void Form1_Load(object sender, EventArgs e)
-        { }
+        {
+            // Set the focus on to the avgPlrLvl box
+            avgPlrLvlBox.Select();
+            avgPlrLvlBox.SelectAll();
+        }
 
         void label1_Click(object sender, EventArgs e)
         { }
@@ -58,6 +67,8 @@ namespace QEG_Windows_Application
             dm.FillEnemyList(avgLvl, count);
 
             UpdateAndDisplayToOutput();
+
+            printButton.Enabled = true;
         }
 
         void UpdateAndDisplayToOutput()
@@ -118,7 +129,5 @@ namespace QEG_Windows_Application
         void enemyCount_TextChanged(object sender, EventArgs e)
         {
         }
-
-
     }
 }

@@ -31,11 +31,11 @@
             this.displayFullWeapons = new System.Windows.Forms.CheckBox();
             this.displayFullGlyphs = new System.Windows.Forms.CheckBox();
             this.displayFullArmor = new System.Windows.Forms.CheckBox();
-            this.avgPlrLvl = new System.Windows.Forms.TextBox();
+            this.avgPlrLvlBox = new System.Windows.Forms.TextBox();
             this.avgPlrLvlLabel = new System.Windows.Forms.Label();
             this.randomize = new System.Windows.Forms.Button();
             this.enemyCountLabel = new System.Windows.Forms.Label();
-            this.enemyCount = new System.Windows.Forms.TextBox();
+            this.enemyCountBox = new System.Windows.Forms.TextBox();
             this.output = new System.Windows.Forms.TextBox();
             this.printButton = new System.Windows.Forms.Button();
             this.formatOptions = new System.Windows.Forms.GroupBox();
@@ -80,13 +80,13 @@
             this.displayFullArmor.UseVisualStyleBackColor = true;
             this.displayFullArmor.CheckedChanged += new System.EventHandler(this.displayFullArmor_CheckedChanged);
             // 
-            // avgPlrLvl
+            // avgPlrLvlBox
             // 
-            this.avgPlrLvl.Location = new System.Drawing.Point(6, 38);
-            this.avgPlrLvl.Name = "avgPlrLvl";
-            this.avgPlrLvl.Size = new System.Drawing.Size(99, 22);
-            this.avgPlrLvl.TabIndex = 3;
-            this.avgPlrLvl.TextChanged += new System.EventHandler(this.avgPlrLvl_TextChanged);
+            this.avgPlrLvlBox.Location = new System.Drawing.Point(6, 38);
+            this.avgPlrLvlBox.Name = "avgPlrLvlBox";
+            this.avgPlrLvlBox.Size = new System.Drawing.Size(99, 22);
+            this.avgPlrLvlBox.TabIndex = 1;
+            this.avgPlrLvlBox.TextChanged += new System.EventHandler(this.avgPlrLvl_TextChanged);
             // 
             // avgPlrLvlLabel
             // 
@@ -105,7 +105,7 @@
             this.randomize.Location = new System.Drawing.Point(331, 15);
             this.randomize.Name = "randomize";
             this.randomize.Size = new System.Drawing.Size(233, 49);
-            this.randomize.TabIndex = 5;
+            this.randomize.TabIndex = 0;
             this.randomize.Text = "Randomize";
             this.randomize.UseVisualStyleBackColor = true;
             this.randomize.Click += new System.EventHandler(this.randomize_Click);
@@ -117,18 +117,18 @@
             this.enemyCountLabel.Location = new System.Drawing.Point(10, 63);
             this.enemyCountLabel.Name = "enemyCountLabel";
             this.enemyCountLabel.Size = new System.Drawing.Size(92, 17);
-            this.enemyCountLabel.TabIndex = 7;
+            this.enemyCountLabel.TabIndex = 2;
             this.enemyCountLabel.Text = "Enemy Count";
             this.enemyCountLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.enemyCountLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // enemyCount
+            // enemyCountBox
             // 
-            this.enemyCount.Location = new System.Drawing.Point(6, 83);
-            this.enemyCount.Name = "enemyCount";
-            this.enemyCount.Size = new System.Drawing.Size(99, 22);
-            this.enemyCount.TabIndex = 6;
-            this.enemyCount.TextChanged += new System.EventHandler(this.enemyCount_TextChanged);
+            this.enemyCountBox.Location = new System.Drawing.Point(6, 83);
+            this.enemyCountBox.Name = "enemyCountBox";
+            this.enemyCountBox.Size = new System.Drawing.Size(99, 22);
+            this.enemyCountBox.TabIndex = 3;
+            this.enemyCountBox.TextChanged += new System.EventHandler(this.enemyCount_TextChanged);
             // 
             // output
             // 
@@ -166,8 +166,8 @@
             // inputData
             // 
             this.inputData.Controls.Add(this.avgPlrLvlLabel);
-            this.inputData.Controls.Add(this.avgPlrLvl);
-            this.inputData.Controls.Add(this.enemyCount);
+            this.inputData.Controls.Add(this.avgPlrLvlBox);
+            this.inputData.Controls.Add(this.enemyCountBox);
             this.inputData.Controls.Add(this.enemyCountLabel);
             this.inputData.Location = new System.Drawing.Point(12, 12);
             this.inputData.Name = "inputData";
@@ -236,11 +236,11 @@
         private System.Windows.Forms.CheckBox displayFullWeapons;
         private System.Windows.Forms.CheckBox displayFullGlyphs;
         private System.Windows.Forms.CheckBox displayFullArmor;
-        private System.Windows.Forms.TextBox avgPlrLvl;
+        private System.Windows.Forms.TextBox avgPlrLvlBox;
         private System.Windows.Forms.Label avgPlrLvlLabel;
         private System.Windows.Forms.Button randomize;
         private System.Windows.Forms.Label enemyCountLabel;
-        private System.Windows.Forms.TextBox enemyCount;
+        private System.Windows.Forms.TextBox enemyCountBox;
         private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.GroupBox formatOptions;
