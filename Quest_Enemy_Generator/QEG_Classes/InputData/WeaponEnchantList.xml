@@ -24,4 +24,12 @@
     <Name>Light Enchanted</Name>
     <Description>All moves have light damage</Description>
   </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Fate 2</Name>
+    <Description>When you roll a dice for this weapon, roll 2 and pick the best.</Description>
+  </WeaponEnchant>
+  <WeaponEnchant>
+    <Name>Fate 3</Name>
+    <Description>When you roll a dice for this weapon, roll 3 and pick the best.</Description>
+  </WeaponEnchant>
 </ArrayOfWeaponEnchant>

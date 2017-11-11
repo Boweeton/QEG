@@ -5,13 +5,6 @@
 		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
-				<string>Gladius</string>
-				<string>Rapier</string>
-				<string>Estoc</string>
-				<string>Cutlass</string>
 				<string>Scimitar</string>
 				<string>Katana</string>
 				<string>Odachi</string>
@@ -30,54 +23,34 @@
 				<string>Double Flail</string>
 				<string>Warhammer</string>
 				<string>Wrath Hammer</string>
-				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
 				<string>Troll Axe</string>
 				<string>Double Axe</string>
-				<string>Jutte</string>
 				<string>Morning Star</string>
-				<string>Quarterstaff</string>
-				<string>Crowbill</string>
 				<string>Warpick</string>
 				<string>Glaive</string>
 				<string>Halbard</string>
-				<string>Spear</string>
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
-				<string>Nun-Chuck</string>
 				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
-				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
-				<string>Simple Bow</string>
-				<string>Recurve Bow</string>
-				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
 				<string>Archer’s Greatbow</string>
+				<string>Bolt Action Rifle</string>
+				<string>Long Blunderbuss</string>
+				<string>6-Shot Revolver</string>
+				<string>4-Shot Revolver</string>
+				<string>Muzzleloading Rifle (beyonetted)</string>
+				<string>Bolt Action Pistol (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
-				<string>Throwing knife</string>
-				<string>War Sling</string>
-				<string>Tomahawk</string>
-				<string>Javelin</string>
-				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
-				<string>Bullwhip</string>
-				<string>Chainwhip</string>
-				<string>Longwhip</string>
-				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
 				<string>Tower Shield</string>
@@ -99,13 +72,6 @@
 		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
-				<string>Gladius</string>
-				<string>Rapier</string>
-				<string>Estoc</string>
-				<string>Cutlass</string>
 				<string>Scimitar</string>
 				<string>Katana</string>
 				<string>Odachi</string>
@@ -124,66 +90,34 @@
 				<string>Double Flail</string>
 				<string>Warhammer</string>
 				<string>Wrath Hammer</string>
-				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
 				<string>Troll Axe</string>
 				<string>Double Axe</string>
-				<string>Jutte</string>
 				<string>Morning Star</string>
-				<string>Quarterstaff</string>
-				<string>Crowbill</string>
 				<string>Warpick</string>
 				<string>Glaive</string>
 				<string>Halbard</string>
-				<string>Spear</string>
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
-				<string>Nun-Chuck</string>
 				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
-				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
-				<string>Simple Bow</string>
-				<string>Recurve Bow</string>
-				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
 				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
 				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
 				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
 				<string>Muzzleloading Rifle (beyonetted)</string>
 				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
-				<string>Throwing knife</string>
-				<string>War Sling</string>
-				<string>Tomahawk</string>
-				<string>Javelin</string>
-				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
-				<string>Bullwhip</string>
-				<string>Chainwhip</string>
-				<string>Longwhip</string>
-				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
 				<string>Tower Shield</string>
@@ -218,53 +152,23 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
-				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
-				<string>Trident</string>
 				<string>Bident</string>
 				<string>Pitchfork</string>
 				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
-				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
 				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
@@ -292,8 +196,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>false</CanUseMagic>
 			<MagType>NON</MagType>
@@ -324,53 +226,23 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
-				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
-				<string>Trident</string>
 				<string>Bident</string>
 				<string>Pitchfork</string>
 				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
-				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
 				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
@@ -398,8 +270,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>false</CanUseMagic>
 			<MagType>NON</MagType>
@@ -417,13 +287,6 @@
 		<ClassType>HeavyMagicUser</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
-				<string>Gladius</string>
-				<string>Rapier</string>
-				<string>Estoc</string>
-				<string>Cutlass</string>
 				<string>Scimitar</string>
 				<string>Katana</string>
 				<string>Odachi</string>
@@ -442,66 +305,34 @@
 				<string>Double Flail</string>
 				<string>Warhammer</string>
 				<string>Wrath Hammer</string>
-				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
 				<string>Troll Axe</string>
 				<string>Double Axe</string>
-				<string>Jutte</string>
 				<string>Morning Star</string>
-				<string>Quarterstaff</string>
-				<string>Crowbill</string>
 				<string>Warpick</string>
 				<string>Glaive</string>
 				<string>Halbard</string>
-				<string>Spear</string>
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
-				<string>Nun-Chuck</string>
 				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
-				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
-				<string>Simple Bow</string>
-				<string>Recurve Bow</string>
-				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
 				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
 				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
 				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
 				<string>Muzzleloading Rifle (beyonetted)</string>
 				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
-				<string>Throwing knife</string>
-				<string>War Sling</string>
-				<string>Tomahawk</string>
-				<string>Javelin</string>
-				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
-				<string>Bullwhip</string>
-				<string>Chainwhip</string>
-				<string>Longwhip</string>
-				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
 				<string>Tower Shield</string>
@@ -523,13 +354,6 @@
 		<ClassType>HeavyMagicUser</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
-				<string>Gladius</string>
-				<string>Rapier</string>
-				<string>Estoc</string>
-				<string>Cutlass</string>
 				<string>Scimitar</string>
 				<string>Katana</string>
 				<string>Odachi</string>
@@ -548,66 +372,34 @@
 				<string>Double Flail</string>
 				<string>Warhammer</string>
 				<string>Wrath Hammer</string>
-				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
 				<string>Troll Axe</string>
 				<string>Double Axe</string>
-				<string>Jutte</string>
 				<string>Morning Star</string>
-				<string>Quarterstaff</string>
-				<string>Crowbill</string>
 				<string>Warpick</string>
 				<string>Glaive</string>
 				<string>Halbard</string>
-				<string>Spear</string>
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
-				<string>Nun-Chuck</string>
 				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
-				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
-				<string>Simple Bow</string>
-				<string>Recurve Bow</string>
-				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
 				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
 				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
 				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
 				<string>Muzzleloading Rifle (beyonetted)</string>
 				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
-				<string>Throwing knife</string>
-				<string>War Sling</string>
-				<string>Tomahawk</string>
-				<string>Javelin</string>
-				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
-				<string>Bullwhip</string>
-				<string>Chainwhip</string>
-				<string>Longwhip</string>
-				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
 				<string>Tower Shield</string>
@@ -629,13 +421,6 @@
 		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
-				<string>Gladius</string>
-				<string>Rapier</string>
-				<string>Estoc</string>
-				<string>Cutlass</string>
 				<string>Scimitar</string>
 				<string>Katana</string>
 				<string>Odachi</string>
@@ -654,16 +439,13 @@
 				<string>Double Flail</string>
 				<string>Warhammer</string>
 				<string>Wrath Hammer</string>
-				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
 				<string>Bearded Axe</string>
 				<string>Troll Axe</string>
 				<string>Double Axe</string>
-				<string>Jutte</string>
 				<string>Morning Star</string>
-				<string>Quarterstaff</string>
 				<string>Crowbill</string>
 				<string>Warpick</string>
 				<string>Glaive</string>
@@ -671,24 +453,19 @@
 				<string>Spear</string>
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
-				<string>Nun-Chuck</string>
 				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
 				<string>Bident</string>
-				<string>Pitchfork</string>
-				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
 				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
@@ -701,19 +478,13 @@
 				<string>Muzzleloading Rifle (beyonetted)</string>
 				<string>Bolt Action Pistol (beyonetted)</string>
 				<string>Bolt Action Rifle (beyonetted)</string>
-				<string>Pistol Blade </string>
-				<string>Throwing star</string>
-				<string>Throwing knife</string>
 				<string>War Sling</string>
 				<string>Tomahawk</string>
 				<string>Javelin</string>
 				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
 				<string>Bullwhip</string>
 				<string>Chainwhip</string>
 				<string>Longwhip</string>
-				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
 				<string>Tower Shield</string>
@@ -748,40 +519,14 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
-				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
@@ -792,21 +537,8 @@
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
-				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
-				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
-				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
-				<string>Muzzleloading Rifle (beyonetted)</string>
-				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
 				<string>Throwing star</string>
 				<string>Throwing knife</string>
@@ -822,8 +554,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>true</CanUseMagic>
 			<MagType>INT</MagType>
@@ -854,40 +584,14 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
-				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
@@ -898,21 +602,8 @@
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
-				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
-				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
-				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
-				<string>Muzzleloading Rifle (beyonetted)</string>
-				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
 				<string>Throwing star</string>
 				<string>Throwing knife</string>
@@ -928,8 +619,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>true</CanUseMagic>
 			<MagType>INT</MagType>
@@ -947,13 +636,6 @@
 		<ClassType>HeavyMagicUser</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
-				<string>Gladius</string>
-				<string>Rapier</string>
-				<string>Estoc</string>
-				<string>Cutlass</string>
 				<string>Scimitar</string>
 				<string>Katana</string>
 				<string>Odachi</string>
@@ -972,16 +654,13 @@
 				<string>Double Flail</string>
 				<string>Warhammer</string>
 				<string>Wrath Hammer</string>
-				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
 				<string>Bearded Axe</string>
 				<string>Troll Axe</string>
 				<string>Double Axe</string>
-				<string>Jutte</string>
 				<string>Morning Star</string>
-				<string>Quarterstaff</string>
 				<string>Crowbill</string>
 				<string>Warpick</string>
 				<string>Glaive</string>
@@ -989,24 +668,19 @@
 				<string>Spear</string>
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
-				<string>Nun-Chuck</string>
 				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
 				<string>Bident</string>
-				<string>Pitchfork</string>
-				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
 				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
@@ -1019,19 +693,13 @@
 				<string>Muzzleloading Rifle (beyonetted)</string>
 				<string>Bolt Action Pistol (beyonetted)</string>
 				<string>Bolt Action Rifle (beyonetted)</string>
-				<string>Pistol Blade </string>
-				<string>Throwing star</string>
-				<string>Throwing knife</string>
 				<string>War Sling</string>
 				<string>Tomahawk</string>
 				<string>Javelin</string>
 				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
 				<string>Bullwhip</string>
 				<string>Chainwhip</string>
 				<string>Longwhip</string>
-				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
 				<string>Tower Shield</string>
@@ -1066,40 +734,14 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
-				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
@@ -1110,9 +752,6 @@
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
-				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
 				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
@@ -1140,8 +779,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>true</CanUseMagic>
 			<MagType>INT</MagType>
@@ -1172,40 +809,14 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
-				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
@@ -1216,21 +827,8 @@
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
-				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
-				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
-				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
-				<string>Muzzleloading Rifle (beyonetted)</string>
-				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
 				<string>Throwing star</string>
 				<string>Throwing knife</string>
@@ -1246,8 +844,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>true</CanUseMagic>
 			<MagType>IMP</MagType>
@@ -1278,65 +874,25 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
 				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
 				<string>Crowbill</string>
 				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
-				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
 				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
-				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
-				<string>Long Blunderbuss</string>
-				<string>6-Shot Revolver</string>
-				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
-				<string>Muzzleloading Rifle (beyonetted)</string>
-				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
 				<string>Throwing star</string>
 				<string>Throwing knife</string>
@@ -1346,14 +902,9 @@
 				<string>Clubbing Boomerang</string>
 				<string>Atlatl</string>
 				<string>Blowdart Gun</string>
-				<string>Bullwhip</string>
-				<string>Chainwhip</string>
 				<string>Longwhip</string>
 				<string>Buckler Shield</string>
-				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>false</CanUseMagic>
 			<MagType>NON</MagType>
@@ -1458,7 +1009,6 @@
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
 				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>false</CanUseMagic>
@@ -1477,9 +1027,6 @@
 		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
 				<string>Gladius</string>
 				<string>Rapier</string>
 				<string>Estoc</string>
@@ -1525,14 +1072,11 @@
 				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
-				<string>Chigiriki</string>
 				<string>Pole Flail</string>
 				<string>Trident</string>
 				<string>Bident</string>
 				<string>Pitchfork</string>
-				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
-				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
@@ -1550,14 +1094,11 @@
 				<string>Bolt Action Pistol (beyonetted)</string>
 				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
 				<string>Throwing knife</string>
 				<string>War Sling</string>
 				<string>Tomahawk</string>
 				<string>Javelin</string>
 				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
 				<string>Bullwhip</string>
 				<string>Chainwhip</string>
 				<string>Longwhip</string>
@@ -1583,9 +1124,6 @@
 		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
-				<string>Fencing Foil</string>
-				<string>Dagger</string>
-				<string>Slashing Daggers</string>
 				<string>Gladius</string>
 				<string>Rapier</string>
 				<string>Estoc</string>
@@ -1642,7 +1180,6 @@
 				<string>Sniper’s Crossbow</string>
 				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
 				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
@@ -1656,14 +1193,11 @@
 				<string>Bolt Action Pistol (beyonetted)</string>
 				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
 				<string>Throwing knife</string>
 				<string>War Sling</string>
 				<string>Tomahawk</string>
 				<string>Javelin</string>
 				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
 				<string>Bullwhip</string>
 				<string>Chainwhip</string>
 				<string>Longwhip</string>
@@ -1702,65 +1236,25 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
-				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
 				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
 				<string>Crowbill</string>
 				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
-				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
 				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
-				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
-				<string>Bolt Action Pistol</string>
-				<string>Bolt Action Rifle</string>
-				<string>Short Blunderbuss</string>
-				<string>Long Blunderbuss</string>
-				<string>6-Shot Revolver</string>
-				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
-				<string>Muzzleloading Rifle (beyonetted)</string>
-				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
 				<string>Throwing star</string>
 				<string>Throwing knife</string>
@@ -1770,14 +1264,9 @@
 				<string>Clubbing Boomerang</string>
 				<string>Atlatl</string>
 				<string>Blowdart Gun</string>
-				<string>Bullwhip</string>
-				<string>Chainwhip</string>
 				<string>Longwhip</string>
 				<string>Buckler Shield</string>
-				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>true</CanUseMagic>
 			<MagType>INS</MagType>
@@ -1809,24 +1298,13 @@
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
 				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
 				<string>Splitting Hammer</string>
 				<string>Mace</string>
 				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
 				<string>Great Flail</string>
 				<string>Punching Gauntlets</string>
 				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
 				<string>Morning Star</string>
 				<string>Quarterstaff</string>
@@ -1838,16 +1316,12 @@
 				<string>Winged Spear</string>
 				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
 				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
-				<string>Trident</string>
-				<string>Bident</string>
-				<string>Pitchfork</string>
 				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
@@ -1868,14 +1342,11 @@
 				<string>Bolt Action Pistol (beyonetted)</string>
 				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
-				<string>Throwing star</string>
 				<string>Throwing knife</string>
 				<string>War Sling</string>
 				<string>Tomahawk</string>
 				<string>Javelin</string>
 				<string>Clubbing Boomerang</string>
-				<string>Atlatl</string>
-				<string>Blowdart Gun</string>
 				<string>Bullwhip</string>
 				<string>Chainwhip</string>
 				<string>Longwhip</string>
@@ -1914,65 +1385,30 @@
 				<string>Falchion</string>
 				<string>Quaren Khopesh</string>
 				<string>Arming Sword</string>
-				<string>Longsword (1H or 2H)</string>
-				<string>Claymore</string>
-				<string>Flamberge</string>
-				<string>Highlander's Sword</string>
-				<string>Zweihander</string>
-				<string>O'hlloman Titan Blade</string>
-				<string>Splitting Hammer</string>
 				<string>Mace</string>
-				<string>Flail</string>
-				<string>Double Flail</string>
-				<string>Warhammer</string>
-				<string>Wrath Hammer</string>
 				<string>Tonfa</string>
-				<string>Great Flail</string>
-				<string>Punching Gauntlets</string>
-				<string>Piercing Sledge</string>
-				<string>Bearded Axe</string>
-				<string>Troll Axe</string>
-				<string>Double Axe</string>
 				<string>Jutte</string>
-				<string>Morning Star</string>
 				<string>Quarterstaff</string>
-				<string>Crowbill</string>
 				<string>Warpick</string>
-				<string>Glaive</string>
-				<string>Halbard</string>
 				<string>Spear</string>
-				<string>Winged Spear</string>
-				<string>Battle Axe</string>
 				<string>Nun-Chuck</string>
-				<string>Bardiche</string>
 				<string>Warden's Scythe</string>
 				<string>Light Scythe</string>
-				<string>Great Scythe</string>
 				<string>Rifle Spear</string>
 				<string>Chigiriki</string>
 				<string>Pole Flail</string>
-				<string>Trident</string>
 				<string>Bident</string>
 				<string>Pitchfork</string>
 				<string>Simple Bow</string>
 				<string>Recurve Bow</string>
 				<string>Light Crossbow</string>
 				<string>Sniper’s Crossbow</string>
-				<string>Great Crossbow</string>
 				<string>Compound Bow</string>
-				<string>Archer’s Greatbow</string>
 				<string>Muzzleloading Pistol</string>
-				<string>Muzzleloading Rifle</string>
 				<string>Bolt Action Pistol</string>
-				<string>Bolt Action Rifle</string>
 				<string>Short Blunderbuss</string>
-				<string>Long Blunderbuss</string>
 				<string>6-Shot Revolver</string>
 				<string>4-Shot Revolver</string>
-				<string>Muzzleloading Pistol (beyonetted)</string>
-				<string>Muzzleloading Rifle (beyonetted)</string>
-				<string>Bolt Action Pistol (beyonetted)</string>
-				<string>Bolt Action Rifle (beyonetted)</string>
 				<string>Pistol Blade </string>
 				<string>Throwing star</string>
 				<string>Throwing knife</string>
@@ -1983,13 +1419,10 @@
 				<string>Atlatl</string>
 				<string>Blowdart Gun</string>
 				<string>Bullwhip</string>
-				<string>Chainwhip</string>
 				<string>Longwhip</string>
 				<string>Buckler Shield</string>
 				<string>Round Shield</string>
 				<string>Kite Shield</string>
-				<string>Tower Shield</string>
-				<string>Teardrop Shield</string>
 			</PossibleWeaponsList>
 			<CanUseMagic>true</CanUseMagic>
 			<MagType>INT</MagType>
