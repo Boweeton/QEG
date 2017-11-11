@@ -147,7 +147,7 @@
             this.output.Name = "output";
             this.output.ReadOnly = true;
             this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.output.Size = new System.Drawing.Size(932, 664);
+            this.output.Size = new System.Drawing.Size(932, 663);
             this.output.TabIndex = 2;
             // 
             // saveButton
@@ -253,12 +253,12 @@
             this.gameClassNorowerBox.Size = new System.Drawing.Size(154, 102);
             this.gameClassNorowerBox.TabIndex = 16;
             // 
-            // QEGForm
+            // QegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(960, 843);
+            this.ClientSize = new System.Drawing.Size(960, 845);
             this.Controls.Add(this.gameClassNarowingGroupBox);
             this.Controls.Add(this.randomMode);
             this.Controls.Add(this.inputData);

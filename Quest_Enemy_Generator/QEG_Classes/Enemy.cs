@@ -80,14 +80,13 @@ namespace Quest_Enemy_Generator
 
         #region Methods
 
-        public override string ToString()
+        public string ConvertToString(int num)
         {
             // Local Declarations
             StringBuilder sb = new StringBuilder();
 
             // Create the partitions
             string fullPartition = CreateFullPartition();
-            string partialPartition = CreatePartialPartition();
 
             // Create the info strings
             List<string> list1 = new List<string>();
@@ -111,12 +110,11 @@ namespace Quest_Enemy_Generator
             list2.Add($"{Scrips} :Scrips");
 
             // Print front end stuff
-            sb.AppendLine(fullPartition);
-            sb.AppendLine(TranslateCentered("--[Core Info]--"));
+            string title = $"{Difficulty} : {Race.Name} : {GameClass.Name}";
+            sb.AppendLine(CreatePartitionWithTitle(num, title));
 
             // Print enemy title
-            sb.AppendLine(TranslateCentered($"{Difficulty} : {Race.Name} : {GameClass.Name}"));
-            sb.AppendLine(partialPartition);
+            sb.AppendLine(CreatePartialPartition("-[Core Info]-"));
 
             for (int i = 0; i < list1.Count; i++)
             {
@@ -128,17 +126,16 @@ namespace Quest_Enemy_Generator
             // Print the weapons
             if (PrintFullWeapons)
             {
-                sb.AppendLine(partialPartition);
-                sb.AppendLine(TranslateCentered("--[Weapons (Full)]--"));
-                foreach (Weapon weapon in Weapons)
+                sb.AppendLine(CreatePartialPartition("-[Weapons (Full)]-"));
+                for (int i = 0; i < Weapons.Count; i++)
                 {
+                    Weapon weapon = Weapons[i];
+
                     // Calculations
                     string parry = $"(Parry cost: {weapon.ParryVal})";
                     const int BufferAfterName = 21;
                     const int BufferAfterDescription = 38;
                     const int BufferAfterSpeed = 8;
-
-                    sb.AppendLine("----------");
 
                     // Print name
                     sb.Append(weapon.DisplayName);
@@ -153,14 +150,18 @@ namespace Quest_Enemy_Generator
                     {
                         sb.AppendLine($"   {move.Name,-BufferAfterName}{move.Description,-BufferAfterDescription}{move.Speed,-BufferAfterSpeed}{move.Damage}");
                     }
+
+                    // If there are two weapons, print a space after the first weapon
+                    if (Weapons.Count > 1 && i == 0)
+                    {
+                        sb.AppendLine();
+                    }
                 }
-                sb.AppendLine("----------");
             }
             else
             {
                 // Print front end stuff
-                sb.AppendLine(partialPartition);
-                sb.AppendLine(TranslateCentered("--[Weapons (Compacted)]--"));
+                sb.AppendLine(CreatePartialPartition("-[Weapons (Compacted)]-"));
 
                 // Print the compacted form of each weapon
                 const int BufferAtEnd = 8;
@@ -185,8 +186,7 @@ namespace Quest_Enemy_Generator
                 if (PrintFullGlyphs)
                 {
                     // Print front end stuff
-                    sb.AppendLine(partialPartition);
-                    sb.AppendLine(TranslateCentered("--[Glyphs (Full)]--"));
+                    sb.AppendLine(CreatePartialPartition("-[Glyphs (Full)]-"));
 
                     // Buffer constants
                     const int BufferAfterName = 20;
@@ -205,8 +205,7 @@ namespace Quest_Enemy_Generator
                 else
                 {
                     // Print front end stuff
-                    sb.AppendLine(partialPartition);
-                    sb.AppendLine(TranslateCentered("--[Glyphs (Compact)]--"));
+                    sb.AppendLine(CreatePartialPartition("-[Glyphs (Compact)]-"));
 
                     // Print glyphs
                     int counter = 0;
@@ -238,8 +237,7 @@ namespace Quest_Enemy_Generator
             if (PrintArmor)
             {
                 // Print front end stuff
-                sb.AppendLine(partialPartition);
-                sb.AppendLine(TranslateCentered("--[Armor]--"));
+                sb.AppendLine(CreatePartialPartition("-[Armor]-"));
 
                 //Print ALL the armor
                 const int TypeOffset = 10;
@@ -300,18 +298,51 @@ namespace Quest_Enemy_Generator
         /// 
         /// </summary>
         /// <returns></returns>
-        string CreatePartialPartition()
+        string CreatePartitionWithTitle(int num, string title)
         {
             // Local declarations
             StringBuilder bobTheStringBuilder = new StringBuilder();
+            string label = $"\\ Enemy: {num} \\ \\ {title} \\";
 
-            for (int i = 0; i < (ScreenWidth / 2) - 1; i++)
+            const int FirstBuffer = 10;
+            // Append fist underscrores
+            bobTheStringBuilder.Append('_', FirstBuffer);
+
+            // Append the label
+            bobTheStringBuilder.Append(label);
+
+            // Append the rest of the underscores
+            bobTheStringBuilder.Append('_',ScreenWidth - FirstBuffer - label.Length);
+
+            // Fill the StringBuilder with the '_' character ScreenWidth times and return it
+            return bobTheStringBuilder.ToString();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        string CreatePartialPartition(string tag)
+        {
+            // Local declarations
+            StringBuilder bobTheStringBuilder = new StringBuilder();
+            int buffer = ((ScreenWidth - tag.Length) / 2) + 1;
+
+            // Print first buffer
+            for (int i = 0; i < buffer/2; i++)
             {
                 bobTheStringBuilder.Append("- ");
             }
-            bobTheStringBuilder.Append("-");
 
-            // Fill the StringBuilder with the '_' character ScreenWidth times and return it
+            // Print the tag
+            bobTheStringBuilder.Append(tag);
+
+            // Print second buffer
+            for (int i = 0; i < (buffer / 2) - 1; i++)
+            {
+                bobTheStringBuilder.Append(" -");
+            }
+
             return bobTheStringBuilder.ToString();
         }
 

@@ -110,12 +110,13 @@ namespace Quest_Enemy_Generator
         {
             List<string> returnList = new List<string>();
 
-            foreach (Enemy enemy in EnemyList)
+            for (int i = 0; i < EnemyList.Count; i++)
             {
+                Enemy enemy = EnemyList[i];
                 enemy.PrintFullWeapons = PrintWeaponsFull;
                 enemy.PrintFullGlyphs = PrintGlyphsFull;
                 enemy.PrintArmor = PrintArmorFull;
-                returnList.Add(enemy.ToString());
+                returnList.Add(enemy.ConvertToString(i+1));
             }
 
             return returnList;
@@ -129,18 +130,19 @@ namespace Quest_Enemy_Generator
 
             int counter = 0;
 
-            foreach (Enemy enemy in EnemyList)
+            for (int i = 0; i < EnemyList.Count; i++)
             {
+                Enemy enemy = EnemyList[i];
                 enemy.PrintFullWeapons = PrintWeaponsFull;
                 enemy.PrintFullGlyphs = PrintGlyphsFull;
                 enemy.PrintArmor = PrintArmorFull;
 
-                string enemyString = enemy.ToString();
+                string enemyString = enemy.ConvertToString(i+1);
                 int currentHeight = CountLines(enemyString);
 
                 if (currentHeight > PageHeight - counter)
                 {
-                    for (int i = 0; i < (PageHeight - counter) + 1; i++)
+                    for (int j = 0; j < (PageHeight - counter) + 1; j++)
                     {
                         returnList.Add(" ");
                     }

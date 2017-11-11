@@ -9,7 +9,6 @@ namespace QEG_Windows_Application
 {
     public partial class QegForm : Form
     {
-
         #region Data
 
         // == DATA ==
