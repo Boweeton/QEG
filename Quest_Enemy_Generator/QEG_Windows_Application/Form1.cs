@@ -74,9 +74,6 @@ namespace QEG_Windows_Application
             avgPlrLvlBox.SelectAll();
         }
 
-        void label1_Click(object sender, EventArgs e)
-        { }
-
         void randomize_Click(object sender, EventArgs e)
         {
             Rando();
@@ -139,23 +136,12 @@ namespace QEG_Windows_Application
             }
         }
 
-        void randomModes_SelectedIndexChanged(object sender, EventArgs e)
-        { }
-
-        void avgPlrLvl_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        void enemyCount_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         void printButton_Click(object sender, EventArgs e)
         {
             SaveToFile();
         }
 
-        private void SaveToFile()
+        void SaveToFile()
         {
             saveFileToTxtDialog.FileName = $"QEG_{DateTime.Now:MM-dd-yy_(hh.mm)}.txt";
 
