@@ -1,6 +1,6 @@
 ﻿namespace QEG_Windows_Application
 {
-    partial class QEG_Form
+    partial class QEGForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QEG_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QEGForm));
             this.displayFullWeapons = new System.Windows.Forms.CheckBox();
             this.displayFullGlyphs = new System.Windows.Forms.CheckBox();
             this.displayFullArmor = new System.Windows.Forms.CheckBox();
@@ -140,13 +140,13 @@
             // output
             // 
             this.output.Font = new System.Drawing.Font("Lucida Console", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(9, 135);
+            this.output.Location = new System.Drawing.Point(11, 134);
             this.output.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.output.Multiline = true;
             this.output.Name = "output";
             this.output.ReadOnly = true;
             this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.output.Size = new System.Drawing.Size(699, 534);
+            this.output.Size = new System.Drawing.Size(700, 540);
             this.output.TabIndex = 8;
             // 
             // printButton
@@ -223,12 +223,12 @@
             // 
             this.saveFileToTxtDialog.DefaultExt = "txt";
             // 
-            // QEG_Form
+            // QEGForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(717, 678);
+            this.ClientSize = new System.Drawing.Size(724, 685);
             this.Controls.Add(this.randomMode);
             this.Controls.Add(this.inputData);
             this.Controls.Add(this.formatOptions);
@@ -239,7 +239,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "QEG_Form";
+            this.MaximizeBox = false;
+            this.Name = "QEGForm";
             this.Text = "QEG 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.formatOptions.ResumeLayout(false);

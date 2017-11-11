@@ -7,7 +7,7 @@ using Quest_Enemy_Generator;
 
 namespace QEG_Windows_Application
 {
-    public partial class QEG_Form : Form
+    public partial class QEGForm : Form
     {
         // Internal declarations
         DataManager dm = new DataManager();
@@ -18,7 +18,7 @@ namespace QEG_Windows_Application
         int avgLvl = 1;
         int count = 1;
 
-        public QEG_Form()
+        public QEGForm()
         {
             InitializeComponent();
             randomModes.SelectedIndex = 0;

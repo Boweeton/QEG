@@ -16,7 +16,7 @@ namespace QEG_Windows_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QEG_Form());
+            Application.Run(new QEGForm());
         }
     }
 }
