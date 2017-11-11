@@ -180,7 +180,7 @@ namespace Quest_Enemy_Generator
             }
 
             // Print the glyphs
-            if (GameClass.CanUseMagic)
+            if (Glyphs.Count != 0)
             {
                 if (PrintFullGlyphs)
                 {

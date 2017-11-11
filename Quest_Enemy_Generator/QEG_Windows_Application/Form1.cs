@@ -143,8 +143,6 @@ namespace QEG_Windows_Application
 
         void SaveToFile()
         {
-            saveFileToTxtDialog.FileName = $"QEG_{DateTime.Now:MM-dd-yy_(hh.mm)}.txt";
-
             if (saveFileToTxtDialog.ShowDialog() == DialogResult.OK)
             {
                 using (StreamWriter sr = new StreamWriter(saveFileToTxtDialog.FileName))

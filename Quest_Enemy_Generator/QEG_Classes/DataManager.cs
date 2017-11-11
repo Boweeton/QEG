@@ -382,20 +382,17 @@ namespace Quest_Enemy_Generator
             // Select Glyphs
 
             // Build the list of POSSIBLE glyphs
-            List<Glyph> tmpPossibleGlyphs = new List<Glyph>();
             if (Enemy.GameClass.CanUseMagic)
             {
-                // ReSharper disable once LoopCanBeConvertedToQuery
+                // ReSharper disable once LoopCanBePartlyConvertedToQuery
                 foreach (Glyph currentGlyph in glyphs)
                 {
                     if (currentGlyph.LvlReq <= Enemy.MagicSkill && currentGlyph.School == Enemy.GameClass.MagType)
                     {
-                        tmpPossibleGlyphs.Add(currentGlyph);
+                        Enemy.Glyphs.Add(currentGlyph);
                     }
                 }
             }
-
-            Enemy.Glyphs = tmpPossibleGlyphs;
 
             // Choose which of those POSSIBLE glyphs the enemy will have
             if (Enemy.Glyphs.Count != 0)

@@ -222,6 +222,7 @@
             // saveFileToTxtDialog
             // 
             this.saveFileToTxtDialog.DefaultExt = "txt";
+            this.saveFileToTxtDialog.FileName = "QEG_Save";
             // 
             // QEGForm
             // 
