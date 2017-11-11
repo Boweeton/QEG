@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using Quest_Enemy_Generator;
@@ -45,6 +46,23 @@ namespace QEG_Windows_Application
             avgPlrLvlBox.Click += (sender, args) => avgPlrLvlBox.SelectAll();
             enemyCountBox.Click += (sender, args) => enemyCountBox.SelectAll();
 
+            KeyPreview = true;
+            KeyDown += (sender, args) =>
+            {
+                if (args.Control)
+                {
+                    switch (args.KeyCode)
+                    {
+                        case Keys.S:
+                            SaveToFile();
+                            break;
+                        case Keys.R:
+                            Rando();
+                            break;
+                    }
+                }
+            };
+
             printButton.Enabled = false;
 
         }
@@ -61,6 +79,11 @@ namespace QEG_Windows_Application
 
         void randomize_Click(object sender, EventArgs e)
         {
+            Rando();
+        }
+
+        void Rando()
+        {
             // Set random mode
             dm.RMode = (RandomMode)randomModes.SelectedIndex;
 
@@ -73,9 +96,6 @@ namespace QEG_Windows_Application
 
         void UpdateAndDisplayToOutput()
         {
-            // Store where the scroll is at
-            
-
             // Formatting Options
             dm.PrintWeaponsFull = displayFullWeapons.Checked;
             dm.PrintGlyphsFull = displayFullGlyphs.Checked;
@@ -128,6 +148,24 @@ namespace QEG_Windows_Application
 
         void enemyCount_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        void printButton_Click(object sender, EventArgs e)
+        {
+            SaveToFile();
+        }
+
+        private void SaveToFile()
+        {
+            saveFileToTxtDialog.FileName = $"QEG_{DateTime.Now:MM-dd-yy_(hh.mm)}.txt";
+
+            if (saveFileToTxtDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sr = new StreamWriter(saveFileToTxtDialog.FileName))
+                {
+                    sr.WriteLine(string.Join(Environment.NewLine, dm.FormatListForTxtPrinting()));
+                }
+            }
         }
     }
 }

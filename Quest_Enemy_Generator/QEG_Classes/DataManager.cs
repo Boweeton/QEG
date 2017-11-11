@@ -122,7 +122,7 @@ namespace Quest_Enemy_Generator
         public List<string> FormatListForTxtPrinting()
         {
             // Local declarations
-            const int PageHeight = 46;
+            const int PageHeight = 47;
             List<string> returnList = new List<string>();
 
             int counter = 0;

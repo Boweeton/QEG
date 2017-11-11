@@ -42,6 +42,7 @@
             this.inputData = new System.Windows.Forms.GroupBox();
             this.randomModes = new System.Windows.Forms.ListBox();
             this.randomMode = new System.Windows.Forms.GroupBox();
+            this.saveFileToTxtDialog = new System.Windows.Forms.SaveFileDialog();
             this.formatOptions.SuspendLayout();
             this.inputData.SuspendLayout();
             this.randomMode.SuspendLayout();
@@ -148,8 +149,9 @@
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(233, 49);
             this.printButton.TabIndex = 9;
-            this.printButton.Text = "Print to .txt";
+            this.printButton.Text = "Save";
             this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // formatOptions
             // 
@@ -204,6 +206,10 @@
             this.randomMode.TabStop = false;
             this.randomMode.Text = "Random Mode";
             // 
+            // saveFileToTxtDialog
+            // 
+            this.saveFileToTxtDialog.DefaultExt = "txt";
+            // 
             // QEG_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,6 +253,7 @@
         private System.Windows.Forms.GroupBox inputData;
         private System.Windows.Forms.ListBox randomModes;
         private System.Windows.Forms.GroupBox randomMode;
+        private System.Windows.Forms.SaveFileDialog saveFileToTxtDialog;
     }
 }
 
