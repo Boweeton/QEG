@@ -80,13 +80,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\u9Yujsc.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\QEG_Classes\QEG_Classes.csproj">
       <Project>{5adac708-b728-4b87-9c03-9d18f7e86e95}</Project>
       <Name>QEG_Classes</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -59,15 +59,5 @@ namespace QEG_Windows_Application.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap u9Yujsc {
-            get {
-                object obj = ResourceManager.GetObject("u9Yujsc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
