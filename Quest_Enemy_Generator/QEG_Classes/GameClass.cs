@@ -35,6 +35,7 @@ namespace Quest_Enemy_Generator
         #region Properties
 
         public string Name { get; set; }
+        public GameClassType ClassType { get; set; }
         public bool WearsLight { get; set; }
         public List<string> PossibleWeaponsList { get; set; }
         public bool CanUseMagic { get; set; }

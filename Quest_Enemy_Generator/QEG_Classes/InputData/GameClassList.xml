@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ArrayOfGameClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
 	<GameClass>
 		<Name>Knight</Name>
+		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -96,6 +96,7 @@
 
 	<GameClass>
 		<Name>Brute</Name>
+		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -201,6 +202,7 @@
 
 	<GameClass>
 		<Name>Hunter</Name>
+		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -306,6 +308,7 @@
 
 	<GameClass>
 		<Name>Ranger</Name>
+		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -411,6 +414,7 @@
 
 	<GameClass>
 		<Name>Paladin</Name>
+		<ClassType>HeavyMagicUser</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -516,6 +520,7 @@
 
 	<GameClass>
 		<Name>Warlord</Name>
+		<ClassType>HeavyMagicUser</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -621,6 +626,7 @@
 
 	<GameClass>
 		<Name>Boweeton Cleric</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -726,6 +732,7 @@
 
 	<GameClass>
 		<Name>Wizard</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -831,6 +838,7 @@
 
 	<GameClass>
 		<Name>Court Mage</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -936,6 +944,7 @@
 
 	<GameClass>
 		<Name>Warlock</Name>
+		<ClassType>HeavyMagicUser</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1041,6 +1050,7 @@
 
 	<GameClass>
 		<Name>Enchanter</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1146,6 +1156,7 @@
 
 	<GameClass>
 		<Name>Monk</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1251,6 +1262,7 @@
 
 	<GameClass>
 		<Name>Thief</Name>
+		<ClassType>SneakFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1356,6 +1368,7 @@
 
 	<GameClass>
 		<Name>Pirate</Name>
+		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1461,6 +1474,7 @@
 
 	<GameClass>
 		<Name>Brigand</Name>
+		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1566,6 +1580,7 @@
 
 	<GameClass>
 		<Name>Mercenary</Name>
+		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1671,6 +1686,7 @@
 
 	<GameClass>
 		<Name>Assassin</Name>
+		<ClassType>SneakFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1776,6 +1792,7 @@
 
 	<GameClass>
 		<Name>Roughrider</Name>
+		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1881,6 +1898,7 @@
 
 	<GameClass>
 		<Name>Bard</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -1986,6 +2004,7 @@
 
 	<GameClass>
 		<Name>Nomad</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -2055,6 +2074,7 @@
 
 	<GameClass>
 		<Name>Scout</Name>
+		<ClassType>SneakFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Fencing Foil</string>
@@ -2136,6 +2156,7 @@
 
 	<GameClass>
 		<Name>Pilgrim</Name>
+		<ClassType>LightMagicUser</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Dagger</string>
@@ -2216,6 +2237,7 @@
 
 	<GameClass>
 		<Name>Gun Slinger</Name>
+		<ClassType>LightFighter</ClassType>
 		<WearsLight>true</WearsLight>
 			<PossibleWeaponsList>
 				<string>Gladius</string>
@@ -2288,6 +2310,7 @@
 
 	<GameClass>
 		<Name>Bounty Hunter</Name>
+		<ClassType>HeavyFighter</ClassType>
 		<WearsLight>false</WearsLight>
 			<PossibleWeaponsList>
 				<string>Gladius</string>

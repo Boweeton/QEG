@@ -86,6 +86,8 @@ namespace Quest_Enemy_Generator
 
         public RandomMode RMode { get; set; }
 
+        public List<GameClassType> AcceptableClasses { get; set; }
+
         #endregion
 
         #region Methods
@@ -158,22 +160,26 @@ namespace Quest_Enemy_Generator
 
             SetDifficulty(RMode);
 
-            // Select a Race
-            Enemy.Race = races[random.Next(races.Count)];
-
-            // Select a random GameClass avalable to this race
-            string tmpClassOption = Enemy.Race.PossibleClassList[random.Next(Enemy.Race.PossibleClassList.Count)];
-
-            // Select a GameClass
-            // ReSharper disable once LoopCanBePartlyConvertedToQuery
-            foreach (GameClass gameClass in gameClasses)
+            // Select Race & Class based on AcceptableClasses
+            do
             {
-                if (tmpClassOption == gameClass.Name)
+                // Select a Race
+                Enemy.Race = races[random.Next(races.Count)];
+
+                // Select a random GameClass avalable to this race
+                string tmpClassOption = Enemy.Race.PossibleClassList[random.Next(Enemy.Race.PossibleClassList.Count)];
+
+                // Select a GameClass
+                // ReSharper disable once LoopCanBePartlyConvertedToQuery
+                foreach (GameClass gameClass in gameClasses)
                 {
-                    Enemy.GameClass = gameClass;
-                    break;
+                    if (tmpClassOption == gameClass.Name)
+                    {
+                        Enemy.GameClass = gameClass;
+                        break;
+                    }
                 }
-            }
+            } while (!IsWithin(Enemy.GameClass.ClassType, AcceptableClasses));
 
             // Set stats
 
@@ -528,7 +534,7 @@ namespace Quest_Enemy_Generator
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        int CountLines(string str)
+        static int CountLines(string str)
         {
             return str.Length - str.Replace("\n", "").Length;
         }
@@ -939,6 +945,17 @@ namespace Quest_Enemy_Generator
 
             // Add the final glyph list to the Enemy.Glyph list
             Enemy.Glyphs = actualGlyphs;
+        }
+
+        /// <summary>
+        /// Returns if a specified enum is within a specified enum list
+        /// </summary>
+        /// <param name="inputType"></param>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        static bool IsWithin(GameClassType inputType, IEnumerable<GameClassType> list)
+        {
+            return list.Any(currentType => inputType == currentType);
         }
 
         #endregion

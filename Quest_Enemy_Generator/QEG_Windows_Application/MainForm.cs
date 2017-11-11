@@ -7,9 +7,12 @@ using Quest_Enemy_Generator;
 
 namespace QEG_Windows_Application
 {
-    public partial class QEGForm : Form
+    public partial class QegForm : Form
     {
-        // Internal declarations
+
+        #region Data
+
+        // == DATA ==
         DataManager dm = new DataManager();
 
         const int MaxPlayerLevel = 50;
@@ -18,7 +21,12 @@ namespace QEG_Windows_Application
         int avgLvl = 1;
         int count = 1;
 
-        public QEGForm()
+        #endregion
+
+        #region Constructors
+
+        // == CONSTRUCTORS ==
+        public QegForm()
         {
             InitializeComponent();
             randomModes.SelectedIndex = 0;
@@ -68,34 +76,39 @@ namespace QEG_Windows_Application
 
         }
 
-        void Form1_Load(object sender, EventArgs e)
-        {
-            // Auto set the Narrow Class
-            for (int i = 0; i < gameClassNorowerBox.Items.Count; i++)
-            {
-                gameClassNorowerBox.SetItemCheckState(i, CheckState.Checked);
-            }
+        #endregion
 
-            // Set the focus on to the avgPlrLvl box
-            avgPlrLvlBox.Select();
-            avgPlrLvlBox.SelectAll();
-        }
+        #region Methods
 
-        void randomize_Click(object sender, EventArgs e)
-        {
-            Rando();
-        }
-
+        // == METHODS ==
         void Rando()
         {
             // Set random mode
             dm.RMode = (RandomMode)randomModes.SelectedIndex;
 
+            // Assemble the list of AcceptableClasses
+            // Clear the previous list
+            dm.AcceptableClasses = new List<GameClassType>();
+
+            // Go through each checkbox and add that enum if it's checked
+            for (int i = 0; i < gameClassNorowerBox.Items.Count; i++)
+            {
+                if (gameClassNorowerBox.GetItemChecked(i))
+                {
+                    dm.AcceptableClasses.Add((GameClassType)i);
+                }
+            }
+
+            // Generate the random enemy list
             dm.FillEnemyList(avgLvl, count);
 
             UpdateAndDisplayToOutput();
 
-            saveButton.Enabled = true;
+            // Make the save buttone active once the output box has been populated at least once
+            if (!output.Text.Equals(""))
+            {
+                saveButton.Enabled = true;
+            }
         }
 
         void UpdateAndDisplayToOutput()
@@ -117,6 +130,30 @@ namespace QEG_Windows_Application
             output.SelectionStart = 0;
             output.SelectionLength = 1;
             output.ScrollToCaret();
+        }
+
+        void SaveToFile()
+        {
+            if (saveFileToTxtDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sr = new StreamWriter(saveFileToTxtDialog.FileName))
+                {
+                    sr.WriteLine(string.Join(Environment.NewLine, dm.FormatListForTxtPrinting()));
+                }
+            }
+        }
+
+        void Form1_Load(object sender, EventArgs e)
+        {
+            // Auto set the Narrow Class
+            for (int i = 0; i < gameClassNorowerBox.Items.Count; i++)
+            {
+                gameClassNorowerBox.SetItemCheckState(i, CheckState.Checked);
+            }
+
+            // Set the focus on to the avgPlrLvl box
+            avgPlrLvlBox.Select();
+            avgPlrLvlBox.SelectAll();
         }
 
         void DisplayFullWeapons_CheckedChanged(object sender, EventArgs e)
@@ -143,20 +180,16 @@ namespace QEG_Windows_Application
             }
         }
 
+        void randomize_Click(object sender, EventArgs e)
+        {
+            Rando();
+        }
+
         void printButton_Click(object sender, EventArgs e)
         {
             SaveToFile();
         }
 
-        void SaveToFile()
-        {
-            if (saveFileToTxtDialog.ShowDialog() == DialogResult.OK)
-            {
-                using (StreamWriter sr = new StreamWriter(saveFileToTxtDialog.FileName))
-                {
-                    sr.WriteLine(string.Join(Environment.NewLine, dm.FormatListForTxtPrinting()));
-                }
-            }
-        }
+        #endregion
     }
 }

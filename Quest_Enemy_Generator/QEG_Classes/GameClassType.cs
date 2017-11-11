@@ -2,7 +2,7 @@
 {
     public enum GameClassType
     {
-        HeavayFighter,
+        HeavyFighter,
         LightFighter,
         SneakFighter,
         HeavyMagicUser,

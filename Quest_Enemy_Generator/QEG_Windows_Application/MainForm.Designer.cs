@@ -1,6 +1,6 @@
 ﻿namespace QEG_Windows_Application
 {
-    partial class QEGForm
+    partial class QegForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QEGForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QegForm));
             this.displayFullWeapons = new System.Windows.Forms.CheckBox();
             this.displayFullGlyphs = new System.Windows.Forms.CheckBox();
             this.displayFullArmor = new System.Windows.Forms.CheckBox();
@@ -110,10 +110,10 @@
             // randomizeButton
             // 
             this.randomizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.randomizeButton.Location = new System.Drawing.Point(331, 15);
+            this.randomizeButton.Location = new System.Drawing.Point(389, 15);
             this.randomizeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.randomizeButton.Name = "randomizeButton";
-            this.randomizeButton.Size = new System.Drawing.Size(233, 49);
+            this.randomizeButton.Size = new System.Drawing.Size(200, 50);
             this.randomizeButton.TabIndex = 1;
             this.randomizeButton.Text = "Randomize";
             this.randomizeButton.UseVisualStyleBackColor = true;
@@ -153,10 +153,10 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(331, 86);
+            this.saveButton.Location = new System.Drawing.Point(389, 86);
             this.saveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(233, 49);
+            this.saveButton.Size = new System.Drawing.Size(200, 50);
             this.saveButton.TabIndex = 9;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -167,7 +167,7 @@
             this.formatOptions.Controls.Add(this.displayFullWeapons);
             this.formatOptions.Controls.Add(this.displayFullGlyphs);
             this.formatOptions.Controls.Add(this.displayFullArmor);
-            this.formatOptions.Location = new System.Drawing.Point(133, 12);
+            this.formatOptions.Location = new System.Drawing.Point(133, 10);
             this.formatOptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.formatOptions.Name = "formatOptions";
             this.formatOptions.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -182,7 +182,7 @@
             this.inputData.Controls.Add(this.avgPlrLvlBox);
             this.inputData.Controls.Add(this.enemyCountBox);
             this.inputData.Controls.Add(this.enemyCountLabel);
-            this.inputData.Location = new System.Drawing.Point(12, 12);
+            this.inputData.Location = new System.Drawing.Point(12, 10);
             this.inputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputData.Name = "inputData";
             this.inputData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -212,7 +212,7 @@
             // randomMode
             // 
             this.randomMode.Controls.Add(this.randomModes);
-            this.randomMode.Location = new System.Drawing.Point(589, 12);
+            this.randomMode.Location = new System.Drawing.Point(645, 10);
             this.randomMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.randomMode.Name = "randomMode";
             this.randomMode.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -229,7 +229,7 @@
             // gameClassNarowingGroupBox
             // 
             this.gameClassNarowingGroupBox.Controls.Add(this.gameClassNorowerBox);
-            this.gameClassNarowingGroupBox.Location = new System.Drawing.Point(719, 12);
+            this.gameClassNarowingGroupBox.Location = new System.Drawing.Point(775, 10);
             this.gameClassNarowingGroupBox.Name = "gameClassNarowingGroupBox";
             this.gameClassNarowingGroupBox.Size = new System.Drawing.Size(169, 118);
             this.gameClassNarowingGroupBox.TabIndex = 15;
@@ -271,7 +271,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.Name = "QEGForm";
+            this.Name = "QegForm";
             this.Text = "QEG 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.formatOptions.ResumeLayout(false);
