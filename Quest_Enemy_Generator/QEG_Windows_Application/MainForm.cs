@@ -32,21 +32,53 @@ namespace QEG_Windows_Application
             avgPlrLvlBox.Text = 1.ToString();
             enemyCountBox.Text = 1.ToString();
 
+            // If you hit "enter" while in the avgPlrLvlBox, you go to enemyCountBox
+            avgPlrLvlBox.KeyDown += (sender, args) =>
+            {
+                if (args.KeyCode == Keys.Enter)
+                {
+                    args.SuppressKeyPress = true;
+                    SelectNextControl(ActiveControl, true, true, true, true);
+                }
+            };
+
+            // If you hit "enter" while in the enemyCountBox, you go to randomizeButton
+            enemyCountBox.KeyDown += (sender, args) =>
+            {
+                if (args.KeyCode == Keys.Enter)
+                {
+                    args.SuppressKeyPress = true;
+                    SelectNextControl(ActiveControl, true, true, true, true);
+                }
+            };
+
+            // Stupid proof the avgPlrLvlBox
             avgPlrLvlBox.Leave += (sender, args) =>
             {
-                if (!int.TryParse(avgPlrLvlBox.Text, out avgLvl) || avgLvl <= 0 || avgLvl > MaxPlayerLevel)
+                if (!int.TryParse(avgPlrLvlBox.Text, out avgLvl) || avgLvl <= 0)
                 {
                     avgPlrLvlBox.Text = 1.ToString();
                     avgLvl = 1;
                 }
+                else if (avgLvl > MaxPlayerLevel)
+                {
+                    avgPlrLvlBox.Text = MaxPlayerLevel.ToString();
+                    avgLvl = MaxPlayerLevel;
+                }
             };
 
+            // Stupid proof the enemyCountBox
             enemyCountBox.Leave += (sender, args) =>
             {
-                if (!int.TryParse(enemyCountBox.Text, out count) || count <= 0 || count > MaxEnemyCount)
+                if (!int.TryParse(enemyCountBox.Text, out count) || count <= 0)
                 {
                     enemyCountBox.Text = 1.ToString();
                     count = 1;
+                }
+                else if (count > MaxEnemyCount)
+                {
+                    enemyCountBox.Text = MaxEnemyCount.ToString();
+                    count = MaxEnemyCount;
                 }
             };
 
