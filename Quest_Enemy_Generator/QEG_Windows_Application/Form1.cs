@@ -53,7 +53,7 @@ namespace QEG_Windows_Application
                 {
                     switch (args.KeyCode)
                     {
-                        case Keys.S:
+                        case Keys.S when printButton.Enabled:
                             SaveToFile();
                             break;
                         case Keys.R:

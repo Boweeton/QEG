@@ -86,7 +86,7 @@
             this.avgPlrLvlBox.Location = new System.Drawing.Point(6, 38);
             this.avgPlrLvlBox.Name = "avgPlrLvlBox";
             this.avgPlrLvlBox.Size = new System.Drawing.Size(99, 22);
-            this.avgPlrLvlBox.TabIndex = 1;
+            this.avgPlrLvlBox.TabIndex = 0;
             this.avgPlrLvlBox.TextChanged += new System.EventHandler(this.avgPlrLvl_TextChanged);
             // 
             // avgPlrLvlLabel
@@ -106,7 +106,7 @@
             this.randomize.Location = new System.Drawing.Point(331, 15);
             this.randomize.Name = "randomize";
             this.randomize.Size = new System.Drawing.Size(233, 49);
-            this.randomize.TabIndex = 0;
+            this.randomize.TabIndex = 1;
             this.randomize.Text = "Randomize";
             this.randomize.UseVisualStyleBackColor = true;
             this.randomize.Click += new System.EventHandler(this.randomize_Click);
@@ -128,7 +128,7 @@
             this.enemyCountBox.Location = new System.Drawing.Point(6, 83);
             this.enemyCountBox.Name = "enemyCountBox";
             this.enemyCountBox.Size = new System.Drawing.Size(99, 22);
-            this.enemyCountBox.TabIndex = 3;
+            this.enemyCountBox.TabIndex = 1;
             this.enemyCountBox.TextChanged += new System.EventHandler(this.enemyCount_TextChanged);
             // 
             // output
@@ -174,7 +174,7 @@
             this.inputData.Location = new System.Drawing.Point(12, 12);
             this.inputData.Name = "inputData";
             this.inputData.Size = new System.Drawing.Size(116, 113);
-            this.inputData.TabIndex = 11;
+            this.inputData.TabIndex = 0;
             this.inputData.TabStop = false;
             this.inputData.Text = "Input Data";
             // 
@@ -225,7 +225,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QEG_Form";
-            this.Text = "QEG 1.0";
+            this.Text = "3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.formatOptions.ResumeLayout(false);
             this.formatOptions.PerformLayout();
