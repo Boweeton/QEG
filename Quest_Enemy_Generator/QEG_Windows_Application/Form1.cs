@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Windows.Forms;
 using Quest_Enemy_Generator;
 
@@ -9,6 +10,9 @@ namespace QEG_Windows_Application
     {
         // Internal declarations
         DataManager dm = new DataManager();
+
+        const int MaxPlayerLevel = 50;
+        const int MaxEnemyCount = 100;
 
         int avgLvl = 1;
         int count = 1;
@@ -20,18 +24,18 @@ namespace QEG_Windows_Application
             avgPlrLvl.Text = 1.ToString();
             enemyCount.Text = 1.ToString();
 
-            avgPlrLvl.Enter += (sender, args) =>
+            avgPlrLvl.Leave += (sender, args) =>
             {
-                if (!int.TryParse(avgPlrLvl.Text, out avgLvl) || avgLvl <= 0)
+                if (!int.TryParse(avgPlrLvl.Text, out avgLvl) || avgLvl <= 0 || avgLvl > MaxPlayerLevel)
                 {
                     avgPlrLvl.Text = 1.ToString();
                     avgLvl = 1;
                 }
             };
 
-            enemyCount.Enter += (sender, args) =>
+            enemyCount.Leave += (sender, args) =>
             {
-                if (!int.TryParse(enemyCount.Text, out count) || avgLvl <= 0)
+                if (!int.TryParse(enemyCount.Text, out count) || count <= 0 || count > MaxEnemyCount)
                 {
                     enemyCount.Text = 1.ToString();
                     count = 1;
@@ -54,10 +58,18 @@ namespace QEG_Windows_Application
             dm.FillEnemyList(avgLvl, count);
 
             UpdateAndDisplayToOutput();
+
+            // Scroll to top of output box
+            output.SelectionStart = 0;
+            output.SelectionLength = 1;
+            output.ScrollToCaret();
         }
 
         void UpdateAndDisplayToOutput()
         {
+            // Store where the scroll is at
+            
+
             // Formatting Options
             dm.PrintWeaponsFull = displayFullWeapons.Checked;
             dm.PrintGlyphsFull = displayFullGlyphs.Checked;
@@ -67,15 +79,9 @@ namespace QEG_Windows_Application
 
             output.Clear();
 
-            foreach (string s in printList)
-            {
-                output.AppendText(s);
-            }
+            string printingString = string.Join(Environment.NewLine, printList);
 
-            // Scroll to top of output box
-            output.SelectionStart = 0;
-            output.SelectionLength = 1;
-            output.ScrollToCaret();
+            output.AppendText(printingString);
         }
 
         void DisplayFullWeapons_CheckedChanged(object sender, EventArgs e)
