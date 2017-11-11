@@ -2385,7 +2385,7 @@
 
 			<WeaponMove>
 			<Name>Throw/Return</Name>
-			<Description>RGD, GB 1, (no parry), (returns at EOT if missed)</Description>
+			<Description>RGD, GB 1, (no parry)</Description>
 			<Speed>4/0</Speed>
 			<Damage>16</Damage>
 			</WeaponMove>
