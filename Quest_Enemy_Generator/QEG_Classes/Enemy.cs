@@ -243,10 +243,14 @@ namespace Quest_Enemy_Generator
 
                 //Print ALL the armor
                 const int TypeOffset = 10;
-                const int NameOffset = 10;
+                const int NameOffset = 30;
+                const int DefOffset = 8;
+
+                sb.AppendLine($"{"Type",-TypeOffset}{"Name",-NameOffset}{"DEF", -DefOffset}D-Type");
+
                 foreach (Armor arm in Armors)
                 {
-                    sb.AppendLine($"{arm.AType.ToString(),-TypeOffset}{arm.Name,-NameOffset}{arm.DefVal}");
+                    sb.AppendLine($"{arm.AType.ToString(),-TypeOffset}{arm.Name,-NameOffset}{arm.DefVal, -DefOffset}{arm.DType}");
                 }
             }
 

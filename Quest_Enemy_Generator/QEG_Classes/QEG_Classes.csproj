@@ -53,6 +53,7 @@
     <Compile Include="MagicianType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Race.cs" />
+    <Compile Include="RandomMode.cs" />
     <Compile Include="SkillGrade.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="WeaponBlueprint.cs" />

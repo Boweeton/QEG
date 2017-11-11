@@ -1,6 +1,27 @@
 <?xml version="1.0"?>
 <ArrayOfGlyph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Glyph>
+    <Name>Flame Dart</Name>
+    <School>IMP</School>
+    <LvlReq>1</LvlReq>
+    <Speed>4</Speed>
+    <Description>Deal 1 Fire damage to target (undodgable).</Description>
+  </Glyph>
+  <Glyph>
+    <Name>Dark Dart</Name>
+    <School>INS</School>
+    <LvlReq>1</LvlReq>
+    <Speed>4</Speed>
+    <Description>Deal 1 Void damage to target (undodgable).</Description>
+  </Glyph>
+  <Glyph>
+    <Name>Ice Dart</Name>
+    <School>INT</School>
+    <LvlReq>1</LvlReq>
+    <Speed>4</Speed>
+    <Description>Deal 1 Frost damage to target (undodgable).</Description>
+  </Glyph>
+  <Glyph>
     <Name>Bone Crack</Name>
     <School>IMP</School>
     <LvlReq>3</LvlReq>

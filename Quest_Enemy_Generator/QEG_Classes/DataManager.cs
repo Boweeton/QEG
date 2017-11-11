@@ -67,6 +67,7 @@ namespace Quest_Enemy_Generator
             // Create the enemy
             Enemy = new Enemy();
             random = new Random();
+            RMode = RandomMode.Normal;
         }
 
         #endregion
@@ -74,10 +75,16 @@ namespace Quest_Enemy_Generator
         #region Properties
 
         public Enemy Enemy { get; set; }
+
         public List<Enemy> EnemyList { get; set; }
+
         public bool PrintWeaponsFull { get; set; }
+
         public bool PrintGlyphsFull { get; set; }
+
         public bool PrintArmorFull { get; set; }
+
+        public RandomMode RMode { get; set; }
 
         #endregion
 
@@ -149,7 +156,7 @@ namespace Quest_Enemy_Generator
         {
             Enemy = new Enemy { AveragePlayerLevel = averageLevel };
 
-            SetDifficulty();
+            SetDifficulty(RMode);
 
             // Select a Race
             Enemy.Race = races[random.Next(races.Count)];
@@ -532,21 +539,81 @@ namespace Quest_Enemy_Generator
         /// <summary>
         /// Sets the enemy diffaculty
         /// </summary>
-        void SetDifficulty()
+        void SetDifficulty(RandomMode rMode)
         {
+            // Declare probability constants
+            const float MoreCommon = 0.68f;
+            const float LessCommon = 0.9f;
+
             // Select difficulty
             double dRoll = random.NextDouble();
-            if (dRoll > Rare)
+            switch (rMode)
             {
-                Enemy.Difficulty = EnemyDifficulty.Hard;
-            }
-            else if (dRoll > Common)
-            {
-                Enemy.Difficulty = EnemyDifficulty.Medium;
-            }
-            else
-            {
-                Enemy.Difficulty = EnemyDifficulty.Easy;
+                case RandomMode.Normal:
+                    if (dRoll > Rare)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Hard;
+                    }
+                    else if (dRoll > Common)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Medium;
+                    }
+                    else
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Easy;
+                    }
+                    break;
+                case RandomMode.MoreEasy:
+                    if (dRoll > LessCommon)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Hard;
+                    }
+                    else if (dRoll > MoreCommon)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Medium;
+                    }
+                    else
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Easy;
+                    }
+                    break;
+                case RandomMode.MoreMedium:
+                    if (dRoll > LessCommon)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Hard;
+                    }
+                    else if (dRoll > MoreCommon)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Easy;
+                    }
+                    else
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Medium;
+                    }
+                    break;
+                case RandomMode.MoreHard:
+                    if (dRoll > LessCommon)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Easy;
+                    }
+                    else if (dRoll > MoreCommon)
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Medium;
+                    }
+                    else
+                    {
+                        Enemy.Difficulty = EnemyDifficulty.Hard;
+                    }
+                    break;
+                case RandomMode.AllEasy:
+                    Enemy.Difficulty = EnemyDifficulty.Easy;
+                    break;
+                case RandomMode.AllMedium:
+                    Enemy.Difficulty = EnemyDifficulty.Medium;
+                    break;
+                case RandomMode.AllHard:
+                    Enemy.Difficulty = EnemyDifficulty.Hard;
+                    break;
             }
         }
 
@@ -619,9 +686,9 @@ namespace Quest_Enemy_Generator
             }
 
             // Mop up negative values
-            if (returnVal < 0)
+            if (returnVal <= 0)
             {
-                returnVal = random.Next(3);
+                returnVal = random.Next(1, 3);
             }
 
             return returnVal;
