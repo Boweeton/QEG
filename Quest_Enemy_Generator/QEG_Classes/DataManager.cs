@@ -16,8 +16,6 @@ namespace Quest_Enemy_Generator
         const string InputFolder = "InputData/";
         readonly List<Race> races;
         readonly List<GameClass> gameClasses;
-        readonly List<Weapon> weapons;
-        readonly List<Glyph> glyphs;
         readonly List<WeaponBlueprint> weaponBlueprints;
         readonly List<WeaponEnchant> weaponEnchants;
         readonly List<WeaponUpgrade> weaponUpgrades;
@@ -51,15 +49,15 @@ namespace Quest_Enemy_Generator
             // Read in the .xml files
             races = ReadInFromXml<List<Race>>(nameof(Race));
             gameClasses = ReadInFromXml<List<GameClass>>(nameof(GameClass));
-            weapons = ReadInFromXml<List<Weapon>>(nameof(Weapon));
+            Weapons = ReadInFromXml<List<Weapon>>(nameof(Weapon));
             weaponBlueprints = ReadInFromXml<List<WeaponBlueprint>>(nameof(WeaponBlueprint));
             weaponEnchants = ReadInFromXml<List<WeaponEnchant>>(nameof(WeaponEnchant));
             weaponUpgrades = ReadInFromXml<List<WeaponUpgrade>>(nameof(WeaponUpgrade));
-            glyphs = ReadInFromXml<List<Glyph>>(nameof(Glyph));
+            Glyphs = ReadInFromXml<List<Glyph>>(nameof(Glyph));
             armors = ReadInFromXml<List<Armor>>(nameof(Armor));
 
             // Set each weapon's "DisplayName" to the base name
-            foreach (Weapon weapon in weapons)
+            foreach (Weapon weapon in Weapons)
             {
                 weapon.DisplayName = weapon.Name;
             }
@@ -73,6 +71,10 @@ namespace Quest_Enemy_Generator
         #endregion
 
         #region Properties
+
+        public List<Weapon> Weapons { get; }
+        
+        public List<Glyph> Glyphs { get; }
 
         public Enemy Enemy { get; set; }
 
@@ -271,7 +273,7 @@ namespace Quest_Enemy_Generator
 
                 // Place a weapon in Weapons[0]
                 // ReSharper disable once LoopCanBePartlyConvertedToQuery
-                foreach (Weapon weapon in weapons)
+                foreach (Weapon weapon in Weapons)
                 {
                     if (tmpWeaponRight == weapon.Name)
                     {
@@ -298,7 +300,7 @@ namespace Quest_Enemy_Generator
                         string tmpWeaponLeft = Enemy.GameClass.PossibleWeaponsList[random.Next(Enemy.GameClass.PossibleWeaponsList.Count)];
 
                         // ReSharper disable once LoopCanBePartlyConvertedToQuery
-                        foreach (Weapon weapon in weapons)
+                        foreach (Weapon weapon in Weapons)
                         {
                             if (tmpWeaponLeft == weapon.Name)
                             {
@@ -393,7 +395,7 @@ namespace Quest_Enemy_Generator
             if (Enemy.GameClass.CanUseMagic)
             {
                 // ReSharper disable once LoopCanBePartlyConvertedToQuery
-                foreach (Glyph currentGlyph in glyphs)
+                foreach (Glyph currentGlyph in Glyphs)
                 {
                     if (currentGlyph.LvlReq <= Enemy.MagicSkill && currentGlyph.School == Enemy.GameClass.MagType)
                     {

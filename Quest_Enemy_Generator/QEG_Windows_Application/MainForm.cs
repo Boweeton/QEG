@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using Quest_Enemy_Generator;
 
@@ -19,6 +18,8 @@ namespace QEG_Windows_Application
 
         int avgLvl = 1;
         int count = 1;
+
+        readonly List<Glyph> currentGlyphSearchResults = new List<Glyph>();
 
         #endregion
 
@@ -112,6 +113,65 @@ namespace QEG_Windows_Application
         #region Methods
 
         // == METHODS ==
+        void SearchGlyphs()
+        {
+            // Clear the list
+            currentGlyphSearchResults.Clear();
+
+            string searchParam = glyphSearchInputBox.Text;
+            GlyphSearchType searchType = (GlyphSearchType)glyphSearchTypeBox.SelectedIndex;
+
+            // Define what constitutes a "matched" glyph
+            Func<Glyph, bool> match;
+            switch (searchType)
+            {
+                case GlyphSearchType.Anything:
+                    match = AnythingTest;
+                    break;
+                case GlyphSearchType.Name:
+                    match = NameTest;
+                    break;
+                case GlyphSearchType.Type:
+                    match = TypeTest;
+                    break;
+                case GlyphSearchType.Level:
+                    match = LevelTest;
+                    break;
+                case GlyphSearchType.Description:
+                    match = DescriptionTest;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            // ReSharper disable once LoopCanBePartlyConvertedToQuery
+            foreach (Glyph currentGlyph in dm.Glyphs)
+            {
+                if (match(currentGlyph))
+                {
+                    currentGlyphSearchResults.Add(currentGlyph);
+                }
+            }
+
+            DisplayNewGlyphResults();
+
+            // Locally defined functions
+            bool AnythingTest(Glyph g) => NameTest(g) || TypeTest(g) || LevelTest(g) || DescriptionTest(g);
+
+            bool NameTest(Glyph g) => g.Name.Contains(searchParam);
+
+            bool TypeTest(Glyph g) => g.School.ToString().Contains(searchParam);
+
+            bool LevelTest(Glyph g) => g.LvlReq.ToString() == searchParam;
+
+            bool DescriptionTest(Glyph g) => g.Description.Contains(searchParam);
+        }
+
+        void DisplayNewGlyphResults()
+        {
+            
+        }
+
         void Rando()
         {
             // Set random mode
@@ -136,7 +196,7 @@ namespace QEG_Windows_Application
             UpdateAndDisplayToOutput();
 
             // Make the save buttone active once the output box has been populated at least once
-            if (!output.Text.Equals(""))
+            if (output.Text.Length != 0)
             {
                 saveButton.Enabled = true;
             }
@@ -174,7 +234,7 @@ namespace QEG_Windows_Application
             }
         }
 
-        void Form1_Load(object sender, EventArgs e)
+        void OnMainFormLoad(object sender, EventArgs e)
         {
             // Auto set the Narrow Class
             for (int i = 0; i < gameClassNorowerBox.Items.Count; i++)
@@ -185,9 +245,18 @@ namespace QEG_Windows_Application
             // Set the focus on to the avgPlrLvl box
             avgPlrLvlBox.Select();
             avgPlrLvlBox.SelectAll();
+
+            // Load settings for glyphSearch
+            glyphSearchTypeBox.Items.Clear();
+
+            foreach (GlyphSearchType searchType in Enum.GetValues(typeof(GlyphSearchType)))
+            {
+                glyphSearchTypeBox.Items.Add($"Search by {searchType}");
+            }
+            glyphSearchTypeBox.SelectedIndex = 0;
         }
 
-        void DisplayFullWeapons_CheckedChanged(object sender, EventArgs e)
+        void OnDisplayWeaponsChanged(object sender, EventArgs e)
         {
             if (dm.EnemyList != null)
             {
@@ -195,7 +264,7 @@ namespace QEG_Windows_Application
             }
         }
 
-        void displayFullGlyphs_CheckedChanged(object sender, EventArgs e)
+        void OnDisplayFullGlyphsChanged(object sender, EventArgs e)
         {
             if (dm.EnemyList != null)
             {
@@ -203,7 +272,7 @@ namespace QEG_Windows_Application
             }
         }
 
-        void displayFullArmor_CheckedChanged(object sender, EventArgs e)
+        void OnDisplayFullArmorChanged(object sender, EventArgs e)
         {
             if (dm.EnemyList != null)
             {
@@ -211,14 +280,24 @@ namespace QEG_Windows_Application
             }
         }
 
-        void randomize_Click(object sender, EventArgs e)
+        void OnRandomizeClicked(object sender, EventArgs e)
         {
             Rando();
         }
 
-        void printButton_Click(object sender, EventArgs e)
+        void OnPrintButtonClicked(object sender, EventArgs e)
         {
             SaveToFile();
+        }
+
+        void OnGlyphSearchTypeChanged(object sender, EventArgs e)
+        {
+            SearchGlyphs();
+        }
+
+        void OnGlyphSearchInputBoxTextChange(object sender, EventArgs e)
+        {
+            SearchGlyphs();
         }
 
         #endregion
