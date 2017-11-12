@@ -52,6 +52,7 @@
     <Compile Include="GameClassType.cs" />
     <Compile Include="Glyph.cs" />
     <Compile Include="GlyphSearchType.cs" />
+    <Compile Include="Util.cs" />
     <Compile Include="MagicianType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Race.cs" />

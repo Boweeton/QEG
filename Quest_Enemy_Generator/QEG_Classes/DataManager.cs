@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using QEG_Classes;
 
 namespace Quest_Enemy_Generator
 {
@@ -127,7 +128,7 @@ namespace Quest_Enemy_Generator
         public List<string> FormatListForTxtPrinting()
         {
             // Local declarations
-            const int PageHeight = 47;
+            const int PageHeight = 46;
             List<string> returnList = new List<string>();
 
             int counter = 0;
@@ -140,7 +141,7 @@ namespace Quest_Enemy_Generator
                 enemy.PrintArmor = PrintArmorFull;
 
                 string enemyString = enemy.ToString(i+1);
-                int currentHeight = CountLines(enemyString);
+                int currentHeight = enemyString.CountLines();
 
                 if (currentHeight > PageHeight - counter)
                 {
@@ -533,15 +534,7 @@ namespace Quest_Enemy_Generator
 
         #region Private Methods
 
-        /// <summary>
-        /// Returns how many line return characters are in the provided string.
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        static int CountLines(string str)
-        {
-            return str.Length - str.Replace("\n", "").Length;
-        }
+        
 
         /// <summary>
         /// Sets the enemy diffaculty

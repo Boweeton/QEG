@@ -32,15 +32,15 @@
             this.displayFullWeapons = new System.Windows.Forms.CheckBox();
             this.displayFullGlyphs = new System.Windows.Forms.CheckBox();
             this.displayFullArmor = new System.Windows.Forms.CheckBox();
-            this.avgPlrLvlBox = new System.Windows.Forms.TextBox();
             this.avgPlrLvlLabel = new System.Windows.Forms.Label();
             this.randomizeButton = new System.Windows.Forms.Button();
             this.enemyCountLabel = new System.Windows.Forms.Label();
-            this.enemyCountBox = new System.Windows.Forms.TextBox();
             this.output = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.formatOptions = new System.Windows.Forms.GroupBox();
             this.inputData = new System.Windows.Forms.GroupBox();
+            this.enemyCountBox = new System.Windows.Forms.NumericUpDown();
+            this.avgPlrLvlBox = new System.Windows.Forms.NumericUpDown();
             this.randomModes = new System.Windows.Forms.ListBox();
             this.randomMode = new System.Windows.Forms.GroupBox();
             this.saveFileToTxtDialog = new System.Windows.Forms.SaveFileDialog();
@@ -49,16 +49,18 @@
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.enemyGenerationTabPage = new System.Windows.Forms.TabPage();
             this.glyphSearchTabPage = new System.Windows.Forms.TabPage();
-            this.glyphSearchResultsTable = new System.Windows.Forms.TableLayoutPanel();
+            this.searchResultsLabel = new System.Windows.Forms.Label();
+            this.glyphResultsTable = new System.Windows.Forms.TableLayoutPanel();
+            this.glyphSearchTypeBox2 = new System.Windows.Forms.ComboBox();
             this.glyphSearchTypeBox1 = new System.Windows.Forms.ComboBox();
+            this.glyphSearchInputBox2 = new System.Windows.Forms.TextBox();
             this.glyphSearchInputBox1 = new System.Windows.Forms.TextBox();
             this.glyphSearchLabel = new System.Windows.Forms.Label();
             this.weaponSearchTabPage = new System.Windows.Forms.TabPage();
-            this.glyphSearchInputBox2 = new System.Windows.Forms.TextBox();
-            this.glyphSearchTypeBox2 = new System.Windows.Forms.ComboBox();
-            this.searchResultsLabel = new System.Windows.Forms.Label();
             this.formatOptions.SuspendLayout();
             this.inputData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enemyCountBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avgPlrLvlBox)).BeginInit();
             this.randomMode.SuspendLayout();
             this.gameClassNarowingGroupBox.SuspendLayout();
             this.mainTabControl.SuspendLayout();
@@ -102,14 +104,6 @@
             this.displayFullArmor.UseVisualStyleBackColor = true;
             this.displayFullArmor.CheckedChanged += new System.EventHandler(this.OnDisplayFullArmorChanged);
             // 
-            // avgPlrLvlBox
-            // 
-            this.avgPlrLvlBox.Location = new System.Drawing.Point(4, 31);
-            this.avgPlrLvlBox.Margin = new System.Windows.Forms.Padding(2);
-            this.avgPlrLvlBox.Name = "avgPlrLvlBox";
-            this.avgPlrLvlBox.Size = new System.Drawing.Size(75, 20);
-            this.avgPlrLvlBox.TabIndex = 0;
-            // 
             // avgPlrLvlLabel
             // 
             this.avgPlrLvlLabel.AutoSize = true;
@@ -145,14 +139,6 @@
             this.enemyCountLabel.TabIndex = 2;
             this.enemyCountLabel.Text = "Enemy Count";
             this.enemyCountLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // enemyCountBox
-            // 
-            this.enemyCountBox.Location = new System.Drawing.Point(4, 67);
-            this.enemyCountBox.Margin = new System.Windows.Forms.Padding(2);
-            this.enemyCountBox.Name = "enemyCountBox";
-            this.enemyCountBox.Size = new System.Drawing.Size(75, 20);
-            this.enemyCountBox.TabIndex = 1;
             // 
             // output
             // 
@@ -194,9 +180,9 @@
             // 
             // inputData
             // 
+            this.inputData.Controls.Add(this.enemyCountBox);
             this.inputData.Controls.Add(this.avgPlrLvlLabel);
             this.inputData.Controls.Add(this.avgPlrLvlBox);
-            this.inputData.Controls.Add(this.enemyCountBox);
             this.inputData.Controls.Add(this.enemyCountLabel);
             this.inputData.Location = new System.Drawing.Point(4, 4);
             this.inputData.Margin = new System.Windows.Forms.Padding(2);
@@ -206,6 +192,45 @@
             this.inputData.TabIndex = 0;
             this.inputData.TabStop = false;
             this.inputData.Text = "Input Data";
+            // 
+            // enemyCountBox
+            // 
+            this.enemyCountBox.Location = new System.Drawing.Point(6, 67);
+            this.enemyCountBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.enemyCountBox.Name = "enemyCountBox";
+            this.enemyCountBox.Size = new System.Drawing.Size(75, 20);
+            this.enemyCountBox.TabIndex = 1;
+            this.enemyCountBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // avgPlrLvlBox
+            // 
+            this.avgPlrLvlBox.Location = new System.Drawing.Point(6, 31);
+            this.avgPlrLvlBox.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.avgPlrLvlBox.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.avgPlrLvlBox.Name = "avgPlrLvlBox";
+            this.avgPlrLvlBox.Size = new System.Drawing.Size(75, 20);
+            this.avgPlrLvlBox.TabIndex = 0;
+            this.avgPlrLvlBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // randomModes
             // 
@@ -305,7 +330,7 @@
             // 
             this.glyphSearchTabPage.BackColor = System.Drawing.Color.Transparent;
             this.glyphSearchTabPage.Controls.Add(this.searchResultsLabel);
-            this.glyphSearchTabPage.Controls.Add(this.glyphSearchResultsTable);
+            this.glyphSearchTabPage.Controls.Add(this.glyphResultsTable);
             this.glyphSearchTabPage.Controls.Add(this.glyphSearchTypeBox2);
             this.glyphSearchTabPage.Controls.Add(this.glyphSearchTypeBox1);
             this.glyphSearchTabPage.Controls.Add(this.glyphSearchInputBox2);
@@ -318,18 +343,36 @@
             this.glyphSearchTabPage.TabIndex = 2;
             this.glyphSearchTabPage.Text = "Glyph Search";
             // 
-            // glyphSearchResultsTable
+            // searchResultsLabel
             // 
-            this.glyphSearchResultsTable.AutoScroll = true;
-            this.glyphSearchResultsTable.ColumnCount = 1;
-            this.glyphSearchResultsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.glyphSearchResultsTable.Location = new System.Drawing.Point(17, 113);
-            this.glyphSearchResultsTable.Name = "glyphSearchResultsTable";
-            this.glyphSearchResultsTable.RowCount = 2;
-            this.glyphSearchResultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.glyphSearchResultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.glyphSearchResultsTable.Size = new System.Drawing.Size(676, 510);
-            this.glyphSearchResultsTable.TabIndex = 3;
+            this.searchResultsLabel.AutoSize = true;
+            this.searchResultsLabel.Location = new System.Drawing.Point(17, 94);
+            this.searchResultsLabel.Name = "searchResultsLabel";
+            this.searchResultsLabel.Size = new System.Drawing.Size(37, 13);
+            this.searchResultsLabel.TabIndex = 4;
+            this.searchResultsLabel.Text = "results";
+            // 
+            // glyphResultsTable
+            // 
+            this.glyphResultsTable.AutoScroll = true;
+            this.glyphResultsTable.ColumnCount = 1;
+            this.glyphResultsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.glyphResultsTable.Location = new System.Drawing.Point(17, 113);
+            this.glyphResultsTable.Name = "glyphResultsTable";
+            this.glyphResultsTable.RowCount = 1;
+            this.glyphResultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.glyphResultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 513F));
+            this.glyphResultsTable.Size = new System.Drawing.Size(676, 513);
+            this.glyphResultsTable.TabIndex = 3;
+            // 
+            // glyphSearchTypeBox2
+            // 
+            this.glyphSearchTypeBox2.FormattingEnabled = true;
+            this.glyphSearchTypeBox2.Location = new System.Drawing.Point(520, 52);
+            this.glyphSearchTypeBox2.Name = "glyphSearchTypeBox2";
+            this.glyphSearchTypeBox2.Size = new System.Drawing.Size(173, 21);
+            this.glyphSearchTypeBox2.TabIndex = 0;
+            this.glyphSearchTypeBox2.SelectedIndexChanged += new System.EventHandler(this.OnGlyphSearchTypeChanged);
             // 
             // glyphSearchTypeBox1
             // 
@@ -340,13 +383,21 @@
             this.glyphSearchTypeBox1.TabIndex = 0;
             this.glyphSearchTypeBox1.SelectedIndexChanged += new System.EventHandler(this.OnGlyphSearchTypeChanged);
             // 
+            // glyphSearchInputBox2
+            // 
+            this.glyphSearchInputBox2.Location = new System.Drawing.Point(17, 53);
+            this.glyphSearchInputBox2.Name = "glyphSearchInputBox2";
+            this.glyphSearchInputBox2.Size = new System.Drawing.Size(497, 20);
+            this.glyphSearchInputBox2.TabIndex = 2;
+            this.glyphSearchInputBox2.TextChanged += new System.EventHandler(this.OnGlyphSearchInputBox2TextChanged);
+            // 
             // glyphSearchInputBox1
             // 
             this.glyphSearchInputBox1.Location = new System.Drawing.Point(17, 27);
             this.glyphSearchInputBox1.Name = "glyphSearchInputBox1";
             this.glyphSearchInputBox1.Size = new System.Drawing.Size(497, 20);
             this.glyphSearchInputBox1.TabIndex = 1;
-            this.glyphSearchInputBox1.TextChanged += new System.EventHandler(this.OnGlyphSearchInputBoxTextChange);
+            this.glyphSearchInputBox1.TextChanged += new System.EventHandler(this.OnGlyphSearchInputBox1TextChanged);
             // 
             // glyphSearchLabel
             // 
@@ -368,32 +419,6 @@
             this.weaponSearchTabPage.TabIndex = 1;
             this.weaponSearchTabPage.Text = "Weapon Search";
             // 
-            // glyphSearchInputBox2
-            // 
-            this.glyphSearchInputBox2.Location = new System.Drawing.Point(17, 53);
-            this.glyphSearchInputBox2.Name = "glyphSearchInputBox2";
-            this.glyphSearchInputBox2.Size = new System.Drawing.Size(497, 20);
-            this.glyphSearchInputBox2.TabIndex = 2;
-            this.glyphSearchInputBox2.TextChanged += new System.EventHandler(this.OnGlyphSearchInputBoxTextChange);
-            // 
-            // glyphSearchTypeBox2
-            // 
-            this.glyphSearchTypeBox2.FormattingEnabled = true;
-            this.glyphSearchTypeBox2.Location = new System.Drawing.Point(520, 52);
-            this.glyphSearchTypeBox2.Name = "glyphSearchTypeBox2";
-            this.glyphSearchTypeBox2.Size = new System.Drawing.Size(173, 21);
-            this.glyphSearchTypeBox2.TabIndex = 0;
-            this.glyphSearchTypeBox2.SelectedIndexChanged += new System.EventHandler(this.OnGlyphSearchTypeChanged);
-            // 
-            // searchResultsLabel
-            // 
-            this.searchResultsLabel.AutoSize = true;
-            this.searchResultsLabel.Location = new System.Drawing.Point(17, 94);
-            this.searchResultsLabel.Name = "searchResultsLabel";
-            this.searchResultsLabel.Size = new System.Drawing.Size(37, 13);
-            this.searchResultsLabel.TabIndex = 4;
-            this.searchResultsLabel.Text = "results";
-            // 
             // QegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,6 +438,8 @@
             this.formatOptions.PerformLayout();
             this.inputData.ResumeLayout(false);
             this.inputData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enemyCountBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avgPlrLvlBox)).EndInit();
             this.randomMode.ResumeLayout(false);
             this.gameClassNarowingGroupBox.ResumeLayout(false);
             this.mainTabControl.ResumeLayout(false);
@@ -429,11 +456,9 @@
         private System.Windows.Forms.CheckBox displayFullWeapons;
         private System.Windows.Forms.CheckBox displayFullGlyphs;
         private System.Windows.Forms.CheckBox displayFullArmor;
-        private System.Windows.Forms.TextBox avgPlrLvlBox;
         private System.Windows.Forms.Label avgPlrLvlLabel;
         private System.Windows.Forms.Button randomizeButton;
         private System.Windows.Forms.Label enemyCountLabel;
-        private System.Windows.Forms.TextBox enemyCountBox;
         private System.Windows.Forms.TextBox output;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.GroupBox formatOptions;
@@ -450,10 +475,12 @@
         private System.Windows.Forms.Label glyphSearchLabel;
         private System.Windows.Forms.ComboBox glyphSearchTypeBox1;
         private System.Windows.Forms.TextBox glyphSearchInputBox1;
-        private System.Windows.Forms.TableLayoutPanel glyphSearchResultsTable;
+        private System.Windows.Forms.TableLayoutPanel glyphResultsTable;
         private System.Windows.Forms.ComboBox glyphSearchTypeBox2;
         private System.Windows.Forms.TextBox glyphSearchInputBox2;
         private System.Windows.Forms.Label searchResultsLabel;
+        private System.Windows.Forms.NumericUpDown enemyCountBox;
+        private System.Windows.Forms.NumericUpDown avgPlrLvlBox;
     }
 }
 

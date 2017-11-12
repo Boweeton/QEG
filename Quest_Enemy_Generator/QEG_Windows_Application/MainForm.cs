@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
+using QEG_Classes;
 using Quest_Enemy_Generator;
 
 namespace QEG_Windows_Application
@@ -12,15 +12,15 @@ namespace QEG_Windows_Application
         #region Data
 
         // == DATA ==
-        DataManager dm = new DataManager();
+        readonly DataManager dm = new DataManager();
 
-        const int MaxPlayerLevel = 50;
-        const int MaxEnemyCount = 100;
+        readonly List<Glyph> gSearchResults = new List<Glyph>();
 
-        int avgLvl = 1;
-        int count = 1;
+        List<RichTextBox> glyphBoxen = new List<RichTextBox>();
 
-        readonly List<Glyph> currentGlyphSearchResults = new List<Glyph>();
+        const int minSearchLength = 3;
+        int gBox1PrevLength;
+        int gBox2PrevLength;
 
         #endregion
 
@@ -31,8 +31,6 @@ namespace QEG_Windows_Application
         {
             InitializeComponent();
             randomModes.SelectedIndex = 0;
-            avgPlrLvlBox.Text = 1.ToString();
-            enemyCountBox.Text = 1.ToString();
 
             // If you hit "enter" while in the avgPlrLvlBox, you go to enemyCountBox
             avgPlrLvlBox.KeyDown += (sender, args) =>
@@ -54,38 +52,11 @@ namespace QEG_Windows_Application
                 }
             };
 
-            // Stupid proof the avgPlrLvlBox
-            avgPlrLvlBox.Leave += (sender, args) =>
-            {
-                if (!int.TryParse(avgPlrLvlBox.Text, out avgLvl) || avgLvl <= 0)
-                {
-                    avgPlrLvlBox.Text = 1.ToString();
-                    avgLvl = 1;
-                }
-                else if (avgLvl > MaxPlayerLevel)
-                {
-                    avgPlrLvlBox.Text = MaxPlayerLevel.ToString();
-                    avgLvl = MaxPlayerLevel;
-                }
-            };
+            avgPlrLvlBox.Click += (sender, args) => avgPlrLvlBox.Select();
+            enemyCountBox.Click += (sender, args) => enemyCountBox.Select();
 
-            // Stupid proof the enemyCountBox
-            enemyCountBox.Leave += (sender, args) =>
-            {
-                if (!int.TryParse(enemyCountBox.Text, out count) || count <= 0)
-                {
-                    enemyCountBox.Text = 1.ToString();
-                    count = 1;
-                }
-                else if (count > MaxEnemyCount)
-                {
-                    enemyCountBox.Text = MaxEnemyCount.ToString();
-                    count = MaxEnemyCount;
-                }
-            };
-
-            avgPlrLvlBox.Click += (sender, args) => avgPlrLvlBox.SelectAll();
-            enemyCountBox.Click += (sender, args) => enemyCountBox.SelectAll();
+            //avgPlrLvlBox.Enter += (sender, args) => avgPlrLvlBox.Select(0,avgPlrLvlBox.TextLength);
+            //enemyCountBox.Enter += (sender, args) => enemyCountBox.Select(0,enemyCountBox.TextLength);
 
             KeyPreview = true;
             KeyDown += (sender, args) =>
@@ -117,7 +88,7 @@ namespace QEG_Windows_Application
         void SearchGlyphs()
         {
             // Clear the list
-            currentGlyphSearchResults.Clear();
+            gSearchResults.Clear();
 
             // Local declarations
             string searchParam1 = glyphSearchInputBox1.Text.ToLower();
@@ -126,10 +97,10 @@ namespace QEG_Windows_Application
             GlyphSearchType searchType2 = (GlyphSearchType)glyphSearchTypeBox2.SelectedIndex;
 
             // Check to see if searchParam == ""
-            if (searchParam1 == string.Empty && searchParam2 == string.Empty)
+            if (searchParam1.Length < minSearchLength && searchParam2.Length < minSearchLength)
             {
                 searchResultsLabel.Text = string.Empty;
-                glyphSearchResultsTable.Enabled = false;
+                glyphResultsTable.Enabled = false;
                 return;
             }
 
@@ -137,12 +108,12 @@ namespace QEG_Windows_Application
             // Func<Glyph, bool> match1 = FindMatch(searchType1);
             Func<Glyph, bool> match;
             // If both params are filled
-            if (searchParam1 != string.Empty && searchParam2 != string.Empty)
+            if (searchParam1.Length >= minSearchLength && searchParam2.Length >= minSearchLength)
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1) && FindMatch(searchType2)(glyph, searchParam2);
             }
             // If only param1 is filled
-            else if (searchParam1 != string.Empty)
+            else if (searchParam1.Length >= minSearchLength)
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1);
             }
@@ -157,7 +128,7 @@ namespace QEG_Windows_Application
             {
                 if (match(currentGlyph))
                 {
-                    currentGlyphSearchResults.Add(currentGlyph);
+                    gSearchResults.Add(currentGlyph);
                 }
             }
 
@@ -195,31 +166,54 @@ namespace QEG_Windows_Application
             }
         }
 
-
-
         void DisplayNewGlyphResults()
         {
-            glyphSearchResultsTable.Enabled = true;
+            glyphResultsTable.Enabled = true;
+            glyphResultsTable.RowCount = gSearchResults.Count;
+
+            // Loop through to populate the glyphs
+            for (int i = glyphBoxen.Count; i < gSearchResults.Count; i++)
+            {
+                RichTextBox richard = new RichTextBox { Dock = DockStyle.Fill, ReadOnly = true };
+                glyphResultsTable.Controls.Add(richard, 0, i);
+                glyphBoxen.Add(richard);
+                glyphResultsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            }
+
+            // Loop to remove unwanted boxen
+            for (int i = glyphBoxen.Count - 1; i > gSearchResults.Count - 1; i--)
+            {
+                glyphBoxen.RemoveAt(i);
+                glyphResultsTable.Controls.RemoveAt(i);
+                glyphResultsTable.RowStyles.RemoveAt(i);
+            }
+
+            // Loop to populate boxen
+            for (int i = 0; i < glyphBoxen.Count; i++)
+            {
+                glyphBoxen[i].Text = gSearchResults[i].Name;
+                glyphResultsTable.RowStyles[i].Height = glyphBoxen[i].Text.CountLines() * 100;
+            }
         }
 
         void UpdateGlyphResultsLabel(string param1, string param2, GlyphSearchType type1, GlyphSearchType type2)
         {
             // If both
-            if (param1 != string.Empty && param2 != string.Empty)
+            if (param1.Length >= minSearchLength && param2.Length >= minSearchLength)
             {
-                searchResultsLabel.Text = $"{currentGlyphSearchResults.Count} results matched \"{param1}\" when searched by {type1} and \"{param2}\" when searched by {type2}";
+                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" when searched by {type1} and \"{param2}\" when searched by {type2}";
             }
 
             // If only box 1
-            else if (param1 != string.Empty)
+            else if (param1.Length >= minSearchLength)
             {
-                searchResultsLabel.Text = $"{currentGlyphSearchResults.Count} results matched \"{param1}\" when searched by {type1}";
+                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" when searched by {type1}";
             }
 
             // If only box 2
             else
             {
-                searchResultsLabel.Text = $"{currentGlyphSearchResults.Count} results matched \"{param2}\" when searched by {type2}";
+                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param2}\" when searched by {type2}";
             }
         }
 
@@ -242,12 +236,12 @@ namespace QEG_Windows_Application
             }
 
             // Generate the random enemy list
-            dm.FillEnemyList(avgLvl, count);
+            dm.FillEnemyList((int)avgPlrLvlBox.Value, (int)enemyCountBox.Value);
 
             UpdateAndDisplayToOutput();
 
             // Make the save buttone active once the output box has been populated at least once
-            if (output.Text.Length != 0)
+            if (output.TextLength != 0)
             {
                 saveButton.Enabled = true;
             }
@@ -295,7 +289,7 @@ namespace QEG_Windows_Application
 
             // Set the focus on to the avgPlrLvl box
             avgPlrLvlBox.Select();
-            avgPlrLvlBox.SelectAll();
+            avgPlrLvlBox.Select(0,1);
 
             // Load settings for glyphSearch boxes
             glyphSearchTypeBox1.Items.Clear();
@@ -351,9 +345,22 @@ namespace QEG_Windows_Application
             SearchGlyphs();
         }
 
-        void OnGlyphSearchInputBoxTextChange(object sender, EventArgs e)
+        void OnGlyphSearchInputBox1TextChanged(object sender, EventArgs e)
         {
-            SearchGlyphs();
+            if (glyphSearchInputBox1.TextLength >= minSearchLength || gBox1PrevLength >= minSearchLength || glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level)
+            {
+                SearchGlyphs();
+            }
+            gBox1PrevLength = glyphSearchInputBox1.TextLength;
+        }
+
+        void OnGlyphSearchInputBox2TextChanged(object sender, EventArgs e)
+        {
+            if (glyphSearchInputBox2.TextLength >= minSearchLength || gBox2PrevLength >= minSearchLength || glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level)
+            {
+                SearchGlyphs();
+            }
+            gBox2PrevLength = glyphSearchInputBox2.TextLength;
         }
 
         #endregion
