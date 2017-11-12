@@ -80,7 +80,7 @@ namespace Quest_Enemy_Generator
 
         #region Methods
 
-        public string ConvertToString(int num)
+        public string ToString(int num)
         {
             // Local Declarations
             StringBuilder sb = new StringBuilder();

@@ -314,6 +314,7 @@
             // 
             // glyphSearchResultsTable
             // 
+            this.glyphSearchResultsTable.AutoScroll = true;
             this.glyphSearchResultsTable.ColumnCount = 1;
             this.glyphSearchResultsTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.glyphSearchResultsTable.Location = new System.Drawing.Point(17, 82);
@@ -324,7 +325,7 @@
             this.glyphSearchResultsTable.Size = new System.Drawing.Size(676, 541);
             this.glyphSearchResultsTable.TabIndex = 3;
             // 
-            // glyphSearchParamsComboBox
+            // glyphSearchTypeBox
             // 
             this.glyphSearchTypeBox.FormattingEnabled = true;
             this.glyphSearchTypeBox.Location = new System.Drawing.Point(520, 26);
@@ -333,7 +334,7 @@
             this.glyphSearchTypeBox.TabIndex = 2;
             this.glyphSearchTypeBox.SelectedIndexChanged += new System.EventHandler(this.OnGlyphSearchTypeChanged);
             // 
-            // glyphSearchInputTextBox
+            // glyphSearchInputBox
             // 
             this.glyphSearchInputBox.Location = new System.Drawing.Point(17, 27);
             this.glyphSearchInputBox.Name = "glyphSearchInputBox";

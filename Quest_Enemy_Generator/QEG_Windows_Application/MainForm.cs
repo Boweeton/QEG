@@ -118,8 +118,16 @@ namespace QEG_Windows_Application
             // Clear the list
             currentGlyphSearchResults.Clear();
 
+            // Local declarations
             string searchParam = glyphSearchInputBox.Text;
             GlyphSearchType searchType = (GlyphSearchType)glyphSearchTypeBox.SelectedIndex;
+
+            // Check to see if searchParam == ""
+            if (searchParam == string.Empty)
+            {
+                glyphSearchResultsTable.Enabled = false;
+                return;
+            }
 
             // Define what constitutes a "matched" glyph
             Func<Glyph, bool> match;

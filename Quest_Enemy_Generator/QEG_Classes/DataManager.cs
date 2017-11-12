@@ -118,7 +118,7 @@ namespace Quest_Enemy_Generator
                 enemy.PrintFullWeapons = PrintWeaponsFull;
                 enemy.PrintFullGlyphs = PrintGlyphsFull;
                 enemy.PrintArmor = PrintArmorFull;
-                returnList.Add(enemy.ConvertToString(i+1));
+                returnList.Add(enemy.ToString(i+1));
             }
 
             return returnList;
@@ -139,7 +139,7 @@ namespace Quest_Enemy_Generator
                 enemy.PrintFullGlyphs = PrintGlyphsFull;
                 enemy.PrintArmor = PrintArmorFull;
 
-                string enemyString = enemy.ConvertToString(i+1);
+                string enemyString = enemy.ToString(i+1);
                 int currentHeight = CountLines(enemyString);
 
                 if (currentHeight > PageHeight - counter)
