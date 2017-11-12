@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using Quest_Enemy_Generator;
 
@@ -119,37 +120,36 @@ namespace QEG_Windows_Application
             currentGlyphSearchResults.Clear();
 
             // Local declarations
-            string searchParam = glyphSearchInputBox.Text;
-            GlyphSearchType searchType = (GlyphSearchType)glyphSearchTypeBox.SelectedIndex;
+            string searchParam1 = glyphSearchInputBox1.Text.ToLower();
+            string searchParam2 = glyphSearchInputBox2.Text.ToLower();
+            GlyphSearchType searchType1 = (GlyphSearchType)glyphSearchTypeBox1.SelectedIndex;
+            GlyphSearchType searchType2 = (GlyphSearchType)glyphSearchTypeBox2.SelectedIndex;
 
             // Check to see if searchParam == ""
-            if (searchParam == string.Empty)
+            if (searchParam1 == string.Empty && searchParam2 == string.Empty)
             {
+                searchResultsLabel.Text = string.Empty;
                 glyphSearchResultsTable.Enabled = false;
                 return;
             }
 
             // Define what constitutes a "matched" glyph
+            // Func<Glyph, bool> match1 = FindMatch(searchType1);
             Func<Glyph, bool> match;
-            switch (searchType)
+            // If both params are filled
+            if (searchParam1 != string.Empty && searchParam2 != string.Empty)
             {
-                case GlyphSearchType.Anything:
-                    match = AnythingTest;
-                    break;
-                case GlyphSearchType.Name:
-                    match = NameTest;
-                    break;
-                case GlyphSearchType.Type:
-                    match = TypeTest;
-                    break;
-                case GlyphSearchType.Level:
-                    match = LevelTest;
-                    break;
-                case GlyphSearchType.Description:
-                    match = DescriptionTest;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                match = glyph => FindMatch(searchType1)(glyph, searchParam1) && FindMatch(searchType2)(glyph, searchParam2);
+            }
+            // If only param1 is filled
+            else if (searchParam1 != string.Empty)
+            {
+                match = glyph => FindMatch(searchType1)(glyph, searchParam1);
+            }
+            // If only param2 is filled
+            else
+            {
+                match = glyph => FindMatch(searchType2)(glyph, searchParam2);
             }
 
             // ReSharper disable once LoopCanBePartlyConvertedToQuery
@@ -162,22 +162,65 @@ namespace QEG_Windows_Application
             }
 
             DisplayNewGlyphResults();
+            UpdateGlyphResultsLabel(searchParam1, searchParam2, searchType1, searchType2);
 
             // Locally defined functions
-            bool AnythingTest(Glyph g) => NameTest(g) || TypeTest(g) || LevelTest(g) || DescriptionTest(g);
+            bool AnythingTest(Glyph g, string param) => NameTest(g, param) || TypeTest(g, param) || LevelTest(g, param) || DescriptionTest(g, param);
 
-            bool NameTest(Glyph g) => g.Name.Contains(searchParam);
+            bool NameTest(Glyph g, string param) => g.Name.ToLower().Contains(param);
 
-            bool TypeTest(Glyph g) => g.School.ToString().Contains(searchParam);
+            bool TypeTest(Glyph g, string param) => g.School.ToString().ToLower().Contains(param);
 
-            bool LevelTest(Glyph g) => g.LvlReq.ToString() == searchParam;
+            bool LevelTest(Glyph g, string param) => g.LvlReq.ToString().ToLower() == param;
 
-            bool DescriptionTest(Glyph g) => g.Description.Contains(searchParam);
+            bool DescriptionTest(Glyph g, string param) => g.Description.ToLower().Contains(param);
+
+            Func<Glyph, string, bool> FindMatch(GlyphSearchType type)
+            {
+                switch (type)
+                {
+                    case GlyphSearchType.Anything:
+                        return AnythingTest;
+                    case GlyphSearchType.Name:
+                        return NameTest;
+                    case GlyphSearchType.School:
+                        return TypeTest;
+                    case GlyphSearchType.Level:
+                        return LevelTest;
+                    case GlyphSearchType.Description:
+                        return DescriptionTest;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
         }
+
+
 
         void DisplayNewGlyphResults()
         {
-            
+            glyphSearchResultsTable.Enabled = true;
+        }
+
+        void UpdateGlyphResultsLabel(string param1, string param2, GlyphSearchType type1, GlyphSearchType type2)
+        {
+            // If both
+            if (param1 != string.Empty && param2 != string.Empty)
+            {
+                searchResultsLabel.Text = $"{currentGlyphSearchResults.Count} results matched \"{param1}\" when searched by {type1} and \"{param2}\" when searched by {type2}";
+            }
+
+            // If only box 1
+            else if (param1 != string.Empty)
+            {
+                searchResultsLabel.Text = $"{currentGlyphSearchResults.Count} results matched \"{param1}\" when searched by {type1}";
+            }
+
+            // If only box 2
+            else
+            {
+                searchResultsLabel.Text = $"{currentGlyphSearchResults.Count} results matched \"{param2}\" when searched by {type2}";
+            }
         }
 
         void Rando()
@@ -254,14 +297,19 @@ namespace QEG_Windows_Application
             avgPlrLvlBox.Select();
             avgPlrLvlBox.SelectAll();
 
-            // Load settings for glyphSearch
-            glyphSearchTypeBox.Items.Clear();
+            // Load settings for glyphSearch boxes
+            glyphSearchTypeBox1.Items.Clear();
+            glyphSearchTypeBox2.Items.Clear();
 
             foreach (GlyphSearchType searchType in Enum.GetValues(typeof(GlyphSearchType)))
             {
-                glyphSearchTypeBox.Items.Add($"Search by {searchType}");
+                glyphSearchTypeBox1.Items.Add($"Search by {searchType}");
+                glyphSearchTypeBox2.Items.Add($"Search by {searchType}");
             }
-            glyphSearchTypeBox.SelectedIndex = 0;
+            glyphSearchTypeBox1.SelectedIndex = 0;
+            glyphSearchTypeBox2.SelectedIndex = 0;
+
+            searchResultsLabel.Text = string.Empty;
         }
 
         void OnDisplayWeaponsChanged(object sender, EventArgs e)

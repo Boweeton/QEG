@@ -4,7 +4,7 @@
     {
         Anything,
         Name,
-        Type,
+        School,
         Level,
         Description
     }
