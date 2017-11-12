@@ -46,10 +46,16 @@
             this.saveFileToTxtDialog = new System.Windows.Forms.SaveFileDialog();
             this.gameClassNarowingGroupBox = new System.Windows.Forms.GroupBox();
             this.gameClassNorowerBox = new System.Windows.Forms.CheckedListBox();
+            this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.enemyGenerationTabPage = new System.Windows.Forms.TabPage();
+            this.weaponSearchTabPage = new System.Windows.Forms.TabPage();
+            this.glyphSearchTabPage = new System.Windows.Forms.TabPage();
             this.formatOptions.SuspendLayout();
             this.inputData.SuspendLayout();
             this.randomMode.SuspendLayout();
             this.gameClassNarowingGroupBox.SuspendLayout();
+            this.mainTabControl.SuspendLayout();
+            this.enemyGenerationTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // displayFullWeapons
@@ -110,7 +116,7 @@
             // randomizeButton
             // 
             this.randomizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.randomizeButton.Location = new System.Drawing.Point(389, 15);
+            this.randomizeButton.Location = new System.Drawing.Point(379, 16);
             this.randomizeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.randomizeButton.Name = "randomizeButton";
             this.randomizeButton.Size = new System.Drawing.Size(200, 40);
@@ -141,19 +147,19 @@
             // output
             // 
             this.output.Font = new System.Drawing.Font("Lucida Console", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(12, 164);
+            this.output.Location = new System.Drawing.Point(6, 176);
             this.output.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.output.Multiline = true;
             this.output.Name = "output";
             this.output.ReadOnly = true;
             this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.output.Size = new System.Drawing.Size(932, 663);
+            this.output.Size = new System.Drawing.Size(932, 611);
             this.output.TabIndex = 2;
             // 
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(389, 66);
+            this.saveButton.Location = new System.Drawing.Point(379, 64);
             this.saveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(200, 40);
@@ -167,7 +173,7 @@
             this.formatOptions.Controls.Add(this.displayFullWeapons);
             this.formatOptions.Controls.Add(this.displayFullGlyphs);
             this.formatOptions.Controls.Add(this.displayFullArmor);
-            this.formatOptions.Location = new System.Drawing.Point(133, 10);
+            this.formatOptions.Location = new System.Drawing.Point(128, 5);
             this.formatOptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.formatOptions.Name = "formatOptions";
             this.formatOptions.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -182,7 +188,7 @@
             this.inputData.Controls.Add(this.avgPlrLvlBox);
             this.inputData.Controls.Add(this.enemyCountBox);
             this.inputData.Controls.Add(this.enemyCountLabel);
-            this.inputData.Location = new System.Drawing.Point(12, 10);
+            this.inputData.Location = new System.Drawing.Point(6, 5);
             this.inputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputData.Name = "inputData";
             this.inputData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -212,7 +218,7 @@
             // randomMode
             // 
             this.randomMode.Controls.Add(this.randomModes);
-            this.randomMode.Location = new System.Drawing.Point(645, 10);
+            this.randomMode.Location = new System.Drawing.Point(639, 6);
             this.randomMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.randomMode.Name = "randomMode";
             this.randomMode.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -229,7 +235,7 @@
             // gameClassNarowingGroupBox
             // 
             this.gameClassNarowingGroupBox.Controls.Add(this.gameClassNorowerBox);
-            this.gameClassNarowingGroupBox.Location = new System.Drawing.Point(775, 10);
+            this.gameClassNarowingGroupBox.Location = new System.Drawing.Point(769, 6);
             this.gameClassNarowingGroupBox.Name = "gameClassNarowingGroupBox";
             this.gameClassNarowingGroupBox.Size = new System.Drawing.Size(169, 118);
             this.gameClassNarowingGroupBox.TabIndex = 15;
@@ -238,7 +244,7 @@
             // 
             // gameClassNorowerBox
             // 
-            this.gameClassNorowerBox.BackColor = System.Drawing.SystemColors.Control;
+            this.gameClassNorowerBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gameClassNorowerBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gameClassNorowerBox.ColumnWidth = 10;
             this.gameClassNorowerBox.FormattingEnabled = true;
@@ -253,19 +259,60 @@
             this.gameClassNorowerBox.Size = new System.Drawing.Size(154, 102);
             this.gameClassNorowerBox.TabIndex = 16;
             // 
+            // mainTabControl
+            // 
+            this.mainTabControl.Controls.Add(this.enemyGenerationTabPage);
+            this.mainTabControl.Controls.Add(this.weaponSearchTabPage);
+            this.mainTabControl.Controls.Add(this.glyphSearchTabPage);
+            this.mainTabControl.Location = new System.Drawing.Point(12, 12);
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.SelectedIndex = 0;
+            this.mainTabControl.Size = new System.Drawing.Size(955, 821);
+            this.mainTabControl.TabIndex = 16;
+            // 
+            // enemyGenerationTabPage
+            // 
+            this.enemyGenerationTabPage.BackColor = System.Drawing.Color.Transparent;
+            this.enemyGenerationTabPage.Controls.Add(this.inputData);
+            this.enemyGenerationTabPage.Controls.Add(this.output);
+            this.enemyGenerationTabPage.Controls.Add(this.randomMode);
+            this.enemyGenerationTabPage.Controls.Add(this.gameClassNarowingGroupBox);
+            this.enemyGenerationTabPage.Controls.Add(this.formatOptions);
+            this.enemyGenerationTabPage.Controls.Add(this.saveButton);
+            this.enemyGenerationTabPage.Controls.Add(this.randomizeButton);
+            this.enemyGenerationTabPage.Location = new System.Drawing.Point(4, 25);
+            this.enemyGenerationTabPage.Name = "enemyGenerationTabPage";
+            this.enemyGenerationTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.enemyGenerationTabPage.Size = new System.Drawing.Size(947, 792);
+            this.enemyGenerationTabPage.TabIndex = 0;
+            this.enemyGenerationTabPage.Text = "Enemy Generation";
+            // 
+            // weaponSearchTabPage
+            // 
+            this.weaponSearchTabPage.BackColor = System.Drawing.Color.Transparent;
+            this.weaponSearchTabPage.Location = new System.Drawing.Point(4, 25);
+            this.weaponSearchTabPage.Name = "weaponSearchTabPage";
+            this.weaponSearchTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.weaponSearchTabPage.Size = new System.Drawing.Size(947, 792);
+            this.weaponSearchTabPage.TabIndex = 1;
+            this.weaponSearchTabPage.Text = "Weapon Search";
+            // 
+            // glyphSearchTabPage
+            // 
+            this.glyphSearchTabPage.BackColor = System.Drawing.Color.Transparent;
+            this.glyphSearchTabPage.Location = new System.Drawing.Point(4, 25);
+            this.glyphSearchTabPage.Name = "glyphSearchTabPage";
+            this.glyphSearchTabPage.Size = new System.Drawing.Size(947, 792);
+            this.glyphSearchTabPage.TabIndex = 2;
+            this.glyphSearchTabPage.Text = "Glyph Search";
+            // 
             // QegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(960, 845);
-            this.Controls.Add(this.gameClassNarowingGroupBox);
-            this.Controls.Add(this.randomMode);
-            this.Controls.Add(this.inputData);
-            this.Controls.Add(this.formatOptions);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.output);
-            this.Controls.Add(this.randomizeButton);
+            this.ClientSize = new System.Drawing.Size(979, 845);
+            this.Controls.Add(this.mainTabControl);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -280,8 +327,10 @@
             this.inputData.PerformLayout();
             this.randomMode.ResumeLayout(false);
             this.gameClassNarowingGroupBox.ResumeLayout(false);
+            this.mainTabControl.ResumeLayout(false);
+            this.enemyGenerationTabPage.ResumeLayout(false);
+            this.enemyGenerationTabPage.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -304,6 +353,10 @@
         private System.Windows.Forms.SaveFileDialog saveFileToTxtDialog;
         private System.Windows.Forms.GroupBox gameClassNarowingGroupBox;
         private System.Windows.Forms.CheckedListBox gameClassNorowerBox;
+        private System.Windows.Forms.TabControl mainTabControl;
+        private System.Windows.Forms.TabPage enemyGenerationTabPage;
+        private System.Windows.Forms.TabPage weaponSearchTabPage;
+        private System.Windows.Forms.TabPage glyphSearchTabPage;
     }
 }
 

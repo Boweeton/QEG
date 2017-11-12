@@ -102,9 +102,9 @@ namespace Quest_Enemy_Generator
             list1.Add($"M-Skill: {MagicSkill}");
             list2.Add($"{Level} :Lvl   ");
             list2.Add($"{XpYield} :XP    ");
+            list2.Add($"{XpYield/2} :A-XP  ");
             list2.Add($"{TotalPDef} :P-Def ");
             list2.Add($"{TotalGDef} :G-Def ");
-            list2.Add(" ");
             list2.Add(" ");
             list2.Add(" ");
             list2.Add($"{Scrips} :Scrips");
