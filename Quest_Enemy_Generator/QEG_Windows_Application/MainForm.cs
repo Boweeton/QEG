@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QEG_Classes;
@@ -16,7 +17,7 @@ namespace QEG_Windows_Application
         // == DATA ==
         readonly DataManager dm = new DataManager();
 
-        readonly List<Glyph> gSearchResults = new List<Glyph>();
+        List<Glyph> gSearchResults = new List<Glyph>();
 
         List<RichTextBox> glyphBoxen = new List<RichTextBox>();
 
@@ -185,6 +186,29 @@ namespace QEG_Windows_Application
             {
                 gSearchResultBox.AppendText(new StringBuilder().Append('_', partitionLength).ToString());
                 gSearchResultBox.AppendText("\n");
+            }
+
+            // Sort before display
+            switch (gSearchResultsSortBox.SelectedIndex)
+            {
+                case 0:
+                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.Name).ToList();
+                    break;
+                case 1:
+                    gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.Name).ToList();
+                    break;
+                case 2:
+                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.LvlReq).ToList();
+                    break;
+                case 3:
+                    gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.LvlReq).ToList();
+                    break;
+                case 4:
+                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.Speed).ToList();
+                    break;
+                case 5:
+                    gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.Speed).ToList();
+                    break;
             }
 
             // MASTER LOOP FOR PRINTING AND HIGHLIGHTING
@@ -379,8 +403,9 @@ namespace QEG_Windows_Application
             glyphSearchTypeBox2.SelectedIndex = 0;
 
             searchResultsLabel.Text = string.Empty;
+            gSearchResultsSortBox.SelectedIndex = 0;
 
-            
+
         }
 
         void OnDisplayWeaponsChanged(object sender, EventArgs e)
@@ -438,6 +463,12 @@ namespace QEG_Windows_Application
                 SearchGlyphs();
             }
             gBox2PrevLength = glyphSearchInputBox2.TextLength;
+        }
+
+        void OnGlyphSearchSortTypeChanged(object sender, EventArgs e)
+        {
+            OnGlyphSearchInputBox1TextChanged(sender, e);
+            OnGlyphSearchInputBox2TextChanged(sender, e);
         }
 
         #endregion
