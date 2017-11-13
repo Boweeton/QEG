@@ -74,6 +74,9 @@ namespace QEG_Windows_Application
                         case Keys.R:
                             Rando();
                             break;
+                        case Keys.T:
+                            ResetGSearch(sender, args);
+                            break;
                     }
                 }
             };
@@ -261,7 +264,7 @@ namespace QEG_Windows_Application
                 }
 
                 // Set the highlight color
-                Color highlightColor1 = Color.Coral;
+                Color highlightColor1 = Color.SkyBlue;
                 Color highlightColor2 = Color.Chartreuse;
 
                 // Record the current index thus far
@@ -299,19 +302,19 @@ namespace QEG_Windows_Application
             // If both
             if (param1.Length >= MinSearchLength && param2.Length >= MinSearchLength)
             {
-                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" when searched by {type1} and \"{param2}\" when searched by {type2}";
+                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" in {type1} and \"{param2}\" in {type2}";
             }
 
             // If only box 1
             else if (param1.Length >= MinSearchLength)
             {
-                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" when searched by {type1}";
+                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" in {type1}";
             }
 
             // If only box 2
             else if (param2.Length >= MinSearchLength)
             {
-                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param2}\" when searched by {type2}";
+                searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param2}\" in {type2}";
             }
         }
 
@@ -469,6 +472,15 @@ namespace QEG_Windows_Application
         {
             OnGlyphSearchInputBox1TextChanged(sender, e);
             OnGlyphSearchInputBox2TextChanged(sender, e);
+        }
+
+        void ResetGSearch(object sender, EventArgs e)
+        {
+            glyphSearchInputBox1.Text = string.Empty;
+            glyphSearchInputBox2.Text = string.Empty;
+            glyphSearchTypeBox1.SelectedIndex = 0;
+            glyphSearchTypeBox2.SelectedIndex = 0;
+            gSearchResultsSortBox.SelectedIndex = 0;
         }
 
         #endregion
