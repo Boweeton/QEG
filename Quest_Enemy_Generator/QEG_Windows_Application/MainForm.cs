@@ -113,7 +113,9 @@ namespace QEG_Windows_Application
             // Define what constitutes a "matched" glyph
             Func<Glyph, bool> match;
             // If both params are filled
-            if (searchParam1.Length >= MinSearchLength && searchParam2.Length >= MinSearchLength)
+            if ((searchParam1.Length >= MinSearchLength && searchParam2.Length >= MinSearchLength) ||
+                (searchParam1.Length >= MinSearchLength && glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level) ||
+                (glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level && searchParam2.Length >= MinSearchLength))
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1) && FindMatch(searchType2)(glyph, searchParam2);
             }
@@ -248,7 +250,7 @@ namespace QEG_Windows_Application
                 gSearchResultBox.AppendText(superString);
 
                 // Check to see if we should highlight
-                if ((type1 == GlyphSearchType.Anything || type1 == goodType) && subString == param1)
+                if ((type1 == GlyphSearchType.Anything || type1 == goodType) && subString == param1 && (param1.Length >= MinSearchLength || goodType == GlyphSearchType.Level))
                 {
                     foreach (int index in indexesToHighlight)
                     {
@@ -256,7 +258,7 @@ namespace QEG_Windows_Application
                         gSearchResultBox.SelectionBackColor = highlightColor1;
                     }
                 }
-                if ((type2 == GlyphSearchType.Anything || type2 == goodType) && subString == param2)
+                if ((type2 == GlyphSearchType.Anything || type2 == goodType) && subString == param2 && (param2.Length >= MinSearchLength || goodType == GlyphSearchType.Level))
                 {
                     foreach (int index in indexesToHighlight)
                     {

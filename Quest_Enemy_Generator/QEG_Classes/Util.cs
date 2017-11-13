@@ -61,7 +61,10 @@ namespace QEG_Classes
                 indexes.Add(prevStringPos);
                 prevStringPos--;
             }
-            indexes.RemoveAt(indexes.Count-1);
+            if (prevStringPos == -2)
+            {
+                indexes.RemoveAt(indexes.Count-1);
+            }
 
             return indexes;
         }
