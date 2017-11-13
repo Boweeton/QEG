@@ -47,8 +47,8 @@
             this.gameClassNarowingGroupBox = new System.Windows.Forms.GroupBox();
             this.gameClassNorowerBox = new System.Windows.Forms.CheckedListBox();
             this.mainTabControl = new System.Windows.Forms.TabControl();
-            this.enemyGenerationTabPage = new System.Windows.Forms.TabPage();
-            this.glyphSearchTabPage = new System.Windows.Forms.TabPage();
+            this.enemyGenerationTab = new System.Windows.Forms.TabPage();
+            this.glyphSearchTab = new System.Windows.Forms.TabPage();
             this.gSortGroupBox = new System.Windows.Forms.GroupBox();
             this.gSearchResultsSortBox = new System.Windows.Forms.ComboBox();
             this.gSearchParamsGroupBox = new System.Windows.Forms.GroupBox();
@@ -58,8 +58,12 @@
             this.glyphSearchTypeBox2 = new System.Windows.Forms.ComboBox();
             this.gSearchResultBox = new System.Windows.Forms.RichTextBox();
             this.searchResultsLabel = new System.Windows.Forms.Label();
-            this.weaponSearchTabPage = new System.Windows.Forms.TabPage();
+            this.weaponSearchTab = new System.Windows.Forms.TabPage();
             this.gSearchResetButton = new System.Windows.Forms.Button();
+            this.areaGeneratorTab = new System.Windows.Forms.TabPage();
+            this.npcGeneratorTab = new System.Windows.Forms.TabPage();
+            this.gsPlannerTab = new System.Windows.Forms.TabPage();
+            this.playerTrackerTabTab = new System.Windows.Forms.TabPage();
             this.formatOptions.SuspendLayout();
             this.inputData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.enemyCountBox)).BeginInit();
@@ -67,8 +71,8 @@
             this.randomMode.SuspendLayout();
             this.gameClassNarowingGroupBox.SuspendLayout();
             this.mainTabControl.SuspendLayout();
-            this.enemyGenerationTabPage.SuspendLayout();
-            this.glyphSearchTabPage.SuspendLayout();
+            this.enemyGenerationTab.SuspendLayout();
+            this.glyphSearchTab.SuspendLayout();
             this.gSortGroupBox.SuspendLayout();
             this.gSearchParamsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -303,9 +307,13 @@
             // 
             // mainTabControl
             // 
-            this.mainTabControl.Controls.Add(this.enemyGenerationTabPage);
-            this.mainTabControl.Controls.Add(this.glyphSearchTabPage);
-            this.mainTabControl.Controls.Add(this.weaponSearchTabPage);
+            this.mainTabControl.Controls.Add(this.playerTrackerTabTab);
+            this.mainTabControl.Controls.Add(this.gsPlannerTab);
+            this.mainTabControl.Controls.Add(this.enemyGenerationTab);
+            this.mainTabControl.Controls.Add(this.glyphSearchTab);
+            this.mainTabControl.Controls.Add(this.weaponSearchTab);
+            this.mainTabControl.Controls.Add(this.areaGeneratorTab);
+            this.mainTabControl.Controls.Add(this.npcGeneratorTab);
             this.mainTabControl.Location = new System.Drawing.Point(9, 10);
             this.mainTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mainTabControl.Name = "mainTabControl";
@@ -313,38 +321,38 @@
             this.mainTabControl.Size = new System.Drawing.Size(716, 667);
             this.mainTabControl.TabIndex = 0;
             // 
-            // enemyGenerationTabPage
+            // enemyGenerationTab
             // 
-            this.enemyGenerationTabPage.BackColor = System.Drawing.Color.Transparent;
-            this.enemyGenerationTabPage.Controls.Add(this.inputData);
-            this.enemyGenerationTabPage.Controls.Add(this.output);
-            this.enemyGenerationTabPage.Controls.Add(this.randomMode);
-            this.enemyGenerationTabPage.Controls.Add(this.gameClassNarowingGroupBox);
-            this.enemyGenerationTabPage.Controls.Add(this.formatOptions);
-            this.enemyGenerationTabPage.Controls.Add(this.saveButton);
-            this.enemyGenerationTabPage.Controls.Add(this.randomizeButton);
-            this.enemyGenerationTabPage.Location = new System.Drawing.Point(4, 22);
-            this.enemyGenerationTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.enemyGenerationTabPage.Name = "enemyGenerationTabPage";
-            this.enemyGenerationTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.enemyGenerationTabPage.Size = new System.Drawing.Size(708, 641);
-            this.enemyGenerationTabPage.TabIndex = 0;
-            this.enemyGenerationTabPage.Text = "Enemy Generation";
+            this.enemyGenerationTab.BackColor = System.Drawing.Color.Transparent;
+            this.enemyGenerationTab.Controls.Add(this.inputData);
+            this.enemyGenerationTab.Controls.Add(this.output);
+            this.enemyGenerationTab.Controls.Add(this.randomMode);
+            this.enemyGenerationTab.Controls.Add(this.gameClassNarowingGroupBox);
+            this.enemyGenerationTab.Controls.Add(this.formatOptions);
+            this.enemyGenerationTab.Controls.Add(this.saveButton);
+            this.enemyGenerationTab.Controls.Add(this.randomizeButton);
+            this.enemyGenerationTab.Location = new System.Drawing.Point(4, 22);
+            this.enemyGenerationTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyGenerationTab.Name = "enemyGenerationTab";
+            this.enemyGenerationTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyGenerationTab.Size = new System.Drawing.Size(708, 641);
+            this.enemyGenerationTab.TabIndex = 0;
+            this.enemyGenerationTab.Text = "Enemy Generation";
             // 
-            // glyphSearchTabPage
+            // glyphSearchTab
             // 
-            this.glyphSearchTabPage.BackColor = System.Drawing.Color.Transparent;
-            this.glyphSearchTabPage.Controls.Add(this.gSearchResetButton);
-            this.glyphSearchTabPage.Controls.Add(this.gSortGroupBox);
-            this.glyphSearchTabPage.Controls.Add(this.gSearchParamsGroupBox);
-            this.glyphSearchTabPage.Controls.Add(this.gSearchResultBox);
-            this.glyphSearchTabPage.Controls.Add(this.searchResultsLabel);
-            this.glyphSearchTabPage.Location = new System.Drawing.Point(4, 22);
-            this.glyphSearchTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.glyphSearchTabPage.Name = "glyphSearchTabPage";
-            this.glyphSearchTabPage.Size = new System.Drawing.Size(708, 641);
-            this.glyphSearchTabPage.TabIndex = 2;
-            this.glyphSearchTabPage.Text = "Glyph Search";
+            this.glyphSearchTab.BackColor = System.Drawing.Color.Transparent;
+            this.glyphSearchTab.Controls.Add(this.gSearchResetButton);
+            this.glyphSearchTab.Controls.Add(this.gSortGroupBox);
+            this.glyphSearchTab.Controls.Add(this.gSearchParamsGroupBox);
+            this.glyphSearchTab.Controls.Add(this.gSearchResultBox);
+            this.glyphSearchTab.Controls.Add(this.searchResultsLabel);
+            this.glyphSearchTab.Location = new System.Drawing.Point(4, 22);
+            this.glyphSearchTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.glyphSearchTab.Name = "glyphSearchTab";
+            this.glyphSearchTab.Size = new System.Drawing.Size(708, 641);
+            this.glyphSearchTab.TabIndex = 2;
+            this.glyphSearchTab.Text = "Glyph Search";
             // 
             // gSortGroupBox
             // 
@@ -442,16 +450,16 @@
             this.searchResultsLabel.TabIndex = 4;
             this.searchResultsLabel.Text = "results";
             // 
-            // weaponSearchTabPage
+            // weaponSearchTab
             // 
-            this.weaponSearchTabPage.BackColor = System.Drawing.Color.Transparent;
-            this.weaponSearchTabPage.Location = new System.Drawing.Point(4, 22);
-            this.weaponSearchTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.weaponSearchTabPage.Name = "weaponSearchTabPage";
-            this.weaponSearchTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.weaponSearchTabPage.Size = new System.Drawing.Size(708, 641);
-            this.weaponSearchTabPage.TabIndex = 1;
-            this.weaponSearchTabPage.Text = "Weapon Search";
+            this.weaponSearchTab.BackColor = System.Drawing.Color.Transparent;
+            this.weaponSearchTab.Location = new System.Drawing.Point(4, 22);
+            this.weaponSearchTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weaponSearchTab.Name = "weaponSearchTab";
+            this.weaponSearchTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weaponSearchTab.Size = new System.Drawing.Size(708, 641);
+            this.weaponSearchTab.TabIndex = 1;
+            this.weaponSearchTab.Text = "Weapon Search";
             // 
             // gSearchResetButton
             // 
@@ -464,6 +472,43 @@
             this.gSearchResetButton.Text = "Reset";
             this.gSearchResetButton.UseVisualStyleBackColor = true;
             this.gSearchResetButton.Click += new System.EventHandler(this.ResetGSearch);
+            // 
+            // areaGeneratorTab
+            // 
+            this.areaGeneratorTab.Location = new System.Drawing.Point(4, 22);
+            this.areaGeneratorTab.Name = "areaGeneratorTab";
+            this.areaGeneratorTab.Padding = new System.Windows.Forms.Padding(3);
+            this.areaGeneratorTab.Size = new System.Drawing.Size(708, 641);
+            this.areaGeneratorTab.TabIndex = 3;
+            this.areaGeneratorTab.Text = "Area Generator";
+            this.areaGeneratorTab.UseVisualStyleBackColor = true;
+            // 
+            // npcGeneratorTab
+            // 
+            this.npcGeneratorTab.Location = new System.Drawing.Point(4, 22);
+            this.npcGeneratorTab.Name = "npcGeneratorTab";
+            this.npcGeneratorTab.Size = new System.Drawing.Size(708, 641);
+            this.npcGeneratorTab.TabIndex = 4;
+            this.npcGeneratorTab.Text = "NPC Generator";
+            this.npcGeneratorTab.UseVisualStyleBackColor = true;
+            // 
+            // gsPlannerTab
+            // 
+            this.gsPlannerTab.Location = new System.Drawing.Point(4, 22);
+            this.gsPlannerTab.Name = "gsPlannerTab";
+            this.gsPlannerTab.Size = new System.Drawing.Size(708, 641);
+            this.gsPlannerTab.TabIndex = 5;
+            this.gsPlannerTab.Text = "GS Planner";
+            this.gsPlannerTab.UseVisualStyleBackColor = true;
+            // 
+            // playerTrackerTabTab
+            // 
+            this.playerTrackerTabTab.Location = new System.Drawing.Point(4, 22);
+            this.playerTrackerTabTab.Name = "playerTrackerTabTab";
+            this.playerTrackerTabTab.Size = new System.Drawing.Size(708, 641);
+            this.playerTrackerTabTab.TabIndex = 6;
+            this.playerTrackerTabTab.Text = "Player Tracker";
+            this.playerTrackerTabTab.UseVisualStyleBackColor = true;
             // 
             // QegForm
             // 
@@ -489,10 +534,10 @@
             this.randomMode.ResumeLayout(false);
             this.gameClassNarowingGroupBox.ResumeLayout(false);
             this.mainTabControl.ResumeLayout(false);
-            this.enemyGenerationTabPage.ResumeLayout(false);
-            this.enemyGenerationTabPage.PerformLayout();
-            this.glyphSearchTabPage.ResumeLayout(false);
-            this.glyphSearchTabPage.PerformLayout();
+            this.enemyGenerationTab.ResumeLayout(false);
+            this.enemyGenerationTab.PerformLayout();
+            this.glyphSearchTab.ResumeLayout(false);
+            this.glyphSearchTab.PerformLayout();
             this.gSortGroupBox.ResumeLayout(false);
             this.gSearchParamsGroupBox.ResumeLayout(false);
             this.gSearchParamsGroupBox.PerformLayout();
@@ -518,9 +563,9 @@
         private System.Windows.Forms.GroupBox gameClassNarowingGroupBox;
         private System.Windows.Forms.CheckedListBox gameClassNorowerBox;
         private System.Windows.Forms.TabControl mainTabControl;
-        private System.Windows.Forms.TabPage enemyGenerationTabPage;
-        private System.Windows.Forms.TabPage weaponSearchTabPage;
-        private System.Windows.Forms.TabPage glyphSearchTabPage;
+        private System.Windows.Forms.TabPage enemyGenerationTab;
+        private System.Windows.Forms.TabPage weaponSearchTab;
+        private System.Windows.Forms.TabPage glyphSearchTab;
         private System.Windows.Forms.ComboBox glyphSearchTypeBox1;
         private System.Windows.Forms.TextBox glyphSearchInputBox1;
         private System.Windows.Forms.ComboBox glyphSearchTypeBox2;
@@ -533,6 +578,10 @@
         private System.Windows.Forms.GroupBox gSortGroupBox;
         private System.Windows.Forms.GroupBox gSearchParamsGroupBox;
         private System.Windows.Forms.Button gSearchResetButton;
+        private System.Windows.Forms.TabPage areaGeneratorTab;
+        private System.Windows.Forms.TabPage npcGeneratorTab;
+        private System.Windows.Forms.TabPage gsPlannerTab;
+        private System.Windows.Forms.TabPage playerTrackerTabTab;
     }
 }
 
