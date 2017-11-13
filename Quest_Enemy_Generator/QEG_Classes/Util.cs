@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -40,6 +41,29 @@ namespace QEG_Classes
         public static int CountLines(this string str)
         {
             return str.Length - str.Replace("\n", "").Length + 1;
+        }
+
+        [SuppressMessage("ReSharper", "StringLastIndexOfIsCultureSpecific.2")]
+        public static List<int> AllIndexesOf(this string wholeString, string subString)
+        {
+            List<int> indexes = new List<int>();
+
+            if (subString == string.Empty)
+            {
+                return indexes;
+            }
+
+            int prevStringPos = wholeString.Length;
+
+            while (prevStringPos > -1)
+            {
+                prevStringPos = wholeString.LastIndexOf(subString, prevStringPos);
+                indexes.Add(prevStringPos);
+                prevStringPos--;
+            }
+            indexes.RemoveAt(indexes.Count-1);
+
+            return indexes;
         }
 
         #endregion

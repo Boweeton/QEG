@@ -45,9 +45,29 @@ namespace Quest_Enemy_Generator
 
         #region Methods
 
-        public string ToSeachResultString()
+        public string ToSeachResultString(int boxCharacterWidth)
         {
-            return "dick";
+            StringBuilder sb = new StringBuilder();
+            const int Buffer = 25;
+
+            // Name
+            sb.AppendLine($"Name:  \t{Name}");
+
+            // School
+            sb.AppendLine($"School:  \t{School}");
+
+            // Lvl
+            sb.AppendLine($"Lvl:  \t{LvlReq}");
+
+            // Speed
+            sb.AppendLine($"SPD:  \t{Speed}");
+
+            // Description
+            sb.AppendLine($"Description: {ToDescripString(boxCharacterWidth, "Description: ".Length)}");
+            sb.Append('_', boxCharacterWidth);
+            sb.AppendLine();
+
+            return sb.ToString();
         }
 
         /// <summary>Returns a string that represents the current object.</summary>

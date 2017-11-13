@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using QEG_Classes;
 using Quest_Enemy_Generator;
@@ -19,7 +20,7 @@ namespace QEG_Windows_Application
 
         List<RichTextBox> glyphBoxen = new List<RichTextBox>();
 
-        const int minSearchLength = 2;
+        const int MinSearchLength = 3;
         int gBox1PrevLength;
         int gBox2PrevLength;
 
@@ -90,6 +91,7 @@ namespace QEG_Windows_Application
         {
             // Clear the list
             gSearchResults.Clear();
+            gSearchResultBox.Enabled = true;
 
             // Local declarations
             string searchParam1 = glyphSearchInputBox1.Text.ToLower();
@@ -98,28 +100,25 @@ namespace QEG_Windows_Application
             GlyphSearchType searchType2 = (GlyphSearchType)glyphSearchTypeBox2.SelectedIndex;
 
             // Check to see if searchParams are the right size glyphSearchTypeBox1.SelectedIndex != (int)GlyphSearchType.Level
-            if ((searchParam1.Length < minSearchLength && searchParam2.Length < minSearchLength) ||
-                (glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level && searchParam2.Length < minSearchLength) ||
-                (glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level && searchParam1.Length < minSearchLength))
+            if (searchParam1.Length < MinSearchLength && searchParam2.Length < MinSearchLength)
             {
                 searchResultsLabel.Text = string.Empty;
-                glyphResultsTable.Enabled = false;
-                glyphResultsTable.Visible = false;
+                gSearchResultBox.Enabled = false;
+                gSearchResultBox.Visible = false;
                 return;
             }
-            glyphResultsTable.Visible = true;
+            gSearchResultBox.Visible = true;
+            gSearchResultBox.BackColor = Color.White;
 
             // Define what constitutes a "matched" glyph
             Func<Glyph, bool> match;
             // If both params are filled
-            if ((searchParam1.Length >= minSearchLength && searchParam2.Length >= minSearchLength) ||
-                (glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level && searchParam2.Length >= minSearchLength) ||
-                (glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level && searchParam1.Length >= minSearchLength))
+            if (searchParam1.Length >= MinSearchLength && searchParam2.Length >= MinSearchLength)
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1) && FindMatch(searchType2)(glyph, searchParam2);
             }
             // If only param1 is filled
-            else if (searchParam1.Length >= minSearchLength || glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level)
+            else if (searchParam1.Length >= MinSearchLength)
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1);
             }
@@ -138,7 +137,7 @@ namespace QEG_Windows_Application
                 }
             }
 
-            DisplayNewGlyphResults();
+            DisplayNewGlyphResults(searchParam1, searchParam2, searchType1, searchType2);
             UpdateGlyphResultsLabel(searchParam1, searchParam2, searchType1, searchType2);
 
             // Locally defined functions
@@ -172,54 +171,119 @@ namespace QEG_Windows_Application
             }
         }
 
-        void DisplayNewGlyphResults()
+        void DisplayNewGlyphResults(string param1, string param2, GlyphSearchType type1, GlyphSearchType type2)
         {
-            glyphResultsTable.Enabled = true;
-            glyphResultsTable.RowCount = gSearchResults.Count;
+            // Front end printing & calculations
+            const float FWidth = 8.3f;
+            int partitionLength = (int)(gSearchResultBox.Width / FWidth);
+            gSearchResultBox.Clear();
 
-            // Loop through to populate the glyphs
-            for (int i = glyphBoxen.Count; i < gSearchResults.Count; i++)
+            // Print first partition if there are results
+            if (gSearchResults.Count > 0)
             {
-                RichTextBox richard = new RichTextBox { Dock = DockStyle.Fill, ReadOnly = true};
-                glyphResultsTable.Controls.Add(richard, 0, i);
-                glyphBoxen.Add(richard);
-                glyphResultsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+                gSearchResultBox.AppendText(new StringBuilder().Append('_', partitionLength).ToString());
+                gSearchResultBox.AppendText("\n");
             }
 
-            // Loop to remove unwanted boxen
-            for (int i = glyphBoxen.Count - 1; i > gSearchResults.Count - 1; i--)
+            // MASTER LOOP FOR PRINTING AND HIGHLIGHTING
+            foreach (Glyph glyph in gSearchResults)
             {
-                glyphBoxen.RemoveAt(i);
-                glyphResultsTable.Controls.RemoveAt(i);
-                glyphResultsTable.RowStyles.RemoveAt(i);
+                // Print the Name heder
+                gSearchResultBox.AppendText("Name: ");
+                PrintAndHighlightIfNeeded(glyph.Name, param1, param2, GlyphSearchType.Name);
+                gSearchResultBox.AppendText("\n");
+
+                // Print the school heder
+                gSearchResultBox.AppendText("School: ");
+                PrintAndHighlightIfNeeded(glyph.School.ToString(), param1, param2, GlyphSearchType.School);
+                gSearchResultBox.AppendText("\n");
+
+                // Print the level heder
+                gSearchResultBox.AppendText("Lvl: ");
+                PrintAndHighlightIfNeeded(glyph.LvlReq.ToString(), param1, param2, GlyphSearchType.Level);
+                gSearchResultBox.AppendText("\n");
+
+                // Print the speed heder
+                gSearchResultBox.AppendText("SPD: ");
+                PrintAndHighlightIfNeeded(glyph.Speed.ToString(), param1, param2, GlyphSearchType.School);
+                gSearchResultBox.AppendText("\n");
+
+                // Print the description heder
+                gSearchResultBox.AppendText("Description: ");
+                PrintAndHighlightIfNeeded(glyph.Description, param1, param2, GlyphSearchType.Description);
+                gSearchResultBox.AppendText("\n");
+
+                gSearchResultBox.AppendText(new StringBuilder().Append('_', partitionLength).ToString());
+                gSearchResultBox.AppendText("\n");
             }
 
-            // Loop to populate boxen
-            for (int i = 0; i < glyphBoxen.Count; i++)
+            void PrintAndHighlightIfNeeded(string superString, string subString1, string subString2, GlyphSearchType goodType)
             {
-                glyphBoxen[i].Text = gSearchResults[i].Name;
-                glyphResultsTable.RowStyles[i].Height = glyphBoxen[i].Text.CountLines() * 40;
-                glyphBoxen[i].BackColor = Color.White;
-                glyphBoxen[i].MouseHover += (sender, args) => glyphResultsTable.Focus();
+                // Decide string
+                string subString;
+                if (goodType == type1)
+                {
+                    subString = subString1;
+                }
+                if (goodType == type2)
+                {
+                    subString = subString2;
+                }
+                else
+                {
+                    subString = subString1;
+                }
+
+                // Set the highlight color
+                Color highlightColor1 = Color.Coral;
+                Color highlightColor2 = Color.Chartreuse;
+
+                // Record the current index thus far
+                int indexThusFar = gSearchResultBox.TextLength;
+
+                // Figure out how many indexes need highlighting
+                List<int> indexesToHighlight = superString.ToLower().AllIndexesOf(subString);
+
+                // Print it
+                gSearchResultBox.AppendText(superString);
+
+                // Check to see if we should highlight
+                if ((type1 == GlyphSearchType.Anything || type1 == goodType) && subString == param1)
+                {
+                    foreach (int index in indexesToHighlight)
+                    {
+                        gSearchResultBox.Select(index + indexThusFar, subString.Length);
+                        gSearchResultBox.SelectionBackColor = highlightColor1;
+                    }
+                }
+                if ((type2 == GlyphSearchType.Anything || type2 == goodType) && subString == param2)
+                {
+                    foreach (int index in indexesToHighlight)
+                    {
+                        gSearchResultBox.Select(index + indexThusFar, subString.Length);
+                        gSearchResultBox.SelectionBackColor = highlightColor2;
+                    }
+                }
             }
+
         }
 
         void UpdateGlyphResultsLabel(string param1, string param2, GlyphSearchType type1, GlyphSearchType type2)
         {
             // If both
-            if (param1.Length >= minSearchLength && param2.Length >= minSearchLength)
+            if (param1.Length >= MinSearchLength && param2.Length >= MinSearchLength)
             {
                 searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" when searched by {type1} and \"{param2}\" when searched by {type2}";
             }
 
             // If only box 1
-            else if (param1.Length >= minSearchLength)
+            else if (param1.Length >= MinSearchLength)
             {
                 searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param1}\" when searched by {type1}";
             }
 
             // If only box 2
-            else if (param2.Length >= minSearchLength)
+            else if (param2.Length >= MinSearchLength)
             {
                 searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param2}\" when searched by {type2}";
             }
@@ -313,6 +377,8 @@ namespace QEG_Windows_Application
             glyphSearchTypeBox2.SelectedIndex = 0;
 
             searchResultsLabel.Text = string.Empty;
+
+            
         }
 
         void OnDisplayWeaponsChanged(object sender, EventArgs e)
@@ -356,7 +422,7 @@ namespace QEG_Windows_Application
 
         void OnGlyphSearchInputBox1TextChanged(object sender, EventArgs e)
         {
-            if (glyphSearchInputBox1.TextLength >= minSearchLength || gBox1PrevLength >= minSearchLength || glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level)
+            if (glyphSearchInputBox1.TextLength >= MinSearchLength || gBox1PrevLength >= MinSearchLength || glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level)
             {
                 SearchGlyphs();
             }
@@ -365,7 +431,7 @@ namespace QEG_Windows_Application
 
         void OnGlyphSearchInputBox2TextChanged(object sender, EventArgs e)
         {
-            if (glyphSearchInputBox2.TextLength >= minSearchLength || gBox2PrevLength >= minSearchLength || glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level)
+            if (glyphSearchInputBox2.TextLength >= MinSearchLength || gBox2PrevLength >= MinSearchLength || glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level)
             {
                 SearchGlyphs();
             }
