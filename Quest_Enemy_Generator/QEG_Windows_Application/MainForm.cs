@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using QEG_Classes;
@@ -18,7 +19,7 @@ namespace QEG_Windows_Application
 
         List<RichTextBox> glyphBoxen = new List<RichTextBox>();
 
-        const int minSearchLength = 3;
+        const int minSearchLength = 2;
         int gBox1PrevLength;
         int gBox2PrevLength;
 
@@ -96,24 +97,29 @@ namespace QEG_Windows_Application
             GlyphSearchType searchType1 = (GlyphSearchType)glyphSearchTypeBox1.SelectedIndex;
             GlyphSearchType searchType2 = (GlyphSearchType)glyphSearchTypeBox2.SelectedIndex;
 
-            // Check to see if searchParam == ""
-            if (searchParam1.Length < minSearchLength && searchParam2.Length < minSearchLength)
+            // Check to see if searchParams are the right size glyphSearchTypeBox1.SelectedIndex != (int)GlyphSearchType.Level
+            if ((searchParam1.Length < minSearchLength && searchParam2.Length < minSearchLength) ||
+                (glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level && searchParam2.Length < minSearchLength) ||
+                (glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level && searchParam1.Length < minSearchLength))
             {
                 searchResultsLabel.Text = string.Empty;
                 glyphResultsTable.Enabled = false;
+                glyphResultsTable.Visible = false;
                 return;
             }
+            glyphResultsTable.Visible = true;
 
             // Define what constitutes a "matched" glyph
-            // Func<Glyph, bool> match1 = FindMatch(searchType1);
             Func<Glyph, bool> match;
             // If both params are filled
-            if (searchParam1.Length >= minSearchLength && searchParam2.Length >= minSearchLength)
+            if ((searchParam1.Length >= minSearchLength && searchParam2.Length >= minSearchLength) ||
+                (glyphSearchTypeBox1.SelectedIndex == (int)GlyphSearchType.Level && searchParam2.Length >= minSearchLength) ||
+                (glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level && searchParam1.Length >= minSearchLength))
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1) && FindMatch(searchType2)(glyph, searchParam2);
             }
             // If only param1 is filled
-            else if (searchParam1.Length >= minSearchLength)
+            else if (searchParam1.Length >= minSearchLength || glyphSearchTypeBox2.SelectedIndex == (int)GlyphSearchType.Level)
             {
                 match = glyph => FindMatch(searchType1)(glyph, searchParam1);
             }
@@ -174,7 +180,7 @@ namespace QEG_Windows_Application
             // Loop through to populate the glyphs
             for (int i = glyphBoxen.Count; i < gSearchResults.Count; i++)
             {
-                RichTextBox richard = new RichTextBox { Dock = DockStyle.Fill, ReadOnly = true };
+                RichTextBox richard = new RichTextBox { Dock = DockStyle.Fill, ReadOnly = true};
                 glyphResultsTable.Controls.Add(richard, 0, i);
                 glyphBoxen.Add(richard);
                 glyphResultsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
@@ -192,7 +198,9 @@ namespace QEG_Windows_Application
             for (int i = 0; i < glyphBoxen.Count; i++)
             {
                 glyphBoxen[i].Text = gSearchResults[i].Name;
-                glyphResultsTable.RowStyles[i].Height = glyphBoxen[i].Text.CountLines() * 100;
+                glyphResultsTable.RowStyles[i].Height = glyphBoxen[i].Text.CountLines() * 40;
+                glyphBoxen[i].BackColor = Color.White;
+                glyphBoxen[i].MouseHover += (sender, args) => glyphResultsTable.Focus();
             }
         }
 
@@ -211,7 +219,7 @@ namespace QEG_Windows_Application
             }
 
             // If only box 2
-            else
+            else if (param2.Length >= minSearchLength)
             {
                 searchResultsLabel.Text = $"{gSearchResults.Count} results matched \"{param2}\" when searched by {type2}";
             }
@@ -244,6 +252,7 @@ namespace QEG_Windows_Application
             if (output.TextLength != 0)
             {
                 saveButton.Enabled = true;
+                output.BackColor = Color.White;
             }
         }
 
