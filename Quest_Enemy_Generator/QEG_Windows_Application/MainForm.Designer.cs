@@ -35,7 +35,7 @@
             this.avgPlrLvlLabel = new System.Windows.Forms.Label();
             this.randomizeButton = new System.Windows.Forms.Button();
             this.enemyCountLabel = new System.Windows.Forms.Label();
-            this.output = new System.Windows.Forms.TextBox();
+            this.eGenOutput = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.formatOptions = new System.Windows.Forms.GroupBox();
             this.inputData = new System.Windows.Forms.GroupBox();
@@ -47,8 +47,11 @@
             this.gameClassNarowingGroupBox = new System.Windows.Forms.GroupBox();
             this.gameClassNorowerBox = new System.Windows.Forms.CheckedListBox();
             this.mainTabControl = new System.Windows.Forms.TabControl();
+            this.playerTrackerTabTab = new System.Windows.Forms.TabPage();
+            this.gsPlannerTab = new System.Windows.Forms.TabPage();
             this.enemyGenerationTab = new System.Windows.Forms.TabPage();
             this.glyphSearchTab = new System.Windows.Forms.TabPage();
+            this.gSearchResetButton = new System.Windows.Forms.Button();
             this.gSortGroupBox = new System.Windows.Forms.GroupBox();
             this.gSearchResultsSortBox = new System.Windows.Forms.ComboBox();
             this.gSearchParamsGroupBox = new System.Windows.Forms.GroupBox();
@@ -59,11 +62,9 @@
             this.gSearchResultBox = new System.Windows.Forms.RichTextBox();
             this.searchResultsLabel = new System.Windows.Forms.Label();
             this.weaponSearchTab = new System.Windows.Forms.TabPage();
-            this.gSearchResetButton = new System.Windows.Forms.Button();
             this.areaGeneratorTab = new System.Windows.Forms.TabPage();
             this.npcGeneratorTab = new System.Windows.Forms.TabPage();
-            this.gsPlannerTab = new System.Windows.Forms.TabPage();
-            this.playerTrackerTabTab = new System.Windows.Forms.TabPage();
+            this.eGResetButton = new System.Windows.Forms.Button();
             this.formatOptions.SuspendLayout();
             this.inputData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.enemyCountBox)).BeginInit();
@@ -81,7 +82,7 @@
             // 
             this.displayFullWeapons.AutoSize = true;
             this.displayFullWeapons.Location = new System.Drawing.Point(4, 17);
-            this.displayFullWeapons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayFullWeapons.Margin = new System.Windows.Forms.Padding(2);
             this.displayFullWeapons.Name = "displayFullWeapons";
             this.displayFullWeapons.Size = new System.Drawing.Size(122, 17);
             this.displayFullWeapons.TabIndex = 0;
@@ -93,7 +94,7 @@
             // 
             this.displayFullGlyphs.AutoSize = true;
             this.displayFullGlyphs.Location = new System.Drawing.Point(4, 39);
-            this.displayFullGlyphs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayFullGlyphs.Margin = new System.Windows.Forms.Padding(2);
             this.displayFullGlyphs.Name = "displayFullGlyphs";
             this.displayFullGlyphs.Size = new System.Drawing.Size(109, 17);
             this.displayFullGlyphs.TabIndex = 1;
@@ -105,7 +106,7 @@
             // 
             this.displayFullArmor.AutoSize = true;
             this.displayFullArmor.Location = new System.Drawing.Point(4, 61);
-            this.displayFullArmor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.displayFullArmor.Margin = new System.Windows.Forms.Padding(2);
             this.displayFullArmor.Name = "displayFullArmor";
             this.displayFullArmor.Size = new System.Drawing.Size(105, 17);
             this.displayFullArmor.TabIndex = 2;
@@ -128,8 +129,8 @@
             // randomizeButton
             // 
             this.randomizeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.randomizeButton.Location = new System.Drawing.Point(284, 13);
-            this.randomizeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randomizeButton.Location = new System.Drawing.Point(284, 10);
+            this.randomizeButton.Margin = new System.Windows.Forms.Padding(2);
             this.randomizeButton.Name = "randomizeButton";
             this.randomizeButton.Size = new System.Drawing.Size(150, 32);
             this.randomizeButton.TabIndex = 1;
@@ -149,23 +150,23 @@
             this.enemyCountLabel.Text = "Enemy Count";
             this.enemyCountLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // output
+            // eGenOutput
             // 
-            this.output.Font = new System.Drawing.Font("Lucida Console", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output.Location = new System.Drawing.Point(4, 143);
-            this.output.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.output.Multiline = true;
-            this.output.Name = "output";
-            this.output.ReadOnly = true;
-            this.output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.output.Size = new System.Drawing.Size(700, 497);
-            this.output.TabIndex = 2;
+            this.eGenOutput.Font = new System.Drawing.Font("Lucida Console", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eGenOutput.Location = new System.Drawing.Point(4, 143);
+            this.eGenOutput.Margin = new System.Windows.Forms.Padding(2);
+            this.eGenOutput.Multiline = true;
+            this.eGenOutput.Name = "eGenOutput";
+            this.eGenOutput.ReadOnly = true;
+            this.eGenOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.eGenOutput.Size = new System.Drawing.Size(700, 497);
+            this.eGenOutput.TabIndex = 2;
             // 
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(284, 52);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveButton.Location = new System.Drawing.Point(284, 46);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(150, 32);
             this.saveButton.TabIndex = 9;
@@ -179,9 +180,9 @@
             this.formatOptions.Controls.Add(this.displayFullGlyphs);
             this.formatOptions.Controls.Add(this.displayFullArmor);
             this.formatOptions.Location = new System.Drawing.Point(96, 4);
-            this.formatOptions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formatOptions.Margin = new System.Windows.Forms.Padding(2);
             this.formatOptions.Name = "formatOptions";
-            this.formatOptions.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formatOptions.Padding = new System.Windows.Forms.Padding(2);
             this.formatOptions.Size = new System.Drawing.Size(127, 83);
             this.formatOptions.TabIndex = 10;
             this.formatOptions.TabStop = false;
@@ -194,9 +195,9 @@
             this.inputData.Controls.Add(this.avgPlrLvlBox);
             this.inputData.Controls.Add(this.enemyCountLabel);
             this.inputData.Location = new System.Drawing.Point(4, 4);
-            this.inputData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inputData.Margin = new System.Windows.Forms.Padding(2);
             this.inputData.Name = "inputData";
-            this.inputData.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inputData.Padding = new System.Windows.Forms.Padding(2);
             this.inputData.Size = new System.Drawing.Size(87, 92);
             this.inputData.TabIndex = 0;
             this.inputData.TabStop = false;
@@ -253,7 +254,7 @@
             "All medium",
             "All hard"});
             this.randomModes.Location = new System.Drawing.Point(10, 17);
-            this.randomModes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randomModes.Margin = new System.Windows.Forms.Padding(2);
             this.randomModes.Name = "randomModes";
             this.randomModes.Size = new System.Drawing.Size(72, 95);
             this.randomModes.TabIndex = 12;
@@ -262,9 +263,9 @@
             // 
             this.randomMode.Controls.Add(this.randomModes);
             this.randomMode.Location = new System.Drawing.Point(479, 5);
-            this.randomMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randomMode.Margin = new System.Windows.Forms.Padding(2);
             this.randomMode.Name = "randomMode";
-            this.randomMode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randomMode.Padding = new System.Windows.Forms.Padding(2);
             this.randomMode.Size = new System.Drawing.Size(93, 120);
             this.randomMode.TabIndex = 13;
             this.randomMode.TabStop = false;
@@ -279,9 +280,9 @@
             // 
             this.gameClassNarowingGroupBox.Controls.Add(this.gameClassNorowerBox);
             this.gameClassNarowingGroupBox.Location = new System.Drawing.Point(577, 5);
-            this.gameClassNarowingGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameClassNarowingGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.gameClassNarowingGroupBox.Name = "gameClassNarowingGroupBox";
-            this.gameClassNarowingGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameClassNarowingGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.gameClassNarowingGroupBox.Size = new System.Drawing.Size(127, 120);
             this.gameClassNarowingGroupBox.TabIndex = 15;
             this.gameClassNarowingGroupBox.TabStop = false;
@@ -300,7 +301,7 @@
             "Heavy Magic Users",
             "Light Magic Users"});
             this.gameClassNorowerBox.Location = new System.Drawing.Point(4, 15);
-            this.gameClassNorowerBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameClassNorowerBox.Margin = new System.Windows.Forms.Padding(2);
             this.gameClassNorowerBox.Name = "gameClassNorowerBox";
             this.gameClassNorowerBox.Size = new System.Drawing.Size(116, 90);
             this.gameClassNorowerBox.TabIndex = 16;
@@ -315,26 +316,45 @@
             this.mainTabControl.Controls.Add(this.areaGeneratorTab);
             this.mainTabControl.Controls.Add(this.npcGeneratorTab);
             this.mainTabControl.Location = new System.Drawing.Point(9, 10);
-            this.mainTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(716, 667);
             this.mainTabControl.TabIndex = 0;
             // 
+            // playerTrackerTabTab
+            // 
+            this.playerTrackerTabTab.BackColor = System.Drawing.SystemColors.Control;
+            this.playerTrackerTabTab.Location = new System.Drawing.Point(4, 22);
+            this.playerTrackerTabTab.Name = "playerTrackerTabTab";
+            this.playerTrackerTabTab.Size = new System.Drawing.Size(708, 641);
+            this.playerTrackerTabTab.TabIndex = 6;
+            this.playerTrackerTabTab.Text = "Player Tracker";
+            // 
+            // gsPlannerTab
+            // 
+            this.gsPlannerTab.BackColor = System.Drawing.SystemColors.Control;
+            this.gsPlannerTab.Location = new System.Drawing.Point(4, 22);
+            this.gsPlannerTab.Name = "gsPlannerTab";
+            this.gsPlannerTab.Size = new System.Drawing.Size(708, 641);
+            this.gsPlannerTab.TabIndex = 5;
+            this.gsPlannerTab.Text = "GS Planner";
+            // 
             // enemyGenerationTab
             // 
             this.enemyGenerationTab.BackColor = System.Drawing.Color.Transparent;
+            this.enemyGenerationTab.Controls.Add(this.eGResetButton);
             this.enemyGenerationTab.Controls.Add(this.inputData);
-            this.enemyGenerationTab.Controls.Add(this.output);
+            this.enemyGenerationTab.Controls.Add(this.eGenOutput);
             this.enemyGenerationTab.Controls.Add(this.randomMode);
             this.enemyGenerationTab.Controls.Add(this.gameClassNarowingGroupBox);
             this.enemyGenerationTab.Controls.Add(this.formatOptions);
             this.enemyGenerationTab.Controls.Add(this.saveButton);
             this.enemyGenerationTab.Controls.Add(this.randomizeButton);
             this.enemyGenerationTab.Location = new System.Drawing.Point(4, 22);
-            this.enemyGenerationTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyGenerationTab.Margin = new System.Windows.Forms.Padding(2);
             this.enemyGenerationTab.Name = "enemyGenerationTab";
-            this.enemyGenerationTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.enemyGenerationTab.Padding = new System.Windows.Forms.Padding(2);
             this.enemyGenerationTab.Size = new System.Drawing.Size(708, 641);
             this.enemyGenerationTab.TabIndex = 0;
             this.enemyGenerationTab.Text = "Enemy Generation";
@@ -348,11 +368,23 @@
             this.glyphSearchTab.Controls.Add(this.gSearchResultBox);
             this.glyphSearchTab.Controls.Add(this.searchResultsLabel);
             this.glyphSearchTab.Location = new System.Drawing.Point(4, 22);
-            this.glyphSearchTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.glyphSearchTab.Margin = new System.Windows.Forms.Padding(2);
             this.glyphSearchTab.Name = "glyphSearchTab";
             this.glyphSearchTab.Size = new System.Drawing.Size(708, 641);
             this.glyphSearchTab.TabIndex = 2;
             this.glyphSearchTab.Text = "Glyph Search";
+            // 
+            // gSearchResetButton
+            // 
+            this.gSearchResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gSearchResetButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.gSearchResetButton.Location = new System.Drawing.Point(596, 105);
+            this.gSearchResetButton.Name = "gSearchResetButton";
+            this.gSearchResetButton.Size = new System.Drawing.Size(96, 35);
+            this.gSearchResetButton.TabIndex = 8;
+            this.gSearchResetButton.Text = "Reset";
+            this.gSearchResetButton.UseVisualStyleBackColor = true;
+            this.gSearchResetButton.Click += new System.EventHandler(this.ResetGSearch);
             // 
             // gSortGroupBox
             // 
@@ -432,7 +464,7 @@
             this.gSearchResultBox.BackColor = System.Drawing.SystemColors.Window;
             this.gSearchResultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gSearchResultBox.Location = new System.Drawing.Point(16, 163);
-            this.gSearchResultBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gSearchResultBox.Margin = new System.Windows.Forms.Padding(2);
             this.gSearchResultBox.Name = "gSearchResultBox";
             this.gSearchResultBox.ReadOnly = true;
             this.gSearchResultBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
@@ -454,61 +486,43 @@
             // 
             this.weaponSearchTab.BackColor = System.Drawing.Color.Transparent;
             this.weaponSearchTab.Location = new System.Drawing.Point(4, 22);
-            this.weaponSearchTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weaponSearchTab.Margin = new System.Windows.Forms.Padding(2);
             this.weaponSearchTab.Name = "weaponSearchTab";
-            this.weaponSearchTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weaponSearchTab.Padding = new System.Windows.Forms.Padding(2);
             this.weaponSearchTab.Size = new System.Drawing.Size(708, 641);
             this.weaponSearchTab.TabIndex = 1;
             this.weaponSearchTab.Text = "Weapon Search";
             // 
-            // gSearchResetButton
-            // 
-            this.gSearchResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gSearchResetButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.gSearchResetButton.Location = new System.Drawing.Point(596, 105);
-            this.gSearchResetButton.Name = "gSearchResetButton";
-            this.gSearchResetButton.Size = new System.Drawing.Size(96, 35);
-            this.gSearchResetButton.TabIndex = 8;
-            this.gSearchResetButton.Text = "Reset";
-            this.gSearchResetButton.UseVisualStyleBackColor = true;
-            this.gSearchResetButton.Click += new System.EventHandler(this.ResetGSearch);
-            // 
             // areaGeneratorTab
             // 
+            this.areaGeneratorTab.BackColor = System.Drawing.SystemColors.Control;
             this.areaGeneratorTab.Location = new System.Drawing.Point(4, 22);
             this.areaGeneratorTab.Name = "areaGeneratorTab";
             this.areaGeneratorTab.Padding = new System.Windows.Forms.Padding(3);
             this.areaGeneratorTab.Size = new System.Drawing.Size(708, 641);
             this.areaGeneratorTab.TabIndex = 3;
             this.areaGeneratorTab.Text = "Area Generator";
-            this.areaGeneratorTab.UseVisualStyleBackColor = true;
             // 
             // npcGeneratorTab
             // 
+            this.npcGeneratorTab.BackColor = System.Drawing.SystemColors.Control;
             this.npcGeneratorTab.Location = new System.Drawing.Point(4, 22);
             this.npcGeneratorTab.Name = "npcGeneratorTab";
             this.npcGeneratorTab.Size = new System.Drawing.Size(708, 641);
             this.npcGeneratorTab.TabIndex = 4;
             this.npcGeneratorTab.Text = "NPC Generator";
-            this.npcGeneratorTab.UseVisualStyleBackColor = true;
             // 
-            // gsPlannerTab
+            // eGResetButton
             // 
-            this.gsPlannerTab.Location = new System.Drawing.Point(4, 22);
-            this.gsPlannerTab.Name = "gsPlannerTab";
-            this.gsPlannerTab.Size = new System.Drawing.Size(708, 641);
-            this.gsPlannerTab.TabIndex = 5;
-            this.gsPlannerTab.Text = "GS Planner";
-            this.gsPlannerTab.UseVisualStyleBackColor = true;
-            // 
-            // playerTrackerTabTab
-            // 
-            this.playerTrackerTabTab.Location = new System.Drawing.Point(4, 22);
-            this.playerTrackerTabTab.Name = "playerTrackerTabTab";
-            this.playerTrackerTabTab.Size = new System.Drawing.Size(708, 641);
-            this.playerTrackerTabTab.TabIndex = 6;
-            this.playerTrackerTabTab.Text = "Player Tracker";
-            this.playerTrackerTabTab.UseVisualStyleBackColor = true;
+            this.eGResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eGResetButton.Location = new System.Drawing.Point(284, 85);
+            this.eGResetButton.Margin = new System.Windows.Forms.Padding(2);
+            this.eGResetButton.Name = "eGResetButton";
+            this.eGResetButton.Size = new System.Drawing.Size(150, 32);
+            this.eGResetButton.TabIndex = 16;
+            this.eGResetButton.Text = "Clear";
+            this.eGResetButton.UseVisualStyleBackColor = true;
+            this.eGResetButton.Click += new System.EventHandler(this.OnEGClearButtonClick);
             // 
             // QegForm
             // 
@@ -520,10 +534,10 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "QegForm";
-            this.Text = "QEG 1.0";
+            this.Text = "GM Toolbox 1.0";
             this.Load += new System.EventHandler(this.OnMainFormLoad);
             this.formatOptions.ResumeLayout(false);
             this.formatOptions.PerformLayout();
@@ -553,7 +567,7 @@
         private System.Windows.Forms.Label avgPlrLvlLabel;
         private System.Windows.Forms.Button randomizeButton;
         private System.Windows.Forms.Label enemyCountLabel;
-        private System.Windows.Forms.TextBox output;
+        private System.Windows.Forms.TextBox eGenOutput;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.GroupBox formatOptions;
         private System.Windows.Forms.GroupBox inputData;
@@ -582,6 +596,7 @@
         private System.Windows.Forms.TabPage npcGeneratorTab;
         private System.Windows.Forms.TabPage gsPlannerTab;
         private System.Windows.Forms.TabPage playerTrackerTabTab;
+        private System.Windows.Forms.Button eGResetButton;
     }
 }
 

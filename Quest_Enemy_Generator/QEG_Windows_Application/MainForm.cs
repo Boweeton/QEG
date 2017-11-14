@@ -341,12 +341,9 @@ namespace QEG_Windows_Application
 
             UpdateAndDisplayToOutput();
 
-            // Make the save buttone active once the output box has been populated at least once
-            if (output.TextLength != 0)
-            {
-                saveButton.Enabled = true;
-                output.BackColor = Color.White;
-            }
+            saveButton.Enabled = true;
+            eGenOutput.Enabled = true;
+            eGenOutput.BackColor = Color.White;
         }
 
         void UpdateAndDisplayToOutput()
@@ -358,16 +355,16 @@ namespace QEG_Windows_Application
 
             List<string> printList = dm.FormatListForDisplay();
 
-            output.Clear();
+            eGenOutput.Clear();
 
             string printingString = string.Join(Environment.NewLine, printList);
 
-            output.AppendText(printingString);
+            eGenOutput.AppendText(printingString);
 
             // Scroll to top of output box
-            output.SelectionStart = 0;
-            output.SelectionLength = 1;
-            output.ScrollToCaret();
+            eGenOutput.SelectionStart = 0;
+            eGenOutput.SelectionLength = 1;
+            eGenOutput.ScrollToCaret();
         }
 
         void SaveToFile()
@@ -481,6 +478,20 @@ namespace QEG_Windows_Application
             glyphSearchTypeBox1.SelectedIndex = 0;
             glyphSearchTypeBox2.SelectedIndex = 0;
             gSearchResultsSortBox.SelectedIndex = 0;
+        }
+
+        void OnEGClearButtonClick(object sender, EventArgs e)
+        {
+            avgPlrLvlBox.Value = 1;
+            enemyCountBox.Value = 1;
+            displayFullWeapons.Checked = false;
+            displayFullGlyphs.Checked = false;
+            displayFullArmor.Checked = false;
+            randomModes.SelectedIndex = 0;
+            gameClassNorowerBox.SelectedIndex = 0;
+            eGenOutput.Text = string.Empty;
+            eGenOutput.Enabled = false;
+            saveButton.Enabled = false;
         }
 
         #endregion
