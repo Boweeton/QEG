@@ -201,16 +201,16 @@ namespace QEG_Windows_Application
                     gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.Name).ToList();
                     break;
                 case 2:
-                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.LvlReq).ToList();
-                    break;
-                case 3:
                     gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.LvlReq).ToList();
                     break;
+                case 3:
+                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.LvlReq).ToList();
+                    break;
                 case 4:
-                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.Speed).ToList();
+                    gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.Speed).ToList();
                     break;
                 case 5:
-                    gSearchResults = gSearchResults.OrderByDescending(glyph => glyph.Speed).ToList();
+                    gSearchResults = gSearchResults.OrderBy(glyph => glyph.Speed).ToList();
                     break;
             }
 

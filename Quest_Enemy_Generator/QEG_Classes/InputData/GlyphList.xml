@@ -96,7 +96,7 @@
 		<School>IMP</School>
 		<LvlReq>7</LvlReq>
 		<Speed>4</Speed>
-		<Description>Deal 8 Fire/Lightning damage to target. (S)</Description>
+		<Description>Deal 8 Fire/Shock damage to target. (S)</Description>
 	</Glyph>
 	<Glyph>
 		<Name>Flame Pillars</Name>
