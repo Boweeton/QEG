@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Quest_Enemy_Generator;
 
@@ -13,19 +9,18 @@ namespace XMLManager
 {
     public partial class XmlManagerForm : Form
     {
-        readonly DataManager dm;
+        List<Glyph> loadedGlyphs;
         List<Glyph> currentGlyphs;
+        Glyph glyphToAdd;
 
         public XmlManagerForm()
         {
             InitializeComponent();
 
-            dm = new DataManager();
-
             // Load up the original glyph list
 
             // Mirror the current list to the loaded glyphs
-            currentGlyphs = dm.Glyphs;
+            currentGlyphs = loadedGlyphs;
         }
 
         void XMLManagerForm_Load(object sender, EventArgs e)
@@ -67,7 +62,42 @@ namespace XMLManager
 
         void GoBackToLoadedGlyphListFile()
         {
+            currentGlyphs = loadedGlyphs;
+        }
 
+        void OnLoadGmtFilesButtonClick(object sender, EventArgs e)
+        {
+            if (loadGmtFilesInterface.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader sr = new StreamReader(loadGmtFilesInterface.FileName))
+                {
+                }
+            }
+        }
+
+        void OnAddNewGlyphButtonClick(object sender, EventArgs e)
+        {
+            // Local declarations
+            glyphToAdd = new Glyph();
+        }
+
+        void deleteSelectedGlyphButton_Click(object sender, EventArgs e)
+        {
+            const string Message = "Are you sure you want to Delete the Selected Glyph?";
+            const string Caption = "Delete Selected Glyph";
+            const MessageBoxButtons Buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(Message, Caption, Buttons);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                DeleteSelectedGlyph();
+            }
+        }
+
+        void DeleteSelectedGlyph()
+        {
+            
         }
     }
 }

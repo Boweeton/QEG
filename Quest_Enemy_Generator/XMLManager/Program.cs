@@ -16,7 +16,7 @@ namespace XMLManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XMLManagerForm());
+            Application.Run(new XmlManagerForm());
         }
     }
 }
