@@ -408,6 +408,16 @@ namespace QEG_Windows_Application
 
         }
 
+        void OnAvgPlrLvlBoxClick(object sender, EventArgs e)
+        {
+            avgPlrLvlBox.Select(0,avgPlrLvlBox.Text.Length);
+        }
+
+        void enemyCountBox_ValueChanged(object sender, EventArgs e)
+        {
+            enemyCountBox.Select(0,enemyCountBox.Text.Length);
+        }
+
         void OnDisplayWeaponsChanged(object sender, EventArgs e)
         {
             if (dm.EnemyList != null)
