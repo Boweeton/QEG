@@ -45,6 +45,19 @@ namespace Quest_Enemy_Generator
 
         #region Methods
 
+        public string ToEditorDisplay(int boxWidth)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Name: {Name}");
+            sb.AppendLine($"School: {School}");
+            sb.AppendLine($"Lvl: {LvlReq}");
+            sb.AppendLine($"SPD: {Speed}");
+            sb.Append($"Description: {Description}");
+
+            return sb.ToString();
+        }
+
         public string ToSeachResultString(int boxCharacterWidth)
         {
             StringBuilder sb = new StringBuilder();
