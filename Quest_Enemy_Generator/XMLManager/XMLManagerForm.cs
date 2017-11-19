@@ -139,6 +139,24 @@ namespace XMLManager
                         currentSelectedBox.BackColor = Color.LightSteelBlue;
                     };
 
+                    textBox.MouseWheel += (o, args) =>
+                    {
+                        int change = displayPanel.VerticalScroll.Value + args.Delta;
+
+                        if (change < 0)
+                        {
+                            displayPanel.VerticalScroll.Value = 0;
+                        }
+                        else if (change > displayPanel.VerticalScroll.Maximum)
+                        {
+                            displayPanel.VerticalScroll.Value = displayPanel.VerticalScroll.Maximum;
+                        }
+                        else
+                        {
+                            displayPanel.VerticalScroll.Value += args.Delta;
+                        }
+                    };
+
                     textBox.Cursor = Cursors.Arrow;
 
                     textBox.BackColor = Color.White;
