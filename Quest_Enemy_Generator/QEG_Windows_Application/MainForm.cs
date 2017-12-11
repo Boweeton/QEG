@@ -405,7 +405,9 @@ namespace QEG_Windows_Application
             searchResultsLabel.Text = string.Empty;
             gSearchResultsSortBox.SelectedIndex = 0;
 
-
+            // Set Values for weapon search
+            weaponSearchTypeComboBox.SelectedIndex = 0;
+            weaponSearchResultsLabel.Text = string.Empty;
         }
 
         void OnAvgPlrLvlBoxClick(object sender, EventArgs e)
